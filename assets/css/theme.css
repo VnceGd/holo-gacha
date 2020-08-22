@@ -1,0 +1,23 @@
+/* Light (Default) */
+:root {
+    --bg-color: #fff;
+    --fg-color: #000;
+    --menu-color: #ccc;
+    --btn-color: #88f;
+}
+
+/* Dark */
+:root[theme='dark'] {
+    --bg-color: #333;
+    --fg-color: #fff;
+    --menu-color: #222;
+    --btn-color: #000;
+}
+
+/* Greenscreen */
+:root[theme='green'] {
+    --bg-color: #00b140;
+    --fg-color: #000;
+    --menu-color: #ccc;
+    --btn-color: #fff;
+}

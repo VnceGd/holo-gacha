@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Hololive gacha project">
+        
+        <title>Holo Gacha</title>
+        <link rel="icon" href="assets/img/favicon.ico">
+
+        <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/css/theme.css">
+
+        <script src="assets/js/index.js" defer></script>
+        <script src="assets/js/theme.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <div id="main">
+                <div class="member-card">
+                    <img class="full-illust" src="assets/img/polka/full.png" alt="Omaru Polka Full">
+                    <button class="tap-head" onclick="interact(area.HEAD)" aria-label="Tap head">
+                    <button class="tap-chest" onclick="interact(area.CHEST)" aria-label="Tap chest">
+                </div>
+                <button class="float-bottom-right" onclick="toggleMenu(menu.SETTINGS)" aria-label="Open settings">
+                    <svg viewBox="0 0 1 1">
+                        <g fill="var(--fg-color)">
+                            <rect width="100%" height="20%"/>
+                            <rect y="40%" width="100%" height="20%"/>
+                            <rect y="80%" width="100%" height="20%"/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+            <div id="settings" class="menu">
+                <div class="panel">
+                    <h2>Theme</h2>
+                    <select id="theme" onchange="changeTheme()">
+                        <option value="light">Light</option>
+                        <option value="dark">Dark</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <h2>Audio</h2>
+                    <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume(false)" ondrag="changeVolume()">
+                    <input id="audio-value" type="number" value="100" onchange="changeVolume(true)">
+                </div>
+                <button class="float-bottom-right" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
+                    <svg viewBox="0 0 1 1">
+                        <g fill="var(--fg-color)">
+                            <path d="M.1 0 1 .9 .9 1 0 .1"/>
+                            <path d="M.9 0 0 .9 .1 1 1 .1"/>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+        </main>
+    </body>
+</html>
