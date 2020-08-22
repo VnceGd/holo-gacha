@@ -2,22 +2,25 @@
 :root {
     --bg-color: #fff;
     --fg-color: #000;
-    --menu-color: #ccc;
-    --btn-color: #88f;
+    --menu-color: rgba(220, 220, 220, .9);
+    --btn-color: #5bf;
+    --link-color: #00f;
 }
 
 /* Dark */
 :root[theme='dark'] {
     --bg-color: #333;
     --fg-color: #fff;
-    --menu-color: #222;
+    --menu-color: rgba(34, 34, 34, .9);
     --btn-color: #000;
+    --link-color: #aaf;
 }
 
 /* Greenscreen */
 :root[theme='green'] {
     --bg-color: #00b140;
     --fg-color: #000;
-    --menu-color: #ccc;
+    --menu-color: rgba(204, 204, 204, .9);
     --btn-color: #fff;
+    --link-color: #00f;
 }

@@ -13,6 +13,10 @@ body {
     background: var(--bg-color);
     color: var(--fg-color);
 }
+a,
+a:visited {
+    color: var(--link-color);
+}
 
 /* BUTTON */
 button {
@@ -78,6 +82,8 @@ button {
     background: var(--menu-color);
     box-sizing: border-box;
     overflow: scroll;
+    backdrop-filter: blur(.25rem);
+    -webkit-backdrop-filter: blur(.25rem);
 }
 #source-link {
     position: absolute;
@@ -89,10 +95,18 @@ button {
     text-decoration: underline;
 }
 
+/* INPUT */
+select,
+input[type="number"] {
+    padding: .25rem .5rem;
+    border: none;
+    border-radius: .25rem;
+}
+
 /* Audio Input */
 #audio {
     vertical-align: middle;
 }
 #audio-value {
-    width: 3rem;
+    width: 2.5rem;
 }
