@@ -79,6 +79,15 @@ button {
     box-sizing: border-box;
     overflow: scroll;
 }
+#source-link {
+    position: absolute;
+    bottom: 2.5rem;
+    text-decoration: none;
+}
+#source-link:focus,
+#source-link:hover {
+    text-decoration: underline;
+}
 
 /* Audio Input */
 #audio {
