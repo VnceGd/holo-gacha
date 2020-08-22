@@ -14,17 +14,17 @@ function setTheme(_theme) {
 
 // Set theme based on select element value
 function changeTheme() {
-    let selectElement = document.getElementById('theme')
-    
-    setTheme(selectElement.value)
+    setTheme(document.getElementById('theme').value)
 }
 
 // Load theme from local storage
 function loadPrefs() {
-    try { currentTheme = localStorage.getItem('theme') }
-    catch { console.log('No theme cached') }
+    currentTheme = localStorage.getItem('theme')
 
-    setTheme(currentTheme)
+    if (currentTheme != null) {
+        setTheme(currentTheme)
+        document.getElementById('theme').value = currentTheme
+    }
 }
 
 // Load preferences after document is loaded
