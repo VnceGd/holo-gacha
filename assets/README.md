@@ -17,3 +17,21 @@ https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 [`audio/polka/tap-head.mp3`](audio/polka/tap-head.mp3)
 
 https://www.youtube.com/watch?v=01HNMoigEuY
+
+## Usada Pekora
+
+### Illustration:
+
+[`img/pekora/full.png`](img/pekora/full.png)
+
+https://hololive.wiki/wiki/File:Usada_Pekora_-_Full_Illustration_01.png
+
+### Audio:
+
+[`audio/pekora/tap-chest.mp3`](audio/pekora/tap-chest.mp3)
+
+https://www.myinstants.com/instant/pekoonetoucchi-7300/
+
+[`audio/pekora/tap-head.mp3`](audio/pekora/tap-head.mp3)
+
+https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/

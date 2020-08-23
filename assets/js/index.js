@@ -2,41 +2,7 @@ const menu = {
     SETTINGS: 'settings'
 }
 
-const member = {
-    POLKA: 'polka'
-}
-
-const area = {
-    HEAD: 'tap-head',
-    CHEST: 'tap-chest'
-}
-
 let currentMenu = null
-let currentMember = member.POLKA
-let currentAudio = new Audio()
-
-// Set Methods
-// -----------
-function setMember(_member) {
-    currentMember = _member
-}
-
-function setVolume(_volume) {
-    currentAudio.volume = _volume
-}
-// -----------
-
-// Toggle active class on specified _menu
-function toggleMenu(_menu) {
-    if (currentMenu == _menu) {
-        document.getElementById(currentMenu).classList.toggle('active')
-        currentMenu = null
-    }
-    else {
-        currentMenu = _menu
-        document.getElementById(currentMenu).classList.add('active')
-    }
-}
 
 // Set audio source and play audio
 function playAudioClip(_member, _clip) {
@@ -48,7 +14,7 @@ function playAudioClip(_member, _clip) {
 
 // Play a short hop animation for the character
 function playAnimation() {
-    let character = document.getElementsByClassName('full-illust')[0]
+    let character = document.getElementById('full-illust')
 
     character.animate([
         // keyframes
@@ -68,17 +34,42 @@ function interact(_area) {
     playAnimation()
 }
 
-// Set currentAudio volume level and update paired input value
-function changeVolume(_value) {
-    let inputRange = document.getElementById('audio')
-    let inputNumber = document.getElementById('audio-value')
-
-    if (_value) {
-        inputRange.value = inputNumber.value
+// Toggle active class on specified _menu
+function toggleMenu(_menu) {
+    if (currentMenu == _menu) {
+        document.getElementById(currentMenu).classList.toggle('active')
+        currentMenu = null
     }
     else {
-        inputNumber.value = inputRange.value
+        currentMenu = _menu
+        document.getElementById(currentMenu).classList.add('active')
+    }
+}
+
+// Load settings from local storage
+function loadPrefs() {
+    currentTheme = localStorage.getItem('theme')
+    currentMember = localStorage.getItem('member')
+    currentVolume = localStorage.getItem('volume')
+
+    if (currentTheme != null) {
+        setTheme(currentTheme)
+        document.getElementById('theme').value = currentTheme
     }
 
-    setVolume(inputRange.value / 100)
+    if (currentMember != null) {
+        setMember(currentMember)
+        document.getElementById('member').value = currentMember
+    }
+
+    if (currentVolume != null) {
+        setVolume(currentVolume)
+        document.getElementById('audio').value = currentVolume
+        document.getElementById('audio-value').value = currentVolume
+    }
 }
+
+// Load preferences after document is loaded
+document.addEventListener("DOMContentLoaded", () => {
+    loadPrefs()
+})

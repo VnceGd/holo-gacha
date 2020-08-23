@@ -46,7 +46,7 @@ button {
     align-items: center;
     box-sizing: border-box;
 }
-.full-illust {
+#full-illust {
     height: 90vh;
 }
 .tap-head,

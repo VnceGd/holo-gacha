@@ -11,14 +11,16 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/theme.css">
 
-        <script src="assets/js/index.js" defer></script>
         <script src="assets/js/theme.js" defer></script>
+        <script src="assets/js/member.js" defer></script>
+        <script src="assets/js/audio.js" defer></script>
+        <script src="assets/js/index.js" defer></script>
     </head>
     <body>
         <main>
             <div id="main">
                 <div class="member-card">
-                    <img class="full-illust" src="assets/img/polka/full.png" alt="Omaru Polka Full">
+                    <img id="full-illust" src="assets/img/polka/full.png" alt="Full Illustration">
                     <button class="tap-head" onclick="interact(area.HEAD)" aria-label="Tap head">
                     <button class="tap-chest" onclick="interact(area.CHEST)" aria-label="Tap chest">
                 </div>
@@ -34,6 +36,11 @@
             </div>
             <div id="settings" class="menu">
                 <div class="panel">
+                    <h2>Member</h2>
+                    <select id="member" onchange="changeMember()">
+                        <option value="pekora">Usada Pekora</option>
+                        <option value="polka" selected>Omaru Polka</option>
+                    </select>
                     <h2>Theme</h2>
                     <select id="theme" onchange="changeTheme()">
                         <option value="light">Light</option>
