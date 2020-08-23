@@ -28,3 +28,7 @@ Some examples include:
 ## Credits
 
 The [`assets`](assets) folder contains a list of all external resources used.
+
+## Demo
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PaMjo3IXMKc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
