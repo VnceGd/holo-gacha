@@ -46,9 +46,26 @@ function playAudioClip(_member, _clip) {
     currentAudio.play()
 }
 
+// Play a short hop animation for the character
+function playAnimation() {
+    let character = document.getElementsByClassName('full-illust')[0]
+
+    character.animate([
+        // keyframes
+        { transform: 'translateY(0)' },
+        { transform: 'translateY(-2vh)' },
+        { transform: 'translateY(0)' }
+    ], {
+        // timing options
+        duration: 100,
+        iterations: 1
+    })
+}
+
 // Play audio associated with _area for currentMember
 function interact(_area) {
     playAudioClip(currentMember, _area)
+    playAnimation()
 }
 
 // Set currentAudio volume level and update paired input value
