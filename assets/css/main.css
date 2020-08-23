@@ -55,6 +55,10 @@ button {
     background: none;
     border: none;
 }
+.tap-head:focus,
+.tap-chest:focus {
+    outline: 0;
+}
 .tap-head {
     width: 20vh;
     height: 25vh;
