@@ -31,4 +31,4 @@ The [`assets`](assets) folder contains a list of all external resources used.
 
 ## Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/PaMjo3IXMKc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Demo Video](http://img.youtube.com/vi/PaMjo3IXMKc/0.jpg)](http://www.youtube.com/watch?v=PaMjo3IXMKc "holo gacha")
