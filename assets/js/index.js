@@ -48,24 +48,24 @@ function toggleMenu(_menu) {
 
 // Load settings from local storage
 function loadPrefs() {
-    currentTheme = localStorage.getItem('theme')
-    currentMember = localStorage.getItem('member')
-    currentVolume = localStorage.getItem('volume')
+    let cachedTheme = localStorage.getItem('theme')
+    let cachedMember = localStorage.getItem('member')
+    let cachedVolume = localStorage.getItem('volume')
 
-    if (currentTheme != null) {
-        setTheme(currentTheme)
-        document.getElementById('theme').value = currentTheme
+    if (cachedTheme != null) {
+        setTheme(cachedTheme)
+        document.getElementById('theme').value = cachedTheme
     }
 
-    if (currentMember != null) {
-        setMember(currentMember)
-        document.getElementById('member').value = currentMember
+    if (cachedMember != null) {
+        setMember(cachedMember)
+        document.getElementById('member').value = cachedMember
     }
 
-    if (currentVolume != null) {
-        setVolume(currentVolume)
-        document.getElementById('audio').value = currentVolume
-        document.getElementById('audio-value').value = currentVolume
+    if (cachedVolume != null) {
+        setVolume(cachedVolume)
+        document.getElementById('audio').value = cachedVolume
+        document.getElementById('audio-value').value = cachedVolume
     }
 }
 
