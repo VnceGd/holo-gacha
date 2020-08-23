@@ -2,6 +2,11 @@
 
 A small project inspired by https://www.youtube.com/watch?v=01HNMoigEuY.
 
+## Disclaimer
+
+This is a fan-made project and is NOT affiliated with Hololive or Cover Corp.
+Assets used may be subject to copyright and the repository may be privated or deleted at the request of relevant copyright holders.
+
 ## Roadmap
 
 This project is currently in an initial phase of Proof of Concept and Experimentation.
