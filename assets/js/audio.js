@@ -8,7 +8,7 @@ function setVolume(_volume) {
 }
 
 // Set currentAudio volume level and update paired input value
-function changeVolume(_value) {
+function changeVolume(_value = false) {
     let inputRange = document.getElementById('audio')
     let inputNumber = document.getElementById('audio-value')
 
@@ -20,4 +20,9 @@ function changeVolume(_value) {
     }
 
     setVolume(inputRange.value)
+}
+
+// Call changeVolume with _value = true to update paired input range
+function changeVolumeValue() {
+    changeVolume(_value = true)
 }
