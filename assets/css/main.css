@@ -103,6 +103,8 @@ button {
 select,
 input[type="number"] {
     padding: .25rem .5rem;
+    background: var(--btn-color);
+    color: var(--fg-color);
     border: none;
     border-radius: .25rem;
 }

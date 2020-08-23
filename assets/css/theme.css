@@ -2,8 +2,8 @@
 :root {
     --bg-color: #fff;
     --fg-color: #000;
-    --menu-color: rgba(220, 220, 220, .9);
-    --btn-color: #5bf;
+    --menu-color: rgba(230, 230, 230, .9);
+    --btn-color: #8df;
     --link-color: #00f;
 }
 
@@ -11,7 +11,7 @@
 :root[theme='dark'] {
     --bg-color: #333;
     --fg-color: #fff;
-    --menu-color: rgba(34, 34, 34, .9);
+    --menu-color: rgba(70, 70, 70, .9);
     --btn-color: #000;
     --link-color: #aaf;
 }
