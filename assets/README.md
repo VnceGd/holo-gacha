@@ -24,6 +24,11 @@ https://www.myinstants.com/instant/neeeeeeeee-37805/
 
 ### Illustration:
 
+[`img/icons-192.png`](img/icons-192.png),
+[`img/icons-512.png`](img/icons-512.png)
+
+*Edited in GIMP-2.10*
+
 [`img/polka/full.png`](img/polka/full.png)
 
 https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
@@ -33,6 +38,8 @@ https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 [`audio/polka/tap-chest.mp3`](audio/polka/tap-chest.mp3)
 
 [`audio/polka/tap-head.mp3`](audio/polka/tap-head.mp3)
+
+*Edited in Audacity*
 
 https://www.youtube.com/watch?v=01HNMoigEuY
 
