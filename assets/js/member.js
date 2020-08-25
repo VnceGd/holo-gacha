@@ -1,6 +1,7 @@
 const member = {
     PEKORA: 'pekora',
-    POLKA: 'polka'
+    POLKA: 'polka',
+    WATAME: 'watame'
 }
 const area = {
     HEAD: 'tap-head',

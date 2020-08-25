@@ -18,6 +18,24 @@ https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 
 https://www.youtube.com/watch?v=01HNMoigEuY
 
+## Tsunomaki Watame
+
+### Illustration:
+
+[`img/watame/full.png`](img/watame/full.png)
+
+https://hololive.wiki/wiki/File:Tsunomaki_Watame_-_Full_Illustration_01.png
+
+### Audio:
+
+[`audio/watame/tap-chest.mp3`](audio/watame/tap-chest.mp3)
+
+https://www.myinstants.com/instant/watame-wa-warukunai-yo-nee-84500/
+
+[`audio/watame/tap-head.mp3`](audio/watame/tap-head.mp3)
+
+https://www.myinstants.com/instant/watame-factory-74311/
+
 ## Usada Pekora
 
 ### Illustration:
