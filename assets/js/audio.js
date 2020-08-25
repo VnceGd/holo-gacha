@@ -1,5 +1,4 @@
 let currentAudio = new Audio()
-let currentVolume = 100
 
 // Update and cache volume
 function setVolume(_volume) {
