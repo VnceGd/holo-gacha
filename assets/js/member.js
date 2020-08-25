@@ -1,4 +1,5 @@
 const member = {
+    AQUA: 'aqua',
     PEKORA: 'pekora',
     POLKA: 'polka',
     WATAME: 'watame'

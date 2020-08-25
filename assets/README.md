@@ -2,6 +2,24 @@
 
 Content from the [hololive wiki](https://hololive.wiki) is available under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
+## Minato Aqua
+
+### Illustration:
+
+[`img/aqua/full.png`](img/aqua/full.png)
+
+https://hololive.wiki/wiki/File:Minato_Aqua_-_Full_Illustration_01.png
+
+### Audio:
+
+[`audio/aqua/tap-chest.mp3`](audio/aqua/tap-chest.mp3)
+
+https://www.myinstants.com/instant/mo-baka-1514/
+
+[`audio/aqua/tap-head.mp3`](audio/aqua/tap-head.mp3)
+
+https://www.myinstants.com/instant/neeeeeeeee-37805/
+
 ## Omaru Polka
 
 ### Illustration:
