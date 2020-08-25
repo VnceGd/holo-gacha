@@ -8,6 +8,7 @@ const area = {
 }
 
 let currentMember = member.POLKA
+let isGridPopulated = false
 
 // Update and cache member
 function setMember(_member) {
@@ -22,4 +23,19 @@ function changeMember() {
 
     setMember(inputMember.value)
     if (!currentAudio.paused) currentAudio.pause()
+}
+
+// Add buttons for each member to the member grid unless already populated
+function populateMemberGrid() {
+    if (isGridPopulated) return
+
+    Object.values(member).forEach(m => {
+        let templateButton = document.createElement('button')
+
+        templateButton.onclick = () => { setMember(m) }
+        templateButton.innerHTML = `<img src="assets/img/${m}/full.png">`
+        document.getElementById('member-grid').appendChild(templateButton)
+    })
+
+    isGridPopulated = true
 }

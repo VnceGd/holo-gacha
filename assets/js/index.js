@@ -1,4 +1,5 @@
 const menu = {
+    MEMBER_SELECT: 'member-select',
     SETTINGS: 'settings'
 }
 
@@ -43,6 +44,12 @@ function toggleMenu(_menu) {
     else {
         currentMenu = _menu
         document.getElementById(currentMenu).classList.add('active')
+    }
+
+    switch (_menu) {
+        case menu.MEMBER_SELECT:
+            populateMemberGrid()
+            break
     }
 }
 
