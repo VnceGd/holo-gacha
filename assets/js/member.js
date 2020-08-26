@@ -17,7 +17,7 @@ function setMember(_member) {
     if (!currentAudio.paused) currentAudio.pause()
 
     currentMember = _member
-    document.getElementById('full-illust').src = `assets/img/${currentMember}/full.png`
+    document.getElementById('full-illust').src = `assets/img/${_member}/full.png`
     localStorage.setItem('member', _member)
 }
 

@@ -66,7 +66,6 @@ function loadPrefs() {
 
     if (cachedMember != null) {
         setMember(cachedMember)
-        document.getElementById('member').value = cachedMember
     }
 
     if (cachedVolume != null) {

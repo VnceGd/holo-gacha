@@ -1,6 +1,7 @@
 const theme = {
     LIGHT: 'light',
-    DARK: 'dark'
+    DARK: 'dark',
+    GREEN: 'green'
 }
 
 let currentTheme = theme.LIGHT
