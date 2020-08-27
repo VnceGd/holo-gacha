@@ -1,5 +1,6 @@
 /* Light (Default) */
 :root {
+    --bg-icon: none;
     --bg-color: #fff;
     --fg-color: #000;
     --menu-color: rgba(230, 230, 230, .9);
@@ -9,6 +10,7 @@
 
 /* Dark */
 :root[theme='dark'] {
+    --bg-icon: none;
     --bg-color: #333;
     --fg-color: #fff;
     --menu-color: rgba(70, 70, 70, .9);
@@ -18,9 +20,20 @@
 
 /* Greenscreen */
 :root[theme='green'] {
+    --bg-icon: none;
     --bg-color: #00b140;
     --fg-color: #000;
     --menu-color: rgba(204, 204, 204, .9);
     --btn-color: #fff;
+    --link-color: #00f;
+}
+
+/* Peko */
+:root[theme='peko'] {
+    --bg-icon: url(../img/pekora/ninjin.svg);
+    --bg-color: #fff;
+    --fg-color: #000;
+    --menu-color: rgba(230, 230, 230, .9);
+    --btn-color: #8df;
     --link-color: #00f;
 }

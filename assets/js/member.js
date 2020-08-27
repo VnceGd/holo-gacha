@@ -10,7 +10,7 @@ const area = {
 }
 
 let currentMember = member.POLKA
-let isGridPopulated = false
+let isMemberPopulated = false
 
 // Update and cache member
 function setMember(_member) {
@@ -23,15 +23,15 @@ function setMember(_member) {
 
 // Add buttons for each member to the member grid unless already populated
 function populateMemberGrid() {
-    if (isGridPopulated) return
+    if (isMemberPopulated) return
 
     Object.values(member).forEach(m => {
         let templateButton = document.createElement('button')
 
         templateButton.onclick = () => { setMember(m) }
-        templateButton.innerHTML = `<img src="assets/img/${m}/full.png">`
+        templateButton.innerHTML = `<div class="background"></div><img src="assets/img/${m}/full.png">`
         document.getElementById('member-grid').appendChild(templateButton)
     })
 
-    isGridPopulated = true
+    isMemberPopulated = true
 }

@@ -17,6 +17,17 @@ a,
 a:visited {
     color: var(--link-color);
 }
+.background {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: var(--bg-icon) repeat center/25%;
+    opacity: .3;
+    z-index: -1;
+}
 
 /* BUTTON */
 button {
@@ -47,9 +58,16 @@ button {
     background: none;
     border: none;
 }
+.grid button {
+    position: relative;
+    min-height: 8rem;
+    border: none;
+}
 #member-grid button {
     background: var(--bg-color);
-    border: none;
+}
+.grid button .background {
+    z-index: auto;
 }
 
 /* CHARACTER */
@@ -118,16 +136,17 @@ button {
     text-decoration: underline;
 }
 
-/* Member Select Menu */
-#member-select .panel {
+/* Select Menu */
+.panel {
     width: 100%;
 }
-#member-grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     grid-gap: 1rem;
 }
-#member-grid img {
+.grid img {
+    position: relative;
     max-width: 8rem;
     max-height: 8rem;
 }

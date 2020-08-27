@@ -38,6 +38,7 @@
         <main>
             <div id="main">
                 <div class="member-card">
+                    <div class="background"></div>
                     <img id="full-illust" src="assets/img/polka/full.png" alt="Full Illustration">
                     <button class="tap-head" onclick="interact(area.HEAD)" aria-label="Tap head">
                     <button class="tap-chest" onclick="interact(area.CHEST)" aria-label="Tap chest">
@@ -52,7 +53,15 @@
                             </g>
                         </svg>
                     </button>
-                    <button class="float-bottom-right" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Open settings">
+                    <button class="float-bottom-right" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Open theme select">
+                        <svg viewBox="0 0 1 1">
+                            <g fill="var(--fg-color)">
+                                <path d="M0 1 .1 .6 .2 .5 .5 .5 .5 .8 .4 .9 Z"/>
+                                <path d="M.95 0 1 .05 .6 .6 .6 .4 .4 .4 Z"/>
+                            </g>
+                        </svg>
+                    </button>
+                    <button class="float-bottom-right" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Open member select">
                         <svg viewBox="0 0 1 1">
                             <g fill="var(--fg-color)">
                                 <circle cx=".5" cy=".4" r=".3"></circle>
@@ -64,20 +73,17 @@
             </div>
             <div id="settings" class="menu">
                 <div class="panel">
-                    <h2>Theme</h2>
-                    <select id="theme" onchange="changeTheme()">
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
-                        <option value="green">Green</option>
-                    </select>
                     <h2>Audio</h2>
                     <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume()" oninput="changeVolume()">
                     <input id="audio-value" type="number" value="100" min="0" max="100" onchange="changeVolumeValue()">
-                    <br><br><br>
-                    <a id="source-link" href="https://github.com/VnceGd/holo-gacha">Source code</a>
+                    <h2>About</h2>
+                    <p>This is a fan-made project NOT affiliated with Hololive or Cover Corp.</p>
+                    <p>Visit the source code to view details on the resources used.</p>
+                    <a id="source-link" href="https://github.com/VnceGd/holo-gacha">Source code (GitHub)</a>
+                    <p>Copyright (c) 2020 Vincent Nguyen under MIT License</p>
                     <button class="exit-menu" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
                         <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
+                            <g id="exit-svg" fill="var(--fg-color)">
                                 <path d="M.1 0 1 .9 .9 1 0 .1"/>
                                 <path d="M.9 0 0 .9 .1 1 1 .1"/>
                             </g>
@@ -85,18 +91,28 @@
                     </button>
                 </div>
             </div>
+            <div id="theme-select" class="menu">
+                <div class="panel">
+                    <h2>Theme Select</h2>
+                    <div id="theme-grid" class="grid">
+                        <!-- Auto populated -->
+                    </div>
+                    <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close settings">
+                        <svg viewBox="0 0 1 1">
+                            <use xlink:href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
             <div id="member-select" class="menu">
                 <div class="panel">
                     <h2>Member Select</h2>
-                    <div id="member-grid">
+                    <div id="member-grid" class="grid">
                         <!-- Auto populated -->
                     </div>
                     <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close settings">
                         <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <path d="M.1 0 1 .9 .9 1 0 .1"/>
-                                <path d="M.9 0 0 .9 .1 1 1 .1"/>
-                            </g>
+                            <use xlink:href="#exit-svg"/>
                         </svg>
                     </button>
                 </div>

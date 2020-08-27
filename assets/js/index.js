@@ -1,6 +1,7 @@
 const menu = {
     MEMBER_SELECT: 'member-select',
-    SETTINGS: 'settings'
+    SETTINGS: 'settings',
+    THEME_SELECT: 'theme-select'
 }
 
 let currentMenu = null
@@ -50,6 +51,9 @@ function toggleMenu(_menu) {
         case menu.MEMBER_SELECT:
             populateMemberGrid()
             break
+        case menu.THEME_SELECT:
+            populateThemeGrid()
+            break
     }
 }
 
@@ -61,7 +65,6 @@ function loadPrefs() {
 
     if (cachedTheme != null) {
         setTheme(cachedTheme)
-        document.getElementById('theme').value = cachedTheme
     }
 
     if (cachedMember != null) {

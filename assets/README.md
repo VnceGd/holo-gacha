@@ -78,3 +78,9 @@ https://www.myinstants.com/instant/pekoonetoucchi-7300/
 [`audio/pekora/tap-head.mp3`](audio/pekora/tap-head.mp3)
 
 https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/
+
+## Icons
+
+[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg)
+
+https://www.freeicons.io/free-food-icons/carrot-icon-11614
