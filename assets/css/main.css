@@ -47,7 +47,13 @@ button {
     padding: .75rem;
     border: none;
     border-radius: 50%;
+    box-shadow: 0 0 .5rem 0 #0005;
     background: var(--btn-color);
+    transition: .2s;
+}
+.float-bottom-right:focus,
+.float-bottom-right:hover {
+    transform: scale(1.125);
 }
 .exit-menu {
     position: absolute;
@@ -57,11 +63,24 @@ button {
     height: 2rem;
     background: none;
     border: none;
+    transition: .2s;
+}
+.exit-menu:focus,
+.exit-menu:hover {
+    background: #0002;
 }
 .grid button {
     position: relative;
     min-height: 8rem;
     border: none;
+    transition: .2s;
+}
+.grid button:focus,
+.grid button:hover {
+    box-shadow: 0 0 .5rem 0 #0005;
+}
+.grid button:active {
+    box-shadow: 0 0 .5rem 0 #0005 inset;
 }
 #member-grid button {
     background: var(--bg-color);
