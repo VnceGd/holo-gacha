@@ -15,7 +15,7 @@ function playAudioClip(_member, _clip) {
 }
 
 // Play a short hop animation for the character
-function playAnimation() {
+function animateCharacter() {
     let character = document.getElementById('full-illust')
 
     character.animate([
@@ -25,26 +25,56 @@ function playAnimation() {
         { transform: 'translateY(0)' }
     ], {
         // timing options
-        duration: 100,
-        iterations: 1
+        duration: 100
     })
 }
 
 // Play audio associated with _area for currentMember
 function interact(_area) {
     playAudioClip(currentMember, _area)
-    playAnimation()
+    animateCharacter()
+}
+
+// Play slide-in/slide-out animation for menu panel
+function animatePanel(_menu, _reverse) {
+    let animDuration = 200
+    let menuChildren = document.getElementById(_menu).childNodes
+
+    return new Promise(resolve => {
+        for (let i = 0; i < menuChildren.length; i++) {
+            let child = menuChildren[i]
+
+            if (child.className == 'panel') {
+                child.animate([
+                    // keyframes
+                    { transform: 'translateY(100vh)', opacity: 0 },
+                    { transform: 'translateY(0)', opacity: 1 }
+                ], {
+                    // timing options
+                    duration: animDuration,
+                    easing: 'ease-out',
+                    direction: _reverse
+                })
+                setTimeout(_ => {
+                    resolve('panel animated')
+                }, animDuration - 20)
+                break
+            }
+        }
+    })
 }
 
 // Toggle active class on specified _menu
-function toggleMenu(_menu) {
+async function toggleMenu(_menu) {
     if (currentMenu == _menu) {
-        document.getElementById(currentMenu).classList.toggle('active')
         currentMenu = null
+        await animatePanel(_menu, 'reverse')
+        document.getElementById(_menu).classList.remove('active')
     }
     else {
         currentMenu = _menu
-        document.getElementById(currentMenu).classList.add('active')
+        document.getElementById(_menu).classList.add('active')
+        animatePanel(_menu)
     }
 
     switch (_menu) {

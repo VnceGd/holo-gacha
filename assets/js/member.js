@@ -29,7 +29,7 @@ function populateMemberGrid() {
         let templateButton = document.createElement('button')
 
         templateButton.onclick = () => { setMember(m) }
-        templateButton.innerHTML = `<div class="background"></div><img src="assets/img/${m}/full.png">`
+        templateButton.innerHTML = `<div class="background"></div><img loading="lazy" src="assets/img/${m}/full.png">`
         document.getElementById('member-grid').appendChild(templateButton)
     })
 

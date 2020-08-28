@@ -73,48 +73,56 @@
             </div>
             <div id="settings" class="menu">
                 <div class="panel">
-                    <h2>Audio</h2>
-                    <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume()" oninput="changeVolume()">
-                    <input id="audio-value" type="number" value="100" min="0" max="100" onchange="changeVolumeValue()">
-                    <h2>About</h2>
-                    <p>This is a fan-made project NOT affiliated with Hololive or Cover Corp.</p>
-                    <p>Visit the source code to view details on the resources used.</p>
-                    <a id="source-link" href="https://github.com/VnceGd/holo-gacha">Source code (GitHub)</a>
-                    <p>Copyright (c) 2020 Vincent Nguyen under MIT License</p>
-                    <button class="exit-menu" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
-                        <svg viewBox="0 0 1 1">
-                            <g id="exit-svg" fill="var(--fg-color)">
-                                <path d="M.1 0 1 .9 .9 1 0 .1"/>
-                                <path d="M.9 0 0 .9 .1 1 1 .1"/>
-                            </g>
-                        </svg>
-                    </button>
+                    <div class="panel-header">
+                        <button class="exit-menu" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
+                            <svg viewBox="0 0 1 1">
+                                <g id="exit-svg" fill="var(--fg-color)">
+                                    <path d="M.1 0 1 .9 .9 1 0 .1"/>
+                                    <path d="M.9 0 0 .9 .1 1 1 .1"/>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="panel-content">
+                        <h2>Audio</h2>
+                        <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume()" oninput="changeVolume()">
+                        <input id="audio-value" type="number" value="100" min="0" max="100" onchange="changeVolumeValue()">
+                        <h2>About</h2>
+                        <p>This is a fan-made project NOT affiliated with Hololive or Cover Corp.</p>
+                        <p>Visit the source code to view details on the resources used.</p>
+                        <a id="source-link" href="https://github.com/VnceGd/holo-gacha">Source code (GitHub)</a>
+                        <p>Copyright (c) 2020 Vincent Nguyen under MIT License</p>
+                    </div>
                 </div>
             </div>
             <div id="theme-select" class="menu">
                 <div class="panel">
-                    <h2>Theme Select</h2>
-                    <div id="theme-grid" class="grid">
+                    <div class="panel-header">
+                        <h2>Theme Select</h2>
+                        <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close settings">
+                            <svg viewBox="0 0 1 1">
+                                <use xlink:href="#exit-svg"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="theme-grid" class="panel-content grid">
                         <!-- Auto populated -->
                     </div>
-                    <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close settings">
-                        <svg viewBox="0 0 1 1">
-                            <use xlink:href="#exit-svg"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
             <div id="member-select" class="menu">
                 <div class="panel">
-                    <h2>Member Select</h2>
-                    <div id="member-grid" class="grid">
+                    <div class="panel-header">
+                        <h2>Member Select</h2>
+                        <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close settings">
+                            <svg viewBox="0 0 1 1">
+                                <use xlink:href="#exit-svg"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="member-grid" class="panel-content grid">
                         <!-- Auto populated -->
                     </div>
-                    <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close settings">
-                        <svg viewBox="0 0 1 1">
-                            <use xlink:href="#exit-svg"/>
-                        </svg>
-                    </button>
                 </div>
             </div>
         </main>
