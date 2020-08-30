@@ -1,5 +1,5 @@
 {
-  "short_name": "holo gacha",
+  "short_name": "Holo Gacha",
   "name": "Hololive Gacha",
   "description": "Fan-made gacha game featuring Hololive members",
   "icons": [
@@ -16,7 +16,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "https://vncegd.github.io/holo-gacha/?source=pwa",
+  "start_url": "/?source=pwa",
   "background_color": "#8df",
   "display": "standalone",
   "scope": "/",
