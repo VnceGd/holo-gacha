@@ -19,6 +19,6 @@
   "start_url": "/holo-gacha/?source=pwa",
   "background_color": "#8df",
   "display": "standalone",
-  "scope": "/holo-gacha",
+  "scope": "/",
   "theme_color": "#8df"
 }
