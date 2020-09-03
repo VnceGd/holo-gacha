@@ -16,7 +16,7 @@
       "purpose": "any maskable"
     }
   ],
-  "start_url": "/holo-gacha/?source=pwa",
+  "start_url": "/?source=pwa",
   "background_color": "#8df",
   "display": "standalone",
   "scope": "/",
