@@ -136,7 +136,7 @@ button {
 }
 .panel {
     position: fixed;
-    padding: 1rem 2rem;
+    padding: 2rem;
     width: 100vw;
     max-height: 100vh;
     bottom: 0;
@@ -144,6 +144,9 @@ button {
     box-sizing: border-box;
     backdrop-filter: blur(.25rem);
     -webkit-backdrop-filter: blur(.25rem);
+}
+.panel h2:first-of-type {
+    margin-top: 0;
 }
 .panel-content {
     max-height: calc(100vh - 6rem);
