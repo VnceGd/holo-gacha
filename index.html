@@ -24,7 +24,7 @@
         if ('serviceWorker' in navigator) {
             // Use the window load event to keep the page load performant
             window.addEventListener('load', _ => {
-                navigator.serviceWorker.register('service-worker.js', { scope: '/' })
+                navigator.serviceWorker.register('service-worker.js', { scope: '/holo-gacha' })
                 .then( registration => {
                     console.log('ServiceWorker registration successful with scope: ', registration.scope)
                 }, err => {
