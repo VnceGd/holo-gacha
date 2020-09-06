@@ -129,7 +129,7 @@ function generateLayout() {
     }
 }
 
-// Generate grid then start spawning YAGOOs
+// Reset hitcount, toggle pregame panel, start spawning YAGOOs
 function startGame() {
     hitCount = 0
     togglePanel(panel.PREGAME)
@@ -141,13 +141,13 @@ function startGame() {
     setTimeout(endGame, (spawnInterval * maxSpawns) + stayDuration)
 }
 
-// Show game end panel
+// Set hitcount text, show game end panel
 function endGame() {
     document.getElementById('hit-count').innerHTML = hitCount
     togglePanel(panel.POSTGAME)
 }
 
-// Close game end panel and start new game
+// Close postgame panel, show pregame panel
 function restartGame() {
     togglePanel(panel.POSTGAME)
     togglePanel(panel.PREGAME)
@@ -165,7 +165,7 @@ function togglePanel(which) {
     }
 }
 
-// Set display of pregame panel on load
+// Set display of pregame panel and generate layout on load
 window.onload = _ => {
     togglePanel(panel.PREGAME)
     generateLayout()
