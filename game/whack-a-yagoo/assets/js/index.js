@@ -88,6 +88,7 @@ async function despawnYagoo(position, whack) {
         if (yagooImage === undefined) return
 
         if (whack) {
+            tile.onclick = null
             yagooImage.style.height = '9vmin'
             hitCount++
         }
@@ -95,6 +96,7 @@ async function despawnYagoo(position, whack) {
         await animateYagoo(yagooImage, 'reverse')
 
         tile.removeChild(yagooImage)
+        tile.onclick = _ => { whackYagoo([positionX, positionY]) }
         positions.splice(positionIndex, 1)
         timeouts.splice(positionIndex, 1)
     }
