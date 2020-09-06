@@ -88,6 +88,7 @@ async function despawnYagoo(position, whack) {
         if (yagooImage === undefined) return
 
         if (whack) {
+            clearTimeout(timeouts[positionIndex])
             tile.onclick = null
             yagooImage.style.height = '9vmin'
             hitCount++
