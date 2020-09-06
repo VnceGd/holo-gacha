@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Whack-a-YAGOO">
+        <meta name="theme-color" content="#8df"/>
+
+        <title>Whack-a-YAGOO</title>
+        <link rel="icon" href="assets/img/yagoo.png">
+
+        <link rel="stylesheet" href="assets/css/index.css">
+
+        <script src="assets/js/index.js" defer></script>
+    </head>
+    <body>
+        <main>
+            <a href="../../index.html">
+                <button class="exit-menu" aria-label="Exit game">
+                    <svg viewBox="0 0 1 1">
+                        <g id="exit-svg" fill="var(--fg-color)">
+                            <path d="M.1 0 1 .9 .9 1 0 .1"/>
+                            <path d="M.9 0 0 .9 .1 1 1 .1"/>
+                        </g>
+                    </svg>
+                </button>
+            </a>
+            <div id="game">
+                <!-- Auto generated -->
+            </div>
+            <div class="modal" id="game-over-panel">
+                <div class="modal-content">
+                    <h1>GAME END</h1>
+                    <p># YAGOO hit: <span id="hit-count">0</span></p>
+                    <button onclick="restartGame()">Play Again</button>
+                    <button onclick="closeEndGamePanel()">Close</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
