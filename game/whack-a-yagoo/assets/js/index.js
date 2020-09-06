@@ -1,3 +1,8 @@
+const panel = {
+    PREGAME: 'pregame',
+    POSTGAME: 'postgame'
+}
+
 let maxRows = 3
 let maxCols = 3
 let maxSpawns = 50
@@ -125,7 +130,7 @@ function generateLayout() {
 // Generate grid then start spawning YAGOOs
 function startGame() {
     hitCount = 0
-
+    togglePanel(panel.PREGAME)
     generateLayout()
 
     for (let s = 0; s < maxSpawns; s++) {
@@ -138,19 +143,23 @@ function startGame() {
 // Show game end panel
 function endGame() {
     document.getElementById('hit-count').innerHTML = hitCount
-    document.getElementById('game-over-panel').style.display = 'block'
-}
-
-// Close game end panel
-function closeEndGamePanel() {
-    document.getElementById('game-over-panel').style.display = 'none'
+    togglePanel(panel.POSTGAME)
 }
 
 // Close game end panel and start new game
 function restartGame() {
-    closeEndGamePanel()
+    togglePanel(panel.POSTGAME)
     startGame()
 }
 
-// Start game on load
-window.onload = _ => { startGame() }
+// Toggle panel specified by 'which'
+function togglePanel(which) {
+    let panel = document.getElementById(`${which}-panel`)
+    
+    if (panel.style.display === 'none') {
+        panel.style.display = 'block'
+    }
+    else {
+        panel.style.display = 'none'
+    }
+}
