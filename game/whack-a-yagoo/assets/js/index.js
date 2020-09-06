@@ -95,7 +95,7 @@ async function despawnYagoo(position, whack) {
 
         await animateYagoo(yagooImage, 'reverse')
 
-        tile.removeChild(yagooImage)
+        tile.removeChild(tile.childNodes[0])
         tile.onclick = _ => { whackYagoo([positionX, positionY]) }
         positions.splice(positionIndex, 1)
         timeouts.splice(positionIndex, 1)
@@ -133,13 +133,12 @@ function generateLayout() {
 function startGame() {
     hitCount = 0
     togglePanel(panel.PREGAME)
-    generateLayout()
 
     for (let s = 0; s < maxSpawns; s++) {
         setTimeout(spawnYagoo, spawnInterval * s)
     }
 
-    setTimeout(endGame, spawnInterval * maxSpawns)
+    setTimeout(endGame, (spawnInterval * maxSpawns) + stayDuration)
 }
 
 // Show game end panel
@@ -151,17 +150,23 @@ function endGame() {
 // Close game end panel and start new game
 function restartGame() {
     togglePanel(panel.POSTGAME)
-    startGame()
+    togglePanel(panel.PREGAME)
 }
 
 // Toggle panel specified by 'which'
 function togglePanel(which) {
     let panel = document.getElementById(`${which}-panel`)
     
-    if (panel.style.display === 'none') {
-        panel.style.display = 'block'
-    }
-    else {
+    if (panel.style.display === 'block') {
         panel.style.display = 'none'
     }
+    else {
+        panel.style.display = 'block'
+    }
+}
+
+// Set display of pregame panel on load
+window.onload = _ => {
+    togglePanel(panel.PREGAME)
+    generateLayout()
 }
