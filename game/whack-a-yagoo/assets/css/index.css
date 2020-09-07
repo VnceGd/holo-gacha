@@ -40,7 +40,10 @@ body {
     background: #000;
     border-radius: 50%;
     clip-path: circle(9vmin at center);
-    cursor: pointer;
+    cursor: url(../img/cursor-hammer.cur) 32 32, pointer;
+}
+.tile:active {
+    cursor: url(../img/cursor-hammer-hit.cur) 32 32, pointer;
 }
 .tile img {
     width: 100%;
