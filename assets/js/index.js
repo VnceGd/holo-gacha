@@ -73,6 +73,8 @@ async function toggleMenu(_menu) {
         document.getElementById(_menu).classList.remove('active')
     }
     else {
+        if (currentMenu != null) document.getElementById(currentMenu).classList.remove('active')
+
         currentMenu = _menu
         document.getElementById(_menu).classList.add('active')
         animatePanel(_menu)
