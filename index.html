@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="assets/css/theme.css">
 
         <script src="assets/js/theme.js" defer></script>
+        <script src="assets/js/game.js" defer></script>
         <script src="assets/js/member.js" defer></script>
         <script src="assets/js/audio.js" defer></script>
         <script src="assets/js/index.js" defer></script>
@@ -69,14 +70,12 @@
                             </g>
                         </svg>
                     </button>
-                    <button class="float-bottom-right" aria-label="Open whack-a-yagoo">
-                        <a href="game/whack-a-yagoo">
-                            <svg viewBox="0 0 1 1">
-                                <g fill="var(--fg-color)">
-                                    <path d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
-                                </g>
-                            </svg>
-                        </a>
+                    <button class="float-bottom-right" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Open game select">
+                        <svg viewBox="0 0 1 1">
+                            <g fill="var(--fg-color)">
+                                <path d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
+                            </g>
+                        </svg>
                     </button>
                 </div>
             </div>
@@ -107,7 +106,7 @@
                 <div class="panel">
                     <div class="panel-header">
                         <h2>Theme Select</h2>
-                        <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close settings">
+                        <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close themes">
                             <svg viewBox="0 0 1 1">
                                 <use xlink:href="#exit-svg"/>
                             </svg>
@@ -122,13 +121,28 @@
                 <div class="panel">
                     <div class="panel-header">
                         <h2>Member Select</h2>
-                        <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close settings">
+                        <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close members">
                             <svg viewBox="0 0 1 1">
                                 <use xlink:href="#exit-svg"/>
                             </svg>
                         </button>
                     </div>
                     <div id="member-grid" class="panel-content grid">
+                        <!-- Auto populated -->
+                    </div>
+                </div>
+            </div>
+            <div id="game-select" class="menu">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2>Games</h2>
+                        <button class="exit-menu" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Close games">
+                            <svg viewBox="0 0 1 1">
+                                <use xlink:href="#exit-svg"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <div id="game-grid" class="panel-content grid">
                         <!-- Auto populated -->
                     </div>
                 </div>

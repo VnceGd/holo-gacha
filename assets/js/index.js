@@ -1,4 +1,5 @@
 const menu = {
+    GAME_SELECT: 'game-select',
     MEMBER_SELECT: 'member-select',
     SETTINGS: 'settings',
     THEME_SELECT: 'theme-select'
@@ -78,6 +79,9 @@ async function toggleMenu(_menu) {
     }
 
     switch (_menu) {
+        case menu.GAME_SELECT:
+            populateGameGrid()
+            break
         case menu.MEMBER_SELECT:
             populateMemberGrid()
             break
