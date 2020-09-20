@@ -2,6 +2,24 @@
 
 Content from the [hololive wiki](https://hololive.wiki) is available under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
+## Gawr Gura
+
+### Illustration:
+
+[`img/gura/full.png`](img/gura/full.png)
+
+https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
+
+### Audio:
+
+[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3)
+
+[`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3)
+
+*Edited in Audacity*
+
+https://www.youtube.com/watch?v=dBK0gKW61NU
+
 ## Minato Aqua
 
 ### Illustration:
