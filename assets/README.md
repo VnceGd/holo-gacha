@@ -2,15 +2,15 @@
 
 ## Table of Contents
 
-[🔱 Gawr Gura](#🔱-gawr-gura)
+[🔱 Gawr Gura](#-gawr-gura)
 
-[⚓ Minato Aqua](#⚓-minato-aqua)
+[⚓ Minato Aqua](#-minato-aqua)
 
-[🎪 Omaru Polka](#🎪-omaru-polka)
+[🎪 Omaru Polka](#-omaru-polka)
 
-[🐏 Tsunomaki Watame](#🐏-tsunomaki-watame)
+[🐏 Tsunomaki Watame](#-tsunomaki-watame)
 
-[👯 Usada Pekora](#👯-usada-pekora)
+[👯 Usada Pekora](#-usada-pekora)
 
 ## Third-Party Content Usage
 
