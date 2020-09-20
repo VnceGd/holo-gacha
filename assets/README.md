@@ -1,12 +1,32 @@
 # External Resources
 
-Content from the [hololive wiki](https://hololive.wiki) is available under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+## Table of Contents
 
-## Gawr Gura
+[🔱 Gawr Gura](#🔱-gawr-gura)
+
+[⚓ Minato Aqua](#⚓-minato-aqua)
+
+[🎪 Omaru Polka](#🎪-omaru-polka)
+
+[🐏 Tsunomaki Watame](#🐏-tsunomaki-watame)
+
+[👯 Usada Pekora](#👯-usada-pekora)
+
+## Third-Party Content Usage
+
+Content from the [Hololive Fan Wiki](https://hololive.wiki) is available under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
+
+Content from [Myinstants](https://www.myinstants.com) is subject to their [Terms of Use](https://www.myinstants.com/terms_of_use.html).
+
+Content from [YouTube](https://youtu.be) is subject to their [Terms of Service](https://www.youtube.com/static?template=terms).
+
+## 🔱 Gawr Gura
 
 ### Illustration:
 
 [`img/gura/full.png`](img/gura/full.png)
+
+*Edited in GIMP-2.10*
 
 https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
 
@@ -20,7 +40,7 @@ https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
 
 https://www.youtube.com/watch?v=dBK0gKW61NU
 
-## Minato Aqua
+## ⚓ Minato Aqua
 
 ### Illustration:
 
@@ -38,7 +58,7 @@ https://www.myinstants.com/instant/mo-baka-1514/
 
 https://www.myinstants.com/instant/neeeeeeeee-37805/
 
-## Omaru Polka
+## 🎪 Omaru Polka
 
 ### Illustration:
 
@@ -61,7 +81,7 @@ https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 
 https://www.youtube.com/watch?v=01HNMoigEuY
 
-## Tsunomaki Watame
+## 🐏 Tsunomaki Watame
 
 ### Illustration:
 
@@ -79,7 +99,7 @@ https://www.myinstants.com/instant/watame-wa-warukunai-yo-nee-84500/
 
 https://www.myinstants.com/instant/watame-factory-74311/
 
-## Usada Pekora
+## 👯 Usada Pekora
 
 ### Illustration:
 
