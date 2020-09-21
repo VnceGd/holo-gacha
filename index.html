@@ -122,6 +122,12 @@
                 <div class="panel">
                     <div class="panel-header">
                         <h2>Member Select</h2>
+                        <p>Sort By
+                            <select name="member-sort" id="member-sort-select" onchange="sortMemberGrid()">
+                                <option value="gen">Gen</option>
+                                <option value="name">Name</option>
+                            </select>
+                        </p>
                         <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close members">
                             <svg viewBox="0 0 1 1">
                                 <use xlink:href="#exit-svg"/>
