@@ -7,6 +7,8 @@ A small project inspired by https://www.youtube.com/watch?v=01HNMoigEuY.
 This is a fan-made project and is NOT affiliated with Hololive or Cover Corp.
 Assets used may be subject to copyright and the repository may be privated or deleted at the request of relevant copyright holders.
 
+Use of hololive characters is governed by hololive's [Fan Work Guidelines](https://en.hololive.tv/terms).
+
 ## Roadmap
 
 This project is currently in an initial phase of Proof of Concept and Experimentation.
@@ -31,4 +33,4 @@ The [`assets`](assets) folder contains a list of all external resources used.
 
 ## Demo
 
-[![Demo Video](http://img.youtube.com/vi/PaMjo3IXMKc/0.jpg)](http://www.youtube.com/watch?v=PaMjo3IXMKc "holo gacha")
+[![Demo Video](https://img.youtube.com/vi/PaMjo3IXMKc/0.jpg)](https://www.youtube.com/playlist?list=PLsW-x-sSmhp_Vf-fwRAUEg3V4GB3Zu2PT "holo gacha")
