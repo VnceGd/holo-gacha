@@ -136,6 +136,7 @@ button .tooltip.right {
 button .tooltip.bottom {
     bottom: 0rem;
     transform-origin: bottom;
+    pointer-events: none;
 }
 button:focus .tooltip,
 button:hover .tooltip {
