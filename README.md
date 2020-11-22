@@ -1,4 +1,4 @@
-# Hololive Gacha
+# Hololive Gacha (HoloGacha)
 
 A small project inspired by https://www.youtube.com/watch?v=01HNMoigEuY.
 
@@ -7,16 +7,18 @@ A small project inspired by https://www.youtube.com/watch?v=01HNMoigEuY.
 This is a fan-made project and is NOT affiliated with Hololive or Cover Corp.
 Assets used may be subject to copyright and the repository may be privated or deleted at the request of relevant copyright holders.
 
-Use of hololive characters is governed by hololive's [Fan Work Guidelines](https://en.hololive.tv/terms).
+View the [License](#License) section for details regarding third-party content usage.
 
 ## Roadmap
 
 This project is currently in an initial phase of Proof of Concept and Experimentation.
 
+It is planned to be a free, offline, responsive experience, and aims to support as many devices and browsers as possible.
+
 The following features may be considered if development continues:
 * More interactable characters
 * More interactions for existing characters
-* System for unlocking characters (simple gameplay loop to earn currency and roll gacha; no real money involved)
+* More ways to earn currency (HoloCoins)
 
 ## Contributing
 
@@ -27,9 +29,11 @@ Some examples include:
 * Providing new or higher quality assets
 * Correcting an error in the current content
 
-## Credits
+## License
 
-The [`assets`](assets) folder contains a list of all external resources used.
+The website code is licensed under the [MIT License](LICENSE). Note that this does **not** cover usage of third-party content such as image and audio files.
+
+See the [assets](assets) folder to view source information for third-party content and relevant terms and conditions.
 
 ## Demo
 

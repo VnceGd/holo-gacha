@@ -1,6 +1,8 @@
-# External Resources
+# Assets
 
-### Third-Party Content Usage
+All assets listed are sourced from third-parties and are subject to their respective terms and conditions. Note that any assets which have been edited are indicated along with the software used to edit them.
+
+## Third-Party Content Usage
 
 Use of hololive characters is governed by hololive's [Fan Work Guidelines](https://en.hololive.tv/terms).
 
