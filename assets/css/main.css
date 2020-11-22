@@ -45,6 +45,11 @@ button {
     cursor: pointer;
     font-weight: 700;
 }
+button a {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 .button-group {
     display: flex;
     flex-direction: column-reverse;
