@@ -14,49 +14,50 @@ Content from [YouTube](https://youtu.be) is subject to their [Terms of Service](
 
 ## Table of Contents
 
-[❣️ Akai Haato](#-akai-haato)
+[❣️ Akai Haato](#akai-haato)
 
-[🍎 Aki Rosenthal](#-aki-rosenthal)
+[🍎 Aki Rosenthal](#aki-rosenthal)
 
-[🔱 Gawr Gura](#-gawr-gura)
+[🔱 Gawr Gura](#gawr-gura)
 
-[☄️ Hoshimachi Suisei](#-hoshimachi-suisei)
+[☄️ Hoshimachi Suisei](#hoshimachi-suisei)
 
-[⚓ Minato Aqua](#-minato-aqua)
+[⚓ Minato Aqua](#minato-aqua)
 
-[🌙 Murasaki Shion](#-murasaki-shion)
+[🌙 Murasaki Shion](#murasaki-shion)
 
-[😈 Nakiri Ayame](#-nakiri-ayame)
+[😈 Nakiri Ayame](#nakiri-ayame)
 
-[🏮 Natsuiro Matsuri](#-natsuiro-matsuri)
+[🏮 Natsuiro Matsuri](#natsuiro-matsuri)
 
-[🎪 Omaru Polka](#-omaru-polka)
+[🎪 Omaru Polka](#omaru-polka)
 
-[🌲 Ookami Mio](#-ookami-mio)
+[🌲 Ookami Mio](#ookami-mio)
 
-[🚑 Oozora Subaru](#-oozora-subaru)
+[🚑 Oozora Subaru](#oozora-subaru)
 
-[🤖 Roboco](#-roboco)
+[🤖 Roboco](#roboco)
 
-[🌸 Sakura Miko](#-sakura-miko)
+[🌸 Sakura Miko](#sakura-miko)
 
-[🌽 Shirakami Fubuki](#-shirakami-fubuki)
+[🌽 Shirakami Fubuki](#shirakami-fubuki)
 
-[🐻 Tokino Sora](#-tokino-sora)
+[🐻 Tokino Sora](#tokino-sora)
 
-[🐏 Tsunomaki Watame](#-tsunomaki-watame)
+[🐏 Tsunomaki Watame](#tsunomaki-watame)
 
-[👯 Usada Pekora](#-usada-pekora)
+[👯 Usada Pekora](#usada-pekora)
 
-[🌟 Yozora Mel](#-yozora-mel)
+[🌟 Yozora Mel](#yozora-mel)
 
-[💋 Yuzuki Choco](#-yuzuki-choco)
+[💋 Yuzuki Choco](#yuzuki-choco)
 
 [Other](#other)
 
 ---
 
-## ❣️ Akai Haato
+❣️
+## Akai Haato
 
 ### Illustration:
 
@@ -64,7 +65,8 @@ Content from [YouTube](https://youtu.be) is subject to their [Terms of Service](
 
 https://en.hololive.tv/portfolio/items/433551
 
-## 🍎 Aki Rosenthal
+🍎
+## Aki Rosenthal
 
 ### Illustration:
 
@@ -72,7 +74,8 @@ https://en.hololive.tv/portfolio/items/433551
 
 https://en.hololive.tv/portfolio/items/433574
 
-## 🔱 Gawr Gura
+🔱
+## Gawr Gura
 
 ### Illustration:
 
@@ -82,7 +85,8 @@ https://en.hololive.tv/portfolio/items/433574
 
 https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
 
-## ☄️ Hoshimachi Suisei
+☄️
+## Hoshimachi Suisei
 
 ### Illustration:
 
@@ -102,7 +106,8 @@ https://en.hololive.tv/portfolio/items/433550
 
 https://www.youtube.com/watch?v=dBK0gKW61NU
 
-## ⚓ Minato Aqua
+⚓
+## Minato Aqua
 
 ### Illustration:
 
@@ -120,7 +125,8 @@ https://www.myinstants.com/instant/mo-baka-1514/
 
 https://www.myinstants.com/instant/neeeeeeeee-37805/
 
-## 🌙 Murasaki Shion
+🌙
+## Murasaki Shion
 
 ### Illustration:
 
@@ -130,7 +136,8 @@ https://www.myinstants.com/instant/neeeeeeeee-37805/
 
 https://en.hololive.tv/portfolio/items/433577
 
-## 😈 Nakiri Ayame
+😈
+## Nakiri Ayame
 
 ### Illustration:
 
@@ -140,7 +147,8 @@ https://en.hololive.tv/portfolio/items/433577
 
 https://en.hololive.tv/portfolio/items/433583
 
-## 🏮 Natsuiro Matsuri
+🏮
+## Natsuiro Matsuri
 
 ### Illustration:
 
@@ -150,7 +158,8 @@ https://en.hololive.tv/portfolio/items/433583
 
 https://en.hololive.tv/portfolio/items/433575
 
-## 🎪 Omaru Polka
+🎪
+## Omaru Polka
 
 ### Illustration:
 
@@ -173,7 +182,8 @@ https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 
 https://www.youtube.com/watch?v=01HNMoigEuY
 
-## 🌲 Ookami Mio
+🌲
+## Ookami Mio
 
 ### Illustration:
 
@@ -181,7 +191,8 @@ https://www.youtube.com/watch?v=01HNMoigEuY
 
 https://en.hololive.tv/portfolio/items/433580
 
-## 🚑 Oozora Subaru
+🚑
+## Oozora Subaru
 
 ### Illustration:
 
@@ -189,7 +200,8 @@ https://en.hololive.tv/portfolio/items/433580
 
 https://en.hololive.tv/portfolio/items/433593
 
-## 🤖 Roboco
+🤖
+## Roboco
 
 ### Illustration:
 
@@ -197,7 +209,8 @@ https://en.hololive.tv/portfolio/items/433593
 
 https://en.hololive.tv/portfolio/items/433579
 
-## 🌸 Sakura Miko
+🌸
+## Sakura Miko
 
 ### Illustration:
 
@@ -205,7 +218,8 @@ https://en.hololive.tv/portfolio/items/433579
 
 https://en.hololive.tv/portfolio/items/433578
 
-## 🌽 Shirakami Fubuki
+🌽
+## Shirakami Fubuki
 
 ### Illustration:
 
@@ -213,7 +227,8 @@ https://en.hololive.tv/portfolio/items/433578
 
 https://hololive.wiki/wiki/File:Shirakami_Fubuki_-_Full_Illustration_01.png
 
-## 🐻 Tokino Sora
+🐻
+## Tokino Sora
 
 ### Illustration:
 
@@ -221,7 +236,8 @@ https://hololive.wiki/wiki/File:Shirakami_Fubuki_-_Full_Illustration_01.png
 
 https://en.hololive.tv/portfolio/items/433553
 
-## 🐏 Tsunomaki Watame
+🐏
+## Tsunomaki Watame
 
 ### Illustration:
 
@@ -239,7 +255,8 @@ https://www.myinstants.com/instant/watame-wa-warukunai-yo-nee-84500/
 
 https://www.myinstants.com/instant/watame-factory-74311/
 
-## 👯 Usada Pekora
+👯
+## Usada Pekora
 
 ### Illustration:
 
@@ -257,7 +274,8 @@ https://www.myinstants.com/instant/pekoonetoucchi-7300/
 
 https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/
 
-## 🌟 Yozora Mel
+🌟
+## Yozora Mel
 
 ### Illustrations:
 
@@ -265,7 +283,8 @@ https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/
 
 https://hololive.wiki/wiki/File:Yozora_Mel_-_Full_Illustration_01.png
 
-## 💋 Yuzuki Choco
+💋
+## Yuzuki Choco
 
 ### Illustrations:
 
