@@ -1,11 +1,15 @@
 body {
     margin: 0;
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+}
+button {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
 }
 
 .exit-menu {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: .5rem;
+    right: .5rem;
     width: 2rem;
     height: 2rem;
     background: none;
@@ -26,7 +30,16 @@ body {
     row-gap: 18vmin;
     top: 50%;
     left: 50%;
+    overflow: hidden;
     transform: translate(-50%, -50%);
+}
+#timer-text {
+    position: fixed;
+    margin: .25rem;
+    padding: .5rem;
+    background-color: #111;
+    color: #fff;
+    border-radius: .5rem;
 }
 .row {
     display: grid;
@@ -37,18 +50,17 @@ body {
 .tile {
     width: 18vmin;
     height: 18vmin;
-    background: #000;
+    background: #8df;
     border-radius: 50%;
+    box-shadow: 0 .25rem .5rem 0 inset;
     clip-path: circle(9vmin at center);
-    cursor: url(../img/cursor-hammer.cur) 32 32, pointer;
-}
-.tile:active {
-    cursor: url(../img/cursor-hammer-hit.cur) 32 32, pointer;
+    cursor: crosshair;
 }
 .tile img {
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    filter: drop-shadow(0 .125rem .125rem);
 }
 
 .modal {
@@ -63,11 +75,33 @@ body {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
 }
+.modal button {
+    display: block;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+    min-width: 10rem;
+    background-color: #8df;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+.modal button:focus,
+.modal button:hover {
+    background-color: #baf8ff;
+}
 .modal-content {
+    display: flex;
     background-color: #fefefe;
-    margin: 35vmin auto;
-    padding: 5vmin;
-    width: 80vmin;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
+    margin: 5vh auto;
+    padding: 5vh 5vw;
+    width: 80vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: auto;
 }

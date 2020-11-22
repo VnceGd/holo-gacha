@@ -11,7 +11,7 @@ function populateGameGrid() {
     Object.values(game).forEach(g => {
         let templateButton = document.createElement('button')
 
-        templateButton.innerHTML = `<a href="game/${g}"><img loading="lazy" src="assets/img/game/${g}.png"></a>`
+        templateButton.innerHTML = `<a href="game/${g}"><img loading="lazy" src="assets/img/game/${g}.png"></a><p class="tooltip bottom"> ${g}</p>`
         document.getElementById('game-grid').appendChild(templateButton)
     })
 

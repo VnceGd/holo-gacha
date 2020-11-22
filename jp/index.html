@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="jp">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Hololive gacha project">
         <meta name="theme-color" content="#8df"/>
 
-        <title>HoloGacha</title>
+        <title>ホロガチャ</title>
+        <base href="..">
         <link rel="manifest" href="manifest.webmanifest">
         <link rel="icon" href="assets/img/favicon.ico">
         <link rel="apple-touch-icon" href="assets/img/icons-192.png">
@@ -57,7 +58,7 @@
                                 <rect y="80%" width="100%" height="20%"/>
                             </g>
                         </svg>
-                        <p class="tooltip right">Settings</p>
+                        <p class="tooltip right">設定</p>
                     </button>
                     <button class="float-bottom-right" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Open member select">
                         <svg viewBox="0 0 1 1">
@@ -66,7 +67,7 @@
                                 <path d="M.5 .4 .85 .8 .9 1 .1 1 .15 .8 Z"/>
                             </g>
                         </svg>
-                        <p class="tooltip right">Characters</p>
+                        <p class="tooltip right">キャラクタ</p>
                     </button>
                     <button class="float-bottom-right" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Open theme select">
                         <svg viewBox="0 0 1 1">
@@ -75,13 +76,15 @@
                                 <path d="M.95 0 1 .05 .6 .6 .6 .4 .4 .4 Z"/>
                             </g>
                         </svg>
-                        <p class="tooltip right">Themes</p>
+                        <p class="tooltip right">テーマ</p>
                     </button>
                     <button class="float-bottom-right" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Open game select">
                         <svg viewBox="0 0 1 1">
-                            <path fill="var(--fg-color)" d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
+                            <g fill="var(--fg-color)">
+                                <path d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
+                            </g>
                         </svg>
-                        <p class="tooltip right">Games</p>
+                        <p class="tooltip right">ゲーム</p>
                     </button>
                     <button class="float-bottom-right" onclick="openBannerMenu()">
                         <svg viewBox="0 0 1 1">
@@ -91,14 +94,13 @@
                                 <path fill-opacity=".4" d="M.2 .3 .9 .6 .2 1"/>
                             </g>
                         </svg>
-                        <p class="tooltip right">Gacha</p>
+                        <p class="tooltip right">ガチャ</p>
                     </button>
                 </div>
             </div>
             <div id="settings" class="menu">
                 <div class="panel">
                     <div class="panel-header">
-                        <h2>Settings</h2>
                         <button class="exit-menu" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
                             <svg viewBox="0 0 1 1">
                                 <g id="exit-svg" fill="var(--fg-color)">
@@ -109,15 +111,16 @@
                         </button>
                     </div>
                     <div class="panel-content">
-                        <h3>Language</h3>
+                        <h2>設定</h2>
+                        <h3>言語</h3>
                         <select name="lang" id="lang-select" onchange="selectLanguage()">
                             <option value="en">English</option>
                             <option value="jp">日本語 (WIP)</option>
                         </select>
-                        <h3>Audio</h3>
+                        <h3>オーディオ</h3>
                         <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume()" oninput="changeVolume()">
                         <input id="audio-value" type="number" value="100" min="0" max="100" onchange="changeVolumeValue()">
-                        <h3>Interface</h3>
+                        <h3>インターフェース</h3>
                         <label>
                             <input type="checkbox" onclick=toggleInterface()></input>
                             <span>Hide interface</span>
@@ -134,7 +137,7 @@
             <div id="theme-select" class="menu">
                 <div class="panel">
                     <div class="panel-header">
-                        <h2>Themes</h2>
+                        <h2>テーマ</h2>
                         <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close themes">
                             <svg viewBox="0 0 1 1">
                                 <use xlink:href="#exit-svg"/>
@@ -149,12 +152,12 @@
             <div id="member-select" class="menu">
                 <div class="panel">
                     <div class="panel-header">
-                        <h2>Characters</h2>
-                        <p>Sort By
+                        <h2>キャラクタ</h2>
+                        <p>並べ替え
                             <select name="member-sort" id="member-sort-select" onchange="sortMemberGrid()">
-                                <option value="gen">Generation</option>
-                                <option value="surname">Surname</option>
-                                <option value="givenname">Given name</option>
+                                <option value="gen">期生</option>
+                                <option value="surname">姓</option>
+                                <option value="givenname">名</option>
                             </select>
                             <label class="custom-checkbox" onchange="reverseSortOrder()">
                                 <input id="member-sort-order" type="checkbox">
@@ -176,7 +179,7 @@
             <div id="game-select" class="menu">
                 <div class="panel">
                     <div class="panel-header">
-                        <h2>Games</h2>
+                        <h2>ゲーム</h2>
                         <button class="exit-menu" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Close games">
                             <svg viewBox="0 0 1 1">
                                 <use xlink:href="#exit-svg"/>

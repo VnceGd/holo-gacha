@@ -13,6 +13,9 @@ body {
     background: var(--bg-color);
     color: var(--fg-color);
 }
+p, span, input, button {
+    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+}
 a,
 a:visited {
     color: var(--link-color);
@@ -29,9 +32,18 @@ a:visited {
     z-index: -1;
 }
 
+/* INTERFACE */
+#holocoin-text {
+    position: fixed;
+    margin: 0;
+    top: 1rem;
+    right: 1rem;
+}
+
 /* BUTTON */
 button {
     cursor: pointer;
+    font-weight: 700;
 }
 .button-group {
     display: flex;
@@ -40,6 +52,14 @@ button {
     right: 1rem;
     bottom: 1rem;
 }
+.button-group.hidden {
+    opacity: 0;
+    transition: .2s;
+}
+.button-group.hidden:focus,
+.button-group.hidden:hover {
+    opacity: 1;
+}
 .float-bottom-right {
     width: 3rem;
     height: 3rem;
@@ -47,13 +67,17 @@ button {
     padding: .75rem;
     border: none;
     border-radius: 50%;
-    box-shadow: 0 0 .5rem 0 #0005;
+    box-shadow: 0 .125rem .25rem 0 #0005;
     background: var(--btn-color);
+    color: var(--fg-color);
     transition: .2s;
 }
 .float-bottom-right:focus,
 .float-bottom-right:hover {
-    transform: scale(1.125);
+    transform: scale(1.1);
+}
+.float-bottom-right:active {
+    transform: scale(.98);
 }
 .exit-menu {
     position: absolute;
@@ -72,21 +96,55 @@ button {
 .grid button {
     position: relative;
     min-height: 8rem;
-    border: none;
+    border: 1px solid var(--bg-color);
     transition: .2s;
 }
 .grid button:focus,
 .grid button:hover {
-    box-shadow: 0 0 .5rem 0 #0005;
+    border: 1px solid var(--fg-color);
 }
 .grid button:active {
-    box-shadow: 0 0 .5rem 0 #0005 inset;
+    border: 1px solid var(--btn-color);
 }
 #member-grid button {
     background: var(--bg-color);
 }
 .grid button .background {
     z-index: auto;
+}
+
+/* Tooltip */
+button .tooltip {
+    position: absolute;
+    padding: .5rem 1rem;
+    color: var(--fg-color);
+    background-color: var(--btn-color);
+    border-radius: .25rem;
+    opacity: 0;
+    font-weight: 400;
+    transform: scale(0);
+    box-shadow: 0 .125rem .25rem 0 #0005;
+    z-index: 1;
+    transition: .2s;
+}
+button .tooltip.right {
+    top: 0rem;
+    right: 3.5rem;
+    white-space: nowrap;
+    transform-origin: right;
+}
+button .tooltip.bottom {
+    bottom: 0rem;
+    transform-origin: bottom;
+}
+button:focus .tooltip,
+button:hover .tooltip {
+    opacity: 1;
+    transform: scale(1);
+    transition: .2s;
+}
+.grid .tooltip {
+    max-width: 65%;
 }
 
 /* CHARACTER */
@@ -131,6 +189,11 @@ button {
 .menu {
     display: none;
 }
+.menu button {
+    padding: .5rem;
+    border: none;
+    border-radius: 1rem;
+}
 .active {
     display: block;
 }
@@ -152,6 +215,14 @@ button {
     max-height: calc(100vh - 6rem);
     overflow: scroll;
 }
+#member-select .panel-content {
+    max-height: calc(100vh - 9rem);
+}
+.alert {
+    background-color: #f00;
+    color: #fff;
+    font-weight: 700;
+}
 
 /* Settings Menu */
 #source-link {
@@ -168,24 +239,75 @@ button {
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
     grid-gap: 1rem;
 }
-.grid img {
-    position: relative;
-    max-width: 8rem;
+.grid button {
     max-height: 8rem;
+    overflow: hidden;
+}
+.grid img {
+    max-width: 100%;
+    max-height: 100%;
+}
+#member-grid img {
+    max-height: none;
+}
+#member-grid .locked ~ img {
+    filter: grayscale(1) brightness(.5);
 }
 
 /* INPUT */
+input, label {
+    cursor: pointer;
+}
 select,
 input[type="number"] {
     padding: .25rem .5rem;
     background: var(--btn-color);
     color: var(--fg-color);
-    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
     border: none;
     border-radius: .25rem;
+    cursor: pointer;
 }
-select {
-    overflow: auto;
+/* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
+.custom-checkbox {
+    display: inline-block;
+    position: relative;
+    padding-left: 2rem;
+}
+.custom-checkbox input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: var(--btn-color);
+    border-radius: 50%;
+}
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    left: .375rem;
+    top: .5rem;
+    width: .5rem;
+    height: .5rem;
+    border: solid var(--fg-color);
+    border-width: 0 .25rem .25rem 0;
+    -webkit-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    transform: rotate(225deg);
+    transition: transform .2s;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+    top: .25rem;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: transform .2s;
 }
 
 /* Audio Input */

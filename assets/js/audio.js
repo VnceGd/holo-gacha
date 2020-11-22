@@ -1,3 +1,6 @@
+const MAX_VOLUME = 100
+const MIN_VOLUME = 0
+
 let currentAudio = new Audio()
 
 // Update and cache volume
@@ -12,7 +15,25 @@ function changeVolume(_value = false) {
     let inputNumber = document.getElementById('audio-value')
 
     if (_value) {
-        inputRange.value = inputNumber.value
+        let inputVolume = inputNumber.value
+        let isError = false
+
+        if (inputVolume > MAX_VOLUME) {
+            inputVolume = MAX_VOLUME
+            isError = true
+        }
+        else if (inputVolume < MIN_VOLUME) {
+            inputVolume = MIN_VOLUME
+            isError = true
+        }
+        else if (!inputVolume.match(/^[0-9]+$/)) { // Regex check for whole number input
+            inputVolume = MAX_VOLUME
+            isError = true
+        }
+
+        if (isError) inputNumber.value = inputVolume
+
+        inputRange.value = inputVolume
     }
     else {
         inputNumber.value = inputRange.value

@@ -9,7 +9,7 @@
 }
 
 /* Dark */
-:root[theme='dark'] {
+:root[theme='Dark'] {
     --bg-icon: none;
     --bg-color: #333;
     --fg-color: #fff;
@@ -19,7 +19,7 @@
 }
 
 /* Greenscreen */
-:root[theme='green'] {
+:root[theme='Green'] {
     --bg-icon: none;
     --bg-color: #00b140;
     --fg-color: #000;
@@ -29,7 +29,7 @@
 }
 
 /* Peko */
-:root[theme='peko'] {
+:root[theme='Peko'] {
     --bg-icon: url(../img/pekora/ninjin.svg);
     --bg-color: #fff;
     --fg-color: #000;

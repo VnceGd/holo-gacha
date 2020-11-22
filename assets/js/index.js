@@ -1,3 +1,7 @@
+const lang = {
+    EN: 'en',
+    JP: 'jp'
+}
 const menu = {
     GAME_SELECT: 'game-select',
     MEMBER_SELECT: 'member-select',
@@ -5,7 +9,11 @@ const menu = {
     THEME_SELECT: 'theme-select'
 }
 
+let currentLang = lang.EN
 let currentMenu = null
+let isInterfaceHidden = false
+let nameKey // String identifying which language to use for names
+let db // Database for storing unlocked characters
 
 // Set audio source and play audio
 function playAudioClip(_member, _clip) {
@@ -93,6 +101,56 @@ async function toggleMenu(_menu) {
     }
 }
 
+// Exit menus when 'Escape' is pressed
+document.addEventListener("keydown", e => {
+    if (currentMenu == null) return
+    if (e.key == 'Escape') toggleMenu(currentMenu)
+})
+
+// --------
+// SETTINGS
+// --------
+
+// Switch to page for specified language
+function selectLanguage() {
+    let selectedLang = document.getElementById('lang-select').value
+
+    if (currentLang == selectedLang) return
+
+    switch (selectedLang) {
+        case lang.EN:
+            window.location.replace('..')
+            break
+        case lang.JP:
+            window.location.replace('/jp')
+            break
+    }
+}
+
+// Toggle visibility of menu buttons
+function toggleInterface() {
+    if (isInterfaceHidden) {
+        document.getElementById('interface').classList.remove('hidden')
+        isInterfaceHidden = false
+    }
+    else {
+        document.getElementById('interface').classList.add('hidden')
+        isInterfaceHidden = true
+    }
+}
+
+// Remove all data from local storage
+function clearData() {
+    if (confirm('This will remove ALL saved data! Continue?')) {
+        localStorage.removeItem('theme')
+        localStorage.removeItem('member')
+        localStorage.removeItem('volume')
+        localStorage.removeItem('holoCoins')
+
+        clearDatabase()
+    }
+}
+
 // Load settings from local storage
 function loadPrefs() {
     let cachedTheme = localStorage.getItem('theme')
@@ -114,7 +172,80 @@ function loadPrefs() {
     }
 }
 
-// Load preferences after document is loaded
-document.addEventListener("DOMContentLoaded", () => {
+// --------
+// DATABASE
+// --------
+
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage
+
+function loadData() {
+    let request = window.indexedDB.open('members_db', 1)
+
+    request.onerror = _ => {
+        console.log('Database failed to open')
+    }
+
+    request.onsuccess = _ => {
+        db = request.result
+
+        updateData()
+    }
+
+    request.onupgradeneeded = e => {
+        let db = e.target.result
+
+        db.createObjectStore('members_os', { keyPath: 'name'})
+    }
+}
+
+function addData(_data) {
+    let newItem = { name: _data['FILE'], value: _data }
+    let transaction = db.transaction(['members_os'], 'readwrite')
+    let objectStore = transaction.objectStore('members_os')
+
+    objectStore.put(newItem)
+
+    transaction.oncomplete = _ => {
+        updateData()
+    }
+
+    transaction.onerror = _ => {
+        console.log('Transaction not opened due to error')
+    }
+}
+
+function updateData() {
+    let objectStore = db.transaction('members_os').objectStore('members_os')
+
+    objectStore.openCursor().onsuccess = e => {
+        let cursor = e.target.result
+
+        if (cursor) {
+            let cursorKey = cursor.value
+            let memberKey = Object.keys(member).find(key => member[key]['FILE'] === cursorKey['name'])
+
+            if (memberKey) {
+                member[memberKey]['OWNED'] = true
+            }
+
+            cursor.continue()
+        }
+    }
+}
+
+// Clear object store for unlocked characters
+function clearDatabase() {  
+    let objectStore = db.transaction('members_os', 'readwrite').objectStore('members_os')
+
+    objectStore.clear()
+}
+
+// Load preferences and data after document is loaded
+document.body.onload = _ => {
+    currentLang = document.documentElement.lang
+    nameKey = `NAME_${currentLang.toUpperCase()}`
+    document.getElementById('lang-select').value = currentLang
     loadPrefs()
-})
+    loadData()
+    updateCoins()
+}
