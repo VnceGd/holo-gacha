@@ -180,7 +180,7 @@ function playGachaAnimation(_character) {
         // keyframes
         { transform: 'translateY(50vh) scale(4)', opacity: '0' },
         { transform: 'translateY(-100vh) scale(4)' },
-        { } // end at default state
+        { opacity: '1' } // end at default state
     ], {
         // timing options
         duration: 5000,
