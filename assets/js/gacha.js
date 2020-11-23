@@ -122,58 +122,11 @@ function rollGacha(rollBanner = banner.DEFAULT) {
 
 // Create fullscreen window and play fancy animations
 function playGachaAnimation(_character) {
+    let animation // Character appear animation
     let animationDuration = 5000
     let animationDiv = document.createElement('div')
     let characterImg = document.createElement('img')
     let continueBtn = document.createElement('button')
-
-    animationDiv.id = 'gacha-animation'
-    characterImg.src = `assets/img/${_character}/full.png`
-
-    continueBtn.innerHTML = 'Skip'
-    continueBtn.onclick = _ => {
-        skipAnimation()
-    }
-
-    animationDiv.appendChild(characterImg)
-    animationDiv.appendChild(continueBtn)
-    document.body.appendChild(animationDiv)
-
-    animationDiv.animate([
-        // keyframes
-        { transform: 'translateY(100vh)' },
-        { transform: 'translateY(0)' }
-    ], {
-        // timing options
-        duration: 500,
-        easing: 'ease-out'
-    })
-
-    let animation = characterImg.animate([
-        // keyframes
-        { transform: 'translateY(50vh) scale(4)', opacity: '0' },
-        { transform: 'translateY(-100vh) scale(4)' },
-        { } // end at default state
-    ], {
-        // timing options
-        duration: 5000,
-        easing: 'cubic-bezier(.8, 0  , 1, .8)'
-    })
-
-    let skipAnimation = _ => {
-        let characterName = document.createElement('p')
-        let memberKey = Object.keys(member).find(key => member[key]['FILE'] === _character)
-
-        characterName.innerHTML = member[memberKey][nameKey]
-        animationDiv.appendChild(characterName)
-        
-        continueBtn.innerHTML = 'Continue'
-        continueBtn.onclick = _ => {
-            closePanel()
-        }
-
-        animation.finish()
-    }
 
     let closePanel = _ => {
         animationDiv.animate([
@@ -189,6 +142,50 @@ function playGachaAnimation(_character) {
             animationDiv.remove()
         }, 250)
     }
+
+    let skipAnimation = _ => {
+        let characterName = document.createElement('p')
+        let memberKey = Object.keys(member).find(key => member[key]['FILE'] === _character)
+
+        characterName.innerHTML = member[memberKey][nameKey]
+        animationDiv.appendChild(characterName)
+
+        continueBtn.innerHTML = 'Continue'
+        continueBtn.onclick = _ => { closePanel() }
+
+        animation.finish()
+    }
+
+    animationDiv.id = 'gacha-animation'
+    characterImg.src = `assets/img/${_character}/full.png`
+
+    continueBtn.innerHTML = 'Skip'
+    continueBtn.onclick = _ => { skipAnimation() }
+
+    animationDiv.appendChild(characterImg)
+    animationDiv.appendChild(continueBtn)
+    document.body.appendChild(animationDiv)
+
+    animationDiv.animate([
+        // keyframes
+        { transform: 'translateY(100vh)' },
+        { transform: 'translateY(0)' }
+    ], {
+        // timing options
+        duration: 500,
+        easing: 'ease-out'
+    })
+
+    animation = characterImg.animate([
+        // keyframes
+        { transform: 'translateY(50vh) scale(4)', opacity: '0' },
+        { transform: 'translateY(-100vh) scale(4)' },
+        { } // end at default state
+    ], {
+        // timing options
+        duration: 5000,
+        easing: 'cubic-bezier(.8, 0  , 1, .8)'
+    })
 
     setTimeout(skipAnimation, animationDuration)
 }
