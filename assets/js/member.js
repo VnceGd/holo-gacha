@@ -137,7 +137,7 @@ let isMemberPopulated = false
 // Update and cache member
 function setMember(_member) {
     let memberFile = _member['FILE']
-    if (!currentAudio.paused) currentAudio.pause()
+    stopAudio()
 
     currentMember = _member
     document.getElementById('full-illust').src = `assets/img/${memberFile}/full.png`

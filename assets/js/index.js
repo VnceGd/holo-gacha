@@ -240,5 +240,6 @@ document.body.onload = _ => {
     document.getElementById('lang-select').value = currentLang
     loadPrefs()
     loadData()
+    loadAudio()
     updateCoins()
 }

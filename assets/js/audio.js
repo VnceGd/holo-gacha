@@ -1,13 +1,14 @@
 const MAX_VOLUME = 100
 const MIN_VOLUME = 0
 
-let AudioContext = window.AudioContext || window.webkitAudioContext
-let audioCtx = new AudioContext()
+let audioCtx
 let currentAudio = new Audio()
+let currentSFX = new Audio()
 
 // Update and cache volume
 function setVolume(_volume) {
     currentAudio.volume = _volume / 100
+    currentSFX.volume = _volume / 100
     localStorage.setItem('volume', _volume)
 }
 
@@ -49,10 +50,37 @@ function changeVolumeValue() {
     changeVolume(_value = true)
 }
 
+// Play sound effect given filename
+function playSoundEffect(_effect) {
+    let sfx = `assets/audio/${_effect}.mp3`
+
+    currentSFX.src = sfx
+    currentSFX.play()
+}
+
 // Set audio source and play audio
 function playAudioClip(_member, _clip) {
     let clip = `assets/audio/${_member['FILE']}/${_clip}.mp3`
 
     currentAudio.src = clip
     currentAudio.play()
+}
+
+// Pause voice line
+function stopAudio() {
+    if (!currentAudio.paused) currentAudio.pause()
+}
+
+// Add event listeners to buttons for playing SFX
+function loadAudio() {
+    let AudioContext = window.AudioContext || window.webkitAudioContext
+    audioCtx = new AudioContext()
+
+    let buttons = document.getElementsByTagName('button')
+    
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].addEventListener('click', e => {
+            playSoundEffect('btn-click')
+        })
+    }
 }

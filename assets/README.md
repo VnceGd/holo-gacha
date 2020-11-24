@@ -127,6 +127,10 @@ https://www.myinstants.com/instant/mo-baka-1514/
 
 https://www.myinstants.com/instant/neeeeeeeee-37805/
 
+[`audio/aqua/gacha.mp3`](audio/aqua/gacha.mp3)
+
+https://www.myinstants.com/instant/minato-aqua-final-fantasy-60263/
+
 🌙
 ## Murasaki Shion
 
@@ -202,6 +206,12 @@ https://en.hololive.tv/portfolio/items/433580
 
 https://en.hololive.tv/portfolio/items/433593
 
+### Audio:
+
+[`audio/subaru/tap-head.mp3`](audio/subaru/tap-head.mp3)
+
+https://www.myinstants.com/instant/subasubasubasubasubasuba-29512/
+
 🤖
 ## Roboco
 
@@ -228,6 +238,20 @@ https://en.hololive.tv/portfolio/items/433578
 [`img/fubuki/full.png`](img/fubuki/full.png)
 
 https://hololive.wiki/wiki/File:Shirakami_Fubuki_-_Full_Illustration_01.png
+
+### Audio:
+
+[`audio/fubuki/greet.mp3`](audio/fubuki/greet.mp3)
+
+https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-040.mp3
+
+[`audio/fubuki/tap-head.mp3`](audio/fubuki/tap-head.mp3)
+
+https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-001.mp3
+
+[`audio/fubuki/tap-chest.mp3`](audio/fubuki/tap-chest.mp3)
+
+https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-018.mp3
 
 🐻
 ## Tokino Sora
@@ -309,3 +333,11 @@ https://www.hololive.tv/
 [`img/pekora/ninjin.svg`](img/pekora/ninjin.svg)
 
 https://www.freeicons.io/free-food-icons/carrot-icon-11614
+
+### Sound Effects
+
+[`audio/btn-click.mp3`](audio/btn-click.mp3)
+
+*Edited in Audacity*
+
+https://www.youtube.com/watch?v=aCAMZvLX1Gs

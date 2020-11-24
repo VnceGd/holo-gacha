@@ -78,11 +78,17 @@ function openBannerMenu() {
 
     rollButton.id = 'gacha-roll-btn'
     rollButton.innerHTML = 'Roll<br><span style="font-size:.7rem">(100 HoloCoins)</span>'
-    rollButton.onclick = _ => { rollGacha() }
+    rollButton.onclick = _ => { 
+        rollGacha()
+        playSoundEffect('btn-click')
+    }
 
     closeButton.id = 'gacha-close-btn'
     closeButton.innerHTML = 'Close'
-    closeButton.onclick = closePanel
+    closeButton.onclick = _ => {
+        closePanel()
+        playSoundEffect('btn-click')
+    }
 
     bannerDiv.appendChild(bannerListing)
     bannerDiv.appendChild(bannerContent)
@@ -124,11 +130,13 @@ function rollGacha(rollBanner = banner.DEFAULT) {
 function playGachaAnimation(_character) {
     let animation // Character appear animation
     let animationDuration = 5000
+    let isAnimationFinished = false
     let animationDiv = document.createElement('div')
     let characterImg = document.createElement('img')
     let continueBtn = document.createElement('button')
 
     let closePanel = _ => {
+        stopAudio()
         animationDiv.animate([
             // keyframes
             { transform: 'translateY(0)' },
@@ -144,6 +152,8 @@ function playGachaAnimation(_character) {
     }
 
     let skipAnimation = _ => {
+        if (isAnimationFinished) return
+
         let characterName = document.createElement('p')
         let memberKey = Object.keys(member).find(key => member[key]['FILE'] === _character)
 
@@ -151,16 +161,26 @@ function playGachaAnimation(_character) {
         animationDiv.appendChild(characterName)
 
         continueBtn.innerHTML = 'Continue'
-        continueBtn.onclick = _ => { closePanel() }
+        continueBtn.onclick = _ => {
+            closePanel()
+            playSoundEffect('btn-click')
+        }
 
         animation.finish()
+
+        playAudioClip(member[memberKey], 'gacha')
+
+        isAnimationFinished = true
     }
 
     animationDiv.id = 'gacha-animation'
     characterImg.src = `assets/img/${_character}/full.png`
 
     continueBtn.innerHTML = 'Skip'
-    continueBtn.onclick = _ => { skipAnimation() }
+    continueBtn.onclick = _ => {
+        skipAnimation()
+        playSoundEffect('btn-click')
+    }
 
     animationDiv.appendChild(characterImg)
     animationDiv.appendChild(continueBtn)
