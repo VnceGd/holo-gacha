@@ -173,12 +173,7 @@ button:hover .tooltip {
 .tap-head,
 .tap-chest {
     position: absolute;
-    background: none;
-    border: none;
-}
-.tap-head:focus,
-.tap-chest:focus {
-    outline: 0;
+    cursor: pointer;
 }
 .tap-head {
     top: 5vh;
