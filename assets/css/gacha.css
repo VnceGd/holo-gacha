@@ -28,6 +28,7 @@
     margin: .5rem auto;
     max-width: 90%;
     max-height: 60%;
+    object-fit: contain;
 }
 #gacha-banner button {
     margin: .5rem auto;
