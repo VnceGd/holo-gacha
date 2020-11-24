@@ -76,6 +76,16 @@ https://en.hololive.tv/portfolio/items/433551
 
 https://en.hololive.tv/portfolio/items/433574
 
+### Audio:
+
+[`audio/rosenthal/tap-chest.mp3`](audio/rosenthal/tap-chest.mp3)
+
+https://www.myinstants.com/instant/akirose-bad-boy-47624/
+
+[`audio/rosenthal/tap-head.mp3`](audio/rosenthal/tap-head.mp3)
+
+https://www.myinstants.com/instant/akirose-ara-ara-55111/
+
 🔱
 ## Gawr Gura
 
@@ -86,6 +96,16 @@ https://en.hololive.tv/portfolio/items/433574
 *Edited in GIMP-2.10*
 
 https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
+
+### Audio:
+
+[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3)
+
+[`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3)
+
+*Edited in Audacity*
+
+https://www.youtube.com/watch?v=dBK0gKW61NU
 
 ☄️
 ## Hoshimachi Suisei
@@ -98,16 +118,6 @@ https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
 
 https://en.hololive.tv/portfolio/items/433550
 
-### Audio:
-
-[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3)
-
-[`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3)
-
-*Edited in Audacity*
-
-https://www.youtube.com/watch?v=dBK0gKW61NU
-
 ⚓
 ## Minato Aqua
 
@@ -119,6 +129,10 @@ https://en.hololive.tv/portfolio/items/433565
 
 ### Audio:
 
+[`audio/aqua/gacha.mp3`](audio/aqua/gacha.mp3)
+
+https://www.myinstants.com/instant/minato-aqua-final-fantasy-60263/
+
 [`audio/aqua/tap-chest.mp3`](audio/aqua/tap-chest.mp3)
 
 https://www.myinstants.com/instant/mo-baka-1514/
@@ -126,10 +140,6 @@ https://www.myinstants.com/instant/mo-baka-1514/
 [`audio/aqua/tap-head.mp3`](audio/aqua/tap-head.mp3)
 
 https://www.myinstants.com/instant/neeeeeeeee-37805/
-
-[`audio/aqua/gacha.mp3`](audio/aqua/gacha.mp3)
-
-https://www.myinstants.com/instant/minato-aqua-final-fantasy-60263/
 
 🌙
 ## Murasaki Shion
@@ -241,7 +251,7 @@ https://hololive.wiki/wiki/File:Shirakami_Fubuki_-_Full_Illustration_01.png
 
 ### Audio:
 
-[`audio/fubuki/greet.mp3`](audio/fubuki/greet.mp3)
+[`audio/fubuki/gacha.mp3`](audio/fubuki/gacha.mp3)
 
 https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-040.mp3
 
@@ -341,3 +351,7 @@ https://www.freeicons.io/free-food-icons/carrot-icon-11614
 *Edited in Audacity*
 
 https://www.youtube.com/watch?v=aCAMZvLX1Gs
+
+[`audio/btn-disabled.mp3`](audio/btn-disabled.mp3)
+
+https://www.myinstants.com/instant/polka-hnn-01-82596/

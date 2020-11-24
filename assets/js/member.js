@@ -228,7 +228,14 @@ function generateButtons(_list) {
         let memberOwned = member[memberKey]['OWNED']
 
         if (memberOwned)
-            templateButton.onclick = () => { setMember(member[memberKey]) }
+            templateButton.onclick = _ => {
+                setMember(member[memberKey])
+                playSoundEffect('btn-click')
+            }
+        else
+            templateButton.onclick = _ => {
+                playSoundEffect('btn-disabled')
+            }
         templateButton.innerHTML = `<div class="background ${memberOwned ? '' : 'locked'}"></div><img loading="lazy" src="assets/img/${memberFile}/full.png"><p class="tooltip bottom">${memberName}</p>`
         document.getElementById('member-grid').appendChild(templateButton)
     })
