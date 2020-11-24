@@ -129,18 +129,19 @@ const sortOrder = {
 }
 
 let memberArray = []
-let currentMember = member.POLKA.FILE
+let currentMember = member.POLKA
 let currentSort = sort.GEN
 let currentSortOrder = sortOrder.ASCEND
 let isMemberPopulated = false
 
 // Update and cache member
 function setMember(_member) {
+    let memberFile = _member['FILE']
     if (!currentAudio.paused) currentAudio.pause()
 
     currentMember = _member
-    document.getElementById('full-illust').src = `assets/img/${_member}/full.png`
-    localStorage.setItem('member', _member)
+    document.getElementById('full-illust').src = `assets/img/${memberFile}/full.png`
+    localStorage.setItem('member', memberFile)
 }
 
 // Add buttons for each member to the member grid unless already populated
@@ -227,7 +228,7 @@ function generateButtons(_list) {
         let memberOwned = member[memberKey]['OWNED']
 
         if (memberOwned)
-            templateButton.onclick = () => { setMember(memberFile) }
+            templateButton.onclick = () => { setMember(member[memberKey]) }
         templateButton.innerHTML = `<div class="background ${memberOwned ? '' : 'locked'}"></div><img loading="lazy" src="assets/img/${memberFile}/full.png"><p class="tooltip bottom">${memberName}</p>`
         document.getElementById('member-grid').appendChild(templateButton)
     })

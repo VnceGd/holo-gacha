@@ -1,6 +1,8 @@
 const MAX_VOLUME = 100
 const MIN_VOLUME = 0
 
+let AudioContext = window.AudioContext || window.webkitAudioContext
+let audioCtx = new AudioContext()
 let currentAudio = new Audio()
 
 // Update and cache volume
@@ -45,4 +47,12 @@ function changeVolume(_value = false) {
 // Call changeVolume with _value = true to update paired input range
 function changeVolumeValue() {
     changeVolume(_value = true)
+}
+
+// Set audio source and play audio
+function playAudioClip(_member, _clip) {
+    let clip = `assets/audio/${_member['FILE']}/${_clip}.mp3`
+
+    currentAudio.src = clip
+    currentAudio.play()
 }

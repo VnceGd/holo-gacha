@@ -15,14 +15,6 @@ let isInterfaceHidden = false
 let nameKey // String identifying which language to use for names
 let db // Database for storing unlocked characters
 
-// Set audio source and play audio
-function playAudioClip(_member, _clip) {
-    let clip = `assets/audio/${_member}/${_clip}.mp3`
-
-    currentAudio.src = clip
-    currentAudio.play()
-}
-
 // Play a short hop animation for the character
 function animateCharacter() {
     let character = document.getElementById('full-illust')
@@ -162,7 +154,8 @@ function loadPrefs() {
     }
 
     if (cachedMember != null) {
-        setMember(cachedMember)
+        let memberKey = Object.keys(member).find(key => member[key]['FILE'] === cachedMember)
+        setMember(member[memberKey])
     }
 
     if (cachedVolume != null) {
