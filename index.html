@@ -43,56 +43,58 @@
             <div id="main">
                 <div class="member-card">
                     <div class="background"></div>
-                    <img id="full-illust" src="assets/img/polka/full.png" alt="Full Illustration">
+                    <img id="full-illust" alt="Full Illustration">
                     <div class="tap-head" onclick="interact(area.HEAD)" aria-label="Tap head"></div>
                     <div class="tap-chest" onclick="interact(area.CHEST)" aria-label="Tap chest"></div>
                 </div>
-                <div class="button-group" id="interface">
+                <div id="interface">
                     <p id="holocoin-text"><span id="holocoin-amount">0</span> HoloCoins</p>
-                    <button class="float-bottom-right" onclick="toggleMenu(menu.SETTINGS)" aria-label="Open settings">
-                        <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <rect width="100%" height="20%"/>
-                                <rect y="40%" width="100%" height="20%"/>
-                                <rect y="80%" width="100%" height="20%"/>
-                            </g>
-                        </svg>
-                        <p class="tooltip right">Settings</p>
-                    </button>
-                    <button class="float-bottom-right" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Open member select">
-                        <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <circle cx=".5" cy=".4" r=".3"></circle>
-                                <path d="M.5 .4 .85 .8 .9 1 .1 1 .15 .8 Z"/>
-                            </g>
-                        </svg>
-                        <p class="tooltip right">Characters</p>
-                    </button>
-                    <button class="float-bottom-right" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Open theme select">
-                        <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <path d="M0 1 .1 .6 .2 .5 .5 .5 .5 .8 .4 .9 Z"/>
-                                <path d="M.95 0 1 .05 .6 .6 .6 .4 .4 .4 Z"/>
-                            </g>
-                        </svg>
-                        <p class="tooltip right">Themes</p>
-                    </button>
-                    <button class="float-bottom-right" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Open game select">
-                        <svg viewBox="0 0 1 1">
-                            <path fill="var(--fg-color)" d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
-                        </svg>
-                        <p class="tooltip right">Games</p>
-                    </button>
-                    <button class="float-bottom-right" onclick="openBannerMenu()">
-                        <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <path d="M.2 .1 .9 .4 .2 .8"/>
-                                <path fill-opacity=".6" d="M.2 .2 .9 .5 .2 .9"/>
-                                <path fill-opacity=".4" d="M.2 .3 .9 .6 .2 1"/>
-                            </g>
-                        </svg>
-                        <p class="tooltip right">Gacha</p>
-                    </button>
+                    <div class="button-group right">
+                        <button class="float-bottom-right" onclick="toggleMenu(menu.SETTINGS)" aria-label="Open settings">
+                            <svg viewBox="0 0 1 1">
+                                <g fill="var(--fg-color)">
+                                    <rect width="100%" height="20%"/>
+                                    <rect y="40%" width="100%" height="20%"/>
+                                    <rect y="80%" width="100%" height="20%"/>
+                                </g>
+                            </svg>
+                            <p class="tooltip right">Settings</p>
+                        </button>
+                        <button class="float-bottom-right" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Open member select">
+                            <svg viewBox="0 0 1 1">
+                                <g fill="var(--fg-color)">
+                                    <circle cx=".5" cy=".4" r=".3"></circle>
+                                    <path d="M.5 .4 .85 .8 .9 1 .1 1 .15 .8 Z"/>
+                                </g>
+                            </svg>
+                            <p class="tooltip right">Characters</p>
+                        </button>
+                        <button class="float-bottom-right" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Open theme select">
+                            <svg viewBox="0 0 1 1">
+                                <g fill="var(--fg-color)">
+                                    <path d="M0 1 .1 .6 .2 .5 .5 .5 .5 .8 .4 .9 Z"/>
+                                    <path d="M.95 0 1 .05 .6 .6 .6 .4 .4 .4 Z"/>
+                                </g>
+                            </svg>
+                            <p class="tooltip right">Themes</p>
+                        </button>
+                        <button class="float-bottom-right" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Open game select">
+                            <svg viewBox="0 0 1 1">
+                                <path fill="var(--fg-color)" d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
+                            </svg>
+                            <p class="tooltip right">Games</p>
+                        </button>
+                        <button class="float-bottom-right" onclick="openBannerMenu()">
+                            <svg viewBox="0 0 1 1">
+                                <g fill="var(--fg-color)">
+                                    <path d="M.2 .1 .9 .4 .2 .8"/>
+                                    <path fill-opacity=".6" d="M.2 .2 .9 .5 .2 .9"/>
+                                    <path fill-opacity=".4" d="M.2 .3 .9 .6 .2 1"/>
+                                </g>
+                            </svg>
+                            <p class="tooltip right">Gacha</p>
+                        </button>
+                    </div>
                 </div>
             </div>
             <div id="settings" class="menu">

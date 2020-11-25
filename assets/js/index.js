@@ -157,6 +157,9 @@ function loadPrefs() {
         let memberKey = Object.keys(member).find(key => member[key]['FILE'] === cachedMember)
         setMember(member[memberKey])
     }
+    else {
+        setMember(member.POLKA)
+    }
 
     if (cachedVolume != null) {
         setVolume(cachedVolume)

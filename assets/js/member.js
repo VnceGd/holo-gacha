@@ -137,10 +137,14 @@ let isMemberPopulated = false
 // Update and cache member
 function setMember(_member) {
     let memberFile = _member['FILE']
+    let fullIllust = document.getElementById('full-illust')
     stopAudio()
 
     currentMember = _member
-    document.getElementById('full-illust').src = `assets/img/${memberFile}/full.png`
+    fullIllust.src = `assets/img/${memberFile}/full.webp`
+    fullIllust.onerror = _ => {
+        fullIllust.src = `assets/img/${memberFile}/full.png`
+    }
     localStorage.setItem('member', memberFile)
 }
 
@@ -227,16 +231,26 @@ function generateButtons(_list) {
         let memberName = member[memberKey][nameKey]
         let memberOwned = member[memberKey]['OWNED']
 
-        if (memberOwned)
+        if (memberOwned) {
             templateButton.onclick = _ => {
                 setMember(member[memberKey])
                 playSoundEffect('btn-click')
             }
-        else
+        }
+        else {
+            templateButton.className = 'locked'
             templateButton.onclick = _ => {
                 playSoundEffect('btn-disabled')
             }
-        templateButton.innerHTML = `<div class="background ${memberOwned ? '' : 'locked'}"></div><img loading="lazy" src="assets/img/${memberFile}/full.png"><p class="tooltip bottom">${memberName}</p>`
+        }
+
+        templateButton.innerHTML = `<div class="background"></div>
+            <picture>
+                <source type="image/webp" srcset="assets/img/${memberFile}/full.webp">
+                <source type="image/png" srcset="assets/img/${memberFile}/full.png">
+                <img src="assets/img/${memberFile}/full.png" alt="${memberFile}">
+            </picture>
+            <p class="tooltip bottom">${memberName}</p>`
         document.getElementById('member-grid').appendChild(templateButton)
     })
 }

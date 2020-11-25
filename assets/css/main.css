@@ -48,14 +48,21 @@ button {
 button a {
     position: absolute;
     top: 0;
+    bottom: 0;
     left: 0;
+    right: 0;
 }
 .button-group {
     display: flex;
     flex-direction: column-reverse;
     position: fixed;
-    right: 1rem;
     bottom: 1rem;
+}
+.button-group.right {
+    right: 1rem;
+}
+.button-group.left {
+    left: 1rem;
 }
 .button-group.hidden {
     opacity: 0;
@@ -65,7 +72,7 @@ button a {
 .button-group.hidden:hover {
     opacity: 1;
 }
-.float-bottom-right {
+.button-group button {
     width: 3rem;
     height: 3rem;
     margin-top: 1rem;
@@ -77,11 +84,11 @@ button a {
     color: var(--fg-color);
     transition: .2s;
 }
-.float-bottom-right:focus,
-.float-bottom-right:hover {
+.button-group button:focus,
+.button-group button:hover {
     transform: scale(1.1);
 }
-.float-bottom-right:active {
+.button-group button:active {
     transform: scale(.98);
 }
 .exit-menu {
@@ -132,11 +139,18 @@ button .tooltip {
     z-index: 1;
     transition: .2s;
 }
-button .tooltip.right {
+button .tooltip.right,
+button .tooltip.left {
     top: 0rem;
-    right: 3.5rem;
     white-space: nowrap;
+}
+button .tooltip.right {
+    right: 3.5rem;
     transform-origin: right;
+}
+button .tooltip.left {
+    left: 3.5rem;
+    transform-origin: left;
 }
 button .tooltip.bottom {
     bottom: 0rem;
@@ -203,6 +217,8 @@ button:hover .tooltip {
     padding: 2rem;
     width: 100vw;
     max-height: 100vh;
+    max-height: -moz-fill-available;
+    max-height: -webkit-fill-available;
     bottom: 0;
     background: var(--menu-color);
     box-sizing: border-box;
@@ -251,7 +267,7 @@ button:hover .tooltip {
 #member-grid img {
     max-height: none;
 }
-#member-grid .locked ~ img {
+.locked img {
     filter: grayscale(1) brightness(.5);
 }
 

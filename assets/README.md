@@ -1,16 +1,20 @@
 # Assets
 
-All assets listed are sourced from third-parties and are subject to their respective terms and conditions. Note that any assets which have been edited are indicated along with the software used to edit them.
+All assets listed are sourced from third-parties and are subject to their respective terms and conditions. Note that any assets which have been edited are indicated along with the software used to edit them. 
+
+Note that WebP images are not included in the list; they are converted from their PNG source material using [ezgif.com](https://ezgif.com/png-to-webp).
 
 ## Third-Party Content Usage
 
-Use of hololive characters is governed by hololive's [Fan Work Guidelines](https://en.hololive.tv/terms).
+Use of hololive characters (illustrations, voices) is governed by hololive's [Fan Work Guidelines](https://en.hololive.tv/terms).
 
 Content from the [Hololive Fan Wiki](https://hololive.wiki) is available under [Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/).
 
 Content from [Myinstants](https://www.myinstants.com) is subject to their [Terms of Use](https://www.myinstants.com/terms_of_use.html).
 
 Content from [YouTube](https://youtu.be) is subject to their [Terms of Service](https://www.youtube.com/static?template=terms).
+
+Other specific licenses may be noted under assets as necessary.
 
 ---
 
@@ -91,19 +95,13 @@ https://www.myinstants.com/instant/akirose-ara-ara-55111/
 
 ### Illustration:
 
-[`img/gura/full.png`](img/gura/full.png)
-
-*Edited in GIMP-2.10*
+[`img/gura/full.png`](img/gura/full.png) (*Edited in GIMP-2.10*)
 
 https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
 
 ### Audio:
 
-[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3)
-
-[`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3)
-
-*Edited in Audacity*
+[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3), [`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3) (*Edited in Audacity*)
 
 https://www.youtube.com/watch?v=dBK0gKW61NU
 
@@ -112,9 +110,7 @@ https://www.youtube.com/watch?v=dBK0gKW61NU
 
 ### Illustration:
 
-[`img/suisei/full.png`](img/suisei/full.png)
-
-*Edited in GIMP-2.10*
+[`img/suisei/full.png`](img/suisei/full.png) (*Edited in GIMP-2.10*)
 
 https://en.hololive.tv/portfolio/items/433550
 
@@ -146,9 +142,7 @@ https://www.myinstants.com/instant/neeeeeeeee-37805/
 
 ### Illustration:
 
-[`img/shion/full.png`](img/shion/full.png)
-
-*Edited in GIMP-2.10*
+[`img/shion/full.png`](img/shion/full.png) (*Edited in GIMP-2.10*)
 
 https://en.hololive.tv/portfolio/items/433577
 
@@ -157,9 +151,7 @@ https://en.hololive.tv/portfolio/items/433577
 
 ### Illustration:
 
-[`img/ayame/full.png`](img/ayame/full.png)
-
-*Edited in GIMP-2.10*
+[`img/ayame/full.png`](img/ayame/full.png) (*Edited in GIMP-2.10*)
 
 https://en.hololive.tv/portfolio/items/433583
 
@@ -168,9 +160,7 @@ https://en.hololive.tv/portfolio/items/433583
 
 ### Illustration:
 
-[`img/matsuri/full.png`](img/matsuri/full.png)
-
-*Edited in GIMP-2.10*
+[`img/matsuri/full.png`](img/matsuri/full.png) (*Edited in GIMP-2.10*)
 
 https://en.hololive.tv/portfolio/items/433575
 
@@ -180,9 +170,7 @@ https://en.hololive.tv/portfolio/items/433575
 ### Illustration:
 
 [`img/icons-192.png`](img/icons-192.png),
-[`img/icons-512.png`](img/icons-512.png)
-
-*Edited in GIMP-2.10*
+[`img/icons-512.png`](img/icons-512.png) (*Edited in GIMP-2.10*)
 
 [`img/polka/full.png`](img/polka/full.png)
 
@@ -190,11 +178,7 @@ https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 
 ### Audio: 
 
-[`audio/polka/tap-chest.mp3`](audio/polka/tap-chest.mp3)
-
-[`audio/polka/tap-head.mp3`](audio/polka/tap-head.mp3)
-
-*Edited in Audacity*
+[`audio/polka/tap-chest.mp3`](audio/polka/tap-chest.mp3), [`audio/polka/tap-head.mp3`](audio/polka/tap-head.mp3) (*Edited in Audacity*)
 
 https://www.youtube.com/watch?v=01HNMoigEuY
 
@@ -341,14 +325,14 @@ https://www.hololive.tv/
 ### Icons
 
 [`img/pekora/ninjin.svg`](img/pekora/ninjin.svg)
+(From Raj Dev @ freeicons.io)
+Licensed under [Creative Commons(Attribution 3.0 unported)](https://creativecommons.org/licenses/by/3.0/)
 
 https://www.freeicons.io/free-food-icons/carrot-icon-11614
 
 ### Sound Effects
 
-[`audio/btn-click.mp3`](audio/btn-click.mp3)
-
-*Edited in Audacity*
+[`audio/btn-click.mp3`](audio/btn-click.mp3) (*Edited in Audacity*)
 
 https://www.youtube.com/watch?v=aCAMZvLX1Gs
 

@@ -174,7 +174,10 @@ function playGachaAnimation(_character) {
     }
 
     animationDiv.id = 'gacha-animation'
-    characterImg.src = `assets/img/${_character}/full.png`
+    characterImg.src = `assets/img/${_character}/full.webp`
+    characterImg.onerror = _ => {
+        characterImg.src = `assets/img/${_character}/full.png`
+    }
 
     continueBtn.innerHTML = 'Skip'
     continueBtn.onclick = _ => {
