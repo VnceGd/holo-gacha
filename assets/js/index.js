@@ -3,6 +3,7 @@ const lang = {
     JP: 'jp'
 }
 const menu = {
+    COSTUME_SELECT: 'costume-select',
     GAME_SELECT: 'game-select',
     MEMBER_SELECT: 'member-select',
     SETTINGS: 'settings',
@@ -81,6 +82,9 @@ async function toggleMenu(_menu) {
     }
 
     switch (_menu) {
+        case menu.COSTUME_SELECT:
+            populateCostumeGrid()
+            break
         case menu.GAME_SELECT:
             populateGameGrid()
             break

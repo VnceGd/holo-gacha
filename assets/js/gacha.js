@@ -30,9 +30,11 @@ function openBannerMenu() {
     let bannerDiv = document.createElement('div')
     let bannerListing = document.createElement('div')
     let bannerContent = document.createElement('div')
+    let bannerTop = document.createElement('div')
     let bannerImg = document.createElement('img')
     let rollButton = document.createElement('button')
     let closeButton = document.createElement('button')
+    let holoCoinDisplay = document.createElement('p')
 
     let handleKeyDown = e => {
         if (e.key == 'Escape') closePanel()
@@ -77,23 +79,35 @@ function openBannerMenu() {
     bannerContent.className = 'content'
 
     rollButton.id = 'gacha-roll-btn'
-    rollButton.innerHTML = 'Roll<br><span style="font-size:.7rem">(100 HoloCoins)</span>'
-    rollButton.onclick = _ => { 
-        rollGacha()
-        playSoundEffect('btn-click')
-    }
+    rollButton.innerHTML = `Roll x1<br>
+        <span><svg viewBox="0 0 1 1">
+            <use href="#holocoin-svg"/>
+        </svg> x 100</span>`
+    rollButton.onclick = _ => { rollGacha() }
+
+    holoCoinDisplay.innerHTML = `<span name='holocoin-amount'>${currentCoins}
+        </span> <span><svg viewBox="0 0 1 1">
+            <use href="#holocoin-svg"/>
+        </svg></span>`
 
     closeButton.id = 'gacha-close-btn'
-    closeButton.innerHTML = 'Close'
+    closeButton.innerHTML = `<svg viewBox="0 0 1 1">
+        <use href="#exit-svg"/>
+        </svg>`
     closeButton.onclick = _ => {
         closePanel()
         playSoundEffect('btn-click')
     }
 
+    bannerTop.className = 'top'
+    bannerTop.appendChild(holoCoinDisplay)
+    bannerTop.appendChild(closeButton)
+
     bannerDiv.appendChild(bannerListing)
     bannerDiv.appendChild(bannerContent)
+    bannerDiv.appendChild(bannerTop)
     bannerDiv.appendChild(rollButton)
-    bannerDiv.appendChild(closeButton)
+    
     document.body.appendChild(bannerDiv)
 
     bannerDiv.animate([
@@ -121,6 +135,7 @@ function rollGacha(rollBanner = banner.DEFAULT) {
     let rngKey = Object.keys(rollBanner)[rng]
 
     playGachaAnimation(rollBanner[rngKey]['FILE'])
+    playSoundEffect('gacha')
     banner[bannerKey][rngKey]['OWNED'] = true
     addData(rollBanner[rngKey])
     removeCoins(bannerCost)
@@ -129,7 +144,7 @@ function rollGacha(rollBanner = banner.DEFAULT) {
 // Create fullscreen window and play fancy animations
 function playGachaAnimation(_character) {
     let animation // Character appear animation
-    let animationDuration = 5000
+    let animationDuration = 4813 // Timed to line up with SFX
     let isAnimationFinished = false
     let animationDiv = document.createElement('div')
     let characterImg = document.createElement('img')
@@ -168,7 +183,9 @@ function playGachaAnimation(_character) {
 
         animation.finish()
 
-        playAudioClip(member[memberKey], 'gacha')
+        setTimeout( _ => {
+            playAudioClip(member[memberKey], 'gacha')
+        }, 100)
 
         isAnimationFinished = true
     }
@@ -206,7 +223,7 @@ function playGachaAnimation(_character) {
         { opacity: '1' } // end at default state
     ], {
         // timing options
-        duration: 5000,
+        duration: animationDuration,
         easing: 'cubic-bezier(.8, 0  , 1, .8)'
     })
 
@@ -221,11 +238,11 @@ function removeCoins(_amount) {
 
 // Update text displaying coin amount
 function updateCoins() {
-    let coinAmountText = document.getElementById('holocoin-amount')
+    let coinAmountText = document.getElementsByName('holocoin-amount')
     currentCoins = localStorage.getItem('holoCoins')
 
     if (!currentCoins)
-        coinAmountText.innerHTML = 0
+        coinAmountText.forEach (txtElement => { txtElement.innerHTML = 0 })
     else
-        coinAmountText.innerHTML = currentCoins
+        coinAmountText.forEach (txtElement => { txtElement.innerHTML = currentCoins })
 }

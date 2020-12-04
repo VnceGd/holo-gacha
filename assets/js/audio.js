@@ -52,7 +52,7 @@ function changeVolumeValue() {
 
 // Play sound effect given filename
 function playSoundEffect(_effect) {
-    let sfx = `assets/audio/${_effect}.mp3`
+    let sfx = `assets/audio/sfx/${_effect}.mp3`
 
     currentSFX.src = sfx
     currentSFX.play()

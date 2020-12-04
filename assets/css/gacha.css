@@ -1,3 +1,5 @@
+/* Banner */
+
 #gacha-banner {
     position: fixed;
     display: flex;
@@ -39,8 +41,17 @@
     border-radius: 2rem;
     transition: .2s;
 }
+#gacha-banner button:focus,
+#gacha-banner button:hover {
+    transform: scale(1.1);
+}
+#gacha-banner .top {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+}
 #gacha-banner .banner-btn {
-    /* margin: auto; */
     width: 8rem;
     height: 4rem;
     background-position: center;
@@ -48,20 +59,22 @@
     background-size: cover;
     border-radius: .5rem;
 }
-#gacha-roll-btn {
+#gacha-banner #gacha-roll-btn {
+    margin: 0;
+    padding: .5rem 1rem;
     position: absolute;
     bottom: 1rem;
     right: 1rem;
+    width: 10rem;
 }
-#gacha-close-btn {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+#gacha-banner #gacha-close-btn {
+    margin-left: 1rem;
+    padding: 0 .625rem;
+    border-radius: 50%;
 }
-#gacha-banner button:focus,
-#gacha-banner button:hover {
-    transform: scale(1.1);
-}
+
+/* Animation */
+
 #gacha-animation {
     position: fixed;
     display: flex;

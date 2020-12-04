@@ -2,7 +2,9 @@
 
 All assets listed are sourced from third-parties and are subject to their respective terms and conditions. Note that any assets which have been edited are indicated along with the software used to edit them. 
 
-Note that WebP images are not included in the list; they are converted from their PNG source material using [ezgif.com](https://ezgif.com/png-to-webp).
+WebP images are not included in the list as they are converted from their PNG source material using [ezgif.com](https://ezgif.com/png-to-webp).
+
+Please report any incorrect sources or broken links by [submitting an issue](https://github.com/VnceGd/holo-gacha/issues).
 
 ## Third-Party Content Usage
 
@@ -160,7 +162,7 @@ https://en.hololive.tv/portfolio/items/433583
 
 ### Illustration:
 
-[`img/matsuri/full.png`](img/matsuri/full.png) (*Edited in GIMP-2.10*)
+[`img/matsuri/full.png`](img/matsuri/full.png) (*Edited in Photopea*)
 
 https://en.hololive.tv/portfolio/items/433575
 
@@ -215,12 +217,42 @@ https://www.myinstants.com/instant/subasubasubasubasubasuba-29512/
 
 https://en.hololive.tv/portfolio/items/433579
 
+[`img/roboco/new_year.png`](img/roboco/new_year.png) (*Edited in Photopea*)
+
+https://twitter.com/GeekJack_Store/status/1241603059303604224/photo/3
+
+[`img/roboco/nonstop_story.png`](img/roboco/nonstop_story.png) (*Edited in Photopea*)
+
+https://hololive.wiki/wiki/File:Roboco_-_Nonstop_Story_Full_Illustration.png
+
+### Audio:
+
+[`audio/roboco/gacha.mp3`](audio/roboco/gacha.mp3) (*Edited in Audacity*)
+
+https://www.youtube.com/watch?v=G-vff8SLVCY
+
+[`audio/roboco/tap-chest.mp3`](audio/roboco/tap-chest.mp3) (*Edited in Audacity*)
+
+https://www.youtube.com/watch?v=rnl9csoCx3g
+
+[`audio/roboco/tap-head.mp3`](audio/roboco/tap-head.mp3) (*Edited in Audacity*)
+
+https://www.youtube.com/watch?v=ddgipyIVra4
+
 🌸
 ## Sakura Miko
 
 ### Illustration:
 
-[`img/miko/full.png`](img/miko/full.png)
+[`img/miko/full.png`](img/miko/full.png) (*Edited in Photopea*)
+
+https://twitter.com/GeekJack_Store/status/1240094304313282560/photo/1
+
+[`img/miko/nonstop_story.png`](img/miko/nonstop_story.png) (*Edited in Photopea*)
+
+https://hololive.wiki/wiki/File:Sakura_Miko_-_Nonstop_Story_Full_Illustration.png
+
+[`img/miko/original.png`](img/miko/original.png)
 
 https://en.hololive.tv/portfolio/items/433578
 
@@ -255,6 +287,10 @@ https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-018.mp3
 [`img/sora/full.png`](img/sora/full.png)
 
 https://en.hololive.tv/portfolio/items/433553
+
+[`img/sora/nonstop_story.png`](img/sora/nonstop_story.png) (*Edited in Photopea*)
+
+https://hololive.wiki/wiki/File:Tokino_Sora_-_Nonstop_Story_Full_Illustration.png
 
 🐏
 ## Tsunomaki Watame
@@ -303,6 +339,14 @@ https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/
 
 https://hololive.wiki/wiki/File:Yozora_Mel_-_Full_Illustration_01.png
 
+[`img/mel/new_year.png`](img/mel/new_year.png) (*Edited in Photopea*)
+
+https://twitter.com/GeekJack_Store/status/1239715435253137408/photo/4
+
+[`img/mel/nonstop_story.png`](img/mel/nonstop_story.png) (*Edited in Photopea*)
+
+https://hololive.wiki/wiki/File:Yozora_Mel_-_Nonstop_Story_Full_Illustration.png
+
 💋
 ## Yuzuki Choco
 
@@ -324,18 +368,22 @@ https://www.hololive.tv/
 
 ### Icons
 
-[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg)
-(From Raj Dev @ freeicons.io)
+[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg) (From Raj Dev @ freeicons.io)
+
 Licensed under [Creative Commons(Attribution 3.0 unported)](https://creativecommons.org/licenses/by/3.0/)
 
 https://www.freeicons.io/free-food-icons/carrot-icon-11614
 
 ### Sound Effects
 
-[`audio/btn-click.mp3`](audio/btn-click.mp3) (*Edited in Audacity*)
+[`audio/sfx/btn-click.mp3`](audio/sfx/btn-click.mp3) (*Edited in Audacity*)
 
 https://www.youtube.com/watch?v=aCAMZvLX1Gs
 
-[`audio/btn-disabled.mp3`](audio/btn-disabled.mp3)
+[`audio/sfx/btn-disabled.mp3`](audio/sfx/btn-disabled.mp3)
 
 https://www.myinstants.com/instant/polka-hnn-01-82596/
+
+[`audio/sfx/gacha.mp3`](audio/sfx/gacha.mp3) (*Edited in Audacity*)
+
+https://www.youtube.com/watch?v=9kQ2GtvDV3s

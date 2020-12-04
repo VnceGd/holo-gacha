@@ -150,7 +150,7 @@ function setMember(_member) {
 
 // Add buttons for each member to the member grid unless already populated
 function populateMemberGrid() {
-    if (isMemberPopulated) clearButtons()
+    if (isMemberPopulated) clearMemberButtons()
 
     let sortingOrderChecked = document.getElementById('member-sort-order').checked
 
@@ -195,7 +195,7 @@ function sortMemberGrid() {
         }
     }
 
-    clearButtons()
+    clearMemberButtons()
 
     if (currentSortOrder == sortOrder.ASCEND) {
         generateButtons(memberArray)
@@ -209,7 +209,7 @@ function sortMemberGrid() {
 
 // Reverse the order of the member buttons
 function reverseSortOrder() {
-    clearButtons()
+    clearMemberButtons()
     generateButtons(memberArray.reverse())
 
     if (currentSortOrder == sortOrder.ASCEND) {
@@ -256,6 +256,6 @@ function generateButtons(_list) {
 }
 
 // Clear button elements from grid
-function clearButtons() {
+function clearMemberButtons() {
     document.getElementById('member-grid').innerHTML = ''
 }

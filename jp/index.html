@@ -12,7 +12,9 @@
         <link rel="icon" href="assets/img/favicon.ico">
         <link rel="apple-touch-icon" href="assets/img/icons-192.png">
 
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" media="print" onload="this.media='all'"/>
         <link rel="stylesheet" href="assets/css/main.css">
         <link rel="stylesheet" href="assets/css/theme.css">
         <link rel="stylesheet" href="assets/css/gacha.css">
@@ -20,6 +22,7 @@
         <script src="assets/js/theme.js" defer></script>
         <script src="assets/js/game.js" defer></script>
         <script src="assets/js/member.js" defer></script>
+        <script src="assets/js/costume.js" defer></script>
         <script src="assets/js/audio.js" defer></script>
         <script src="assets/js/gacha.js" defer></script>
         <script src="assets/js/index.js" defer></script>
@@ -41,37 +44,59 @@
     </head>
     <body>
         <main>
-            <div id="main">
-                <div class="member-card">
-                    <div class="background"></div>
-                    <img id="full-illust" src="assets/img/polka/full.png" alt="Full Illustration">
-                    <button class="tap-head" onclick="interact(area.HEAD)" aria-label="Tap head">
-                    <button class="tap-chest" onclick="interact(area.CHEST)" aria-label="Tap chest">
+            <div class="member-card">
+                <div class="background"></div>
+                <img id="full-illust" alt="Full Illustration">
+                <div class="tap-head" onclick="interact(area.HEAD)" aria-label="Tap head"></div>
+                <div class="tap-chest" onclick="interact(area.CHEST)" aria-label="Tap chest"></div>
+            </div>
+            <div id="interface">
+                <p id="holocoin-text"><span name="holocoin-amount">0</span> 
+                    <svg viewBox="0 0 1 1" title="HoloCoins">
+                        <g id="holocoin-svg">
+                            <circle r=".5" cx=".5" cy=".5"/>
+                            <circle stroke="#ff0" stroke-width=".05" fill="#eee" r=".45" cx=".5" cy=".5"/>
+                            <rect fill="#fff" width=".8" height=".25" x=".1" y=".375" transform="rotate(-45 .5 .5)"/>
+                            <path fill="#5eddee" d="M.3 .2 .8 .5 .3 .8 Z"/>
+                        </g>
+                    </svg>
+                </p>
+                <div class="button-group left">
+                    <button  onclick="toggleMenu(menu.COSTUME_SELECT)" aria-label="Open costume select">
+                        <svg viewBox="0 0 1 1">
+                            <path id="costumes-svg" stroke="var(--fg-color)" stroke-width=".1" fill-opacity="0" d="M.35 .3 .5 .15 .65 .3 .5 .5 .2 .6 .1 .8 .9 .8 .8 .6 .6 .5"/>
+                        </svg>
+                        <p class="tooltip left">コスチューム</p>
+                    </button>
                 </div>
-                <div class="button-group" id="interface">
-                    <p id="holocoin-text"><span id="holocoin-amount">0</span> HoloCoins</p>
+                <div class="button-group right">
                     <button class="float-bottom-right" onclick="toggleMenu(menu.SETTINGS)" aria-label="Open settings">
                         <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <rect width="100%" height="20%"/>
-                                <rect y="40%" width="100%" height="20%"/>
-                                <rect y="80%" width="100%" height="20%"/>
+                            <mask id="hole">
+                                <rect fill="#fff" width="1" height="1"/>
+                                <circle fill="#000" r=".2" cx=".5" cy=".5"/>
+                            </mask>
+                            <g id="settings-svg" fill="var(--fg-color)" mask="url(#hole)">
+                                <circle r=".4" cx=".5" cy=".5"/>
+                                <rect width=".2" height="1" x=".4"/>
+                                <rect y=".4" width="1" height=".2" transform="rotate(30 .5 .5)"/>
+                                <rect y=".4" width="1" height=".2" transform="rotate(-30 .5 .5)"/>
                             </g>
                         </svg>
                         <p class="tooltip right">設定</p>
                     </button>
                     <button class="float-bottom-right" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Open member select">
                         <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <circle cx=".5" cy=".4" r=".3"></circle>
+                            <g id="characters-svg" fill="var(--fg-color)">
+                                <circle cx=".5" cy=".4" r=".3"/>
                                 <path d="M.5 .4 .85 .8 .9 1 .1 1 .15 .8 Z"/>
                             </g>
                         </svg>
-                        <p class="tooltip right">キャラクタ</p>
+                        <p class="tooltip right">キャラ</p>
                     </button>
                     <button class="float-bottom-right" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Open theme select">
                         <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
+                            <g id="themes-svg" fill="var(--fg-color)">
                                 <path d="M0 1 .1 .6 .2 .5 .5 .5 .5 .8 .4 .9 Z"/>
                                 <path d="M.95 0 1 .05 .6 .6 .6 .4 .4 .4 Z"/>
                             </g>
@@ -80,9 +105,7 @@
                     </button>
                     <button class="float-bottom-right" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Open game select">
                         <svg viewBox="0 0 1 1">
-                            <g fill="var(--fg-color)">
-                                <path d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
-                            </g>
+                            <path id="games-svg" fill="var(--fg-color)" d="M.3 .2 .7 .2 .85 .3 .9 .7 .75 .8 .6 .6 .4 .6 .25 .8 .1 .7 .15 .3 Z"/>
                         </svg>
                         <p class="tooltip right">ゲーム</p>
                     </button>
@@ -98,99 +121,134 @@
                     </button>
                 </div>
             </div>
-            <div id="settings" class="menu">
-                <div class="panel">
-                    <div class="panel-header">
-                        <button class="exit-menu" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
-                            <svg viewBox="0 0 1 1">
-                                <g id="exit-svg" fill="var(--fg-color)">
-                                    <path d="M.1 0 1 .9 .9 1 0 .1"/>
-                                    <path d="M.9 0 0 .9 .1 1 1 .1"/>
-                                </g>
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="panel-content">
-                        <h2>設定</h2>
-                        <h3>言語</h3>
-                        <select name="lang" id="lang-select" onchange="selectLanguage()">
-                            <option value="en">English</option>
-                            <option value="jp">日本語 (WIP)</option>
-                        </select>
-                        <h3>オーディオ</h3>
-                        <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume()" oninput="changeVolume()">
-                        <input id="audio-value" type="number" value="100" min="0" max="100" onchange="changeVolumeValue()">
-                        <h3>インターフェース</h3>
-                        <label>
-                            <input type="checkbox" onclick=toggleInterface()></input>
-                            <span>Hide interface</span>
-                        </label>
-                        <h3>Data</h3>
-                        <button class="alert" onclick="clearData()">Clear Data</button>
-                        <h3>About</h3>
-                        <p>This is an unofficial, fan-made project and is NOT affiliated with Hololive or Cover Corporation.</p>
-                        <p>To learn more or report any issues, visit the source code.</p>
-                        <a id="source-link" href="https://github.com/VnceGd/holo-gacha" target="_blank" rel="noreferrer">Source code (GitHub)</a>
-                    </div>
-                </div>
-            </div>
-            <div id="theme-select" class="menu">
-                <div class="panel">
-                    <div class="panel-header">
-                        <h2>テーマ</h2>
-                        <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close themes">
-                            <svg viewBox="0 0 1 1">
-                                <use xlink:href="#exit-svg"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="theme-grid" class="panel-content grid">
-                        <!-- Auto populated -->
-                    </div>
-                </div>
-            </div>
-            <div id="member-select" class="menu">
-                <div class="panel">
-                    <div class="panel-header">
-                        <h2>キャラクタ</h2>
-                        <p>並べ替え
-                            <select name="member-sort" id="member-sort-select" onchange="sortMemberGrid()">
-                                <option value="gen">期生</option>
-                                <option value="surname">姓</option>
-                                <option value="givenname">名</option>
-                            </select>
-                            <label class="custom-checkbox" onchange="reverseSortOrder()">
-                                <input id="member-sort-order" type="checkbox">
-                                <span class="checkmark"></span>
-                                <span id="sort-order-txt"></span>
-                            </label>
-                        </p>
-                        <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close members">
-                            <svg viewBox="0 0 1 1">
-                                <use xlink:href="#exit-svg"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="member-grid" class="panel-content grid">
-                        <!-- Auto populated -->
-                    </div>
-                </div>
-            </div>
-            <div id="game-select" class="menu">
-                <div class="panel">
-                    <div class="panel-header">
-                        <h2>ゲーム</h2>
-                        <button class="exit-menu" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Close games">
-                            <svg viewBox="0 0 1 1">
-                                <use xlink:href="#exit-svg"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <div id="game-grid" class="panel-content grid">
-                        <!-- Auto populated -->
-                    </div>
-                </div>
-            </div>
         </main>
+        <div id="settings" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>設定
+                        <svg viewBox="0 0 1 1">
+                            <use href="#settings-svg"/>
+                        </svg>
+                    </h2>
+                    <button class="exit-menu" onclick="toggleMenu(menu.SETTINGS)" aria-label="Close settings">
+                        <svg viewBox="0 0 1 1">
+                            <g id="exit-svg" fill="var(--fg-color)">
+                                <path d="M.1 0 1 .9 .9 1 0 .1"/>
+                                <path d="M.9 0 0 .9 .1 1 1 .1"/>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+                <div class="panel-content">
+                    <h3>言語</h3>
+                    <select name="lang" id="lang-select" onchange="selectLanguage()">
+                        <option value="en">English</option>
+                        <option value="jp">日本語 (WIP)</option>
+                    </select>
+                    <h3>オーディオ</h3>
+                    <input id="audio" type="range" list="volume-levels" value="100" onchange="changeVolume()" oninput="changeVolume()">
+                    <input id="audio-value" type="number" value="100" min="0" max="100" onchange="changeVolumeValue()">
+                    <h3>インターフェース</h3>
+                    <label>
+                        <input type="checkbox" onclick=toggleInterface()></input>
+                        <span>Hide interface</span>
+                    </label>
+                    <h3>データ</h3>
+                    <button class="alert" onclick="clearData()">Clear Data</button>
+                    <h3>About</h3>
+                    <p>This is an unofficial, fan-made project and is NOT affiliated with Hololive or Cover Corporation.</p>
+                    <p>To learn more or report any issues, visit the source code.</p>
+                    <a id="source-link" href="https://github.com/VnceGd/holo-gacha" target="_blank" rel="noreferrer">Source code (GitHub)</a>
+                </div>
+            </div>
+        </div>
+        <div id="member-select" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>キャラ
+                        <svg viewBox="0 0 1 1">
+                            <use href="#characters-svg"/>
+                        </svg>
+                    </h2>
+                    <p>Sort By
+                        <select name="member-sort" id="member-sort-select" onchange="sortMemberGrid()">
+                            <option value="gen">Generation</option>
+                            <option value="surname">Surname</option>
+                            <option value="givenname">Given name</option>
+                        </select>
+                        <label class="custom-checkbox" onchange="reverseSortOrder()">
+                            <input id="member-sort-order" type="checkbox">
+                            <span class="checkmark"></span>
+                            <span id="sort-order-txt"></span>
+                        </label>
+                    </p>
+                    <button class="exit-menu" onclick="toggleMenu(menu.MEMBER_SELECT)" aria-label="Close members">
+                        <svg viewBox="0 0 1 1">
+                            <use href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="member-grid" class="panel-content grid">
+                    <!-- Auto populated -->
+                </div>
+            </div>
+        </div>
+        <div id="theme-select" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>テーマ
+                        <svg viewBox="0 0 1 1">
+                            <use href="#themes-svg"/>
+                        </svg>
+                    </h2>
+                    <button class="exit-menu" onclick="toggleMenu(menu.THEME_SELECT)" aria-label="Close themes">
+                        <svg viewBox="0 0 1 1">
+                            <use href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="theme-grid" class="panel-content grid">
+                    <!-- Auto populated -->
+                </div>
+            </div>
+        </div>
+        <div id="game-select" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>ゲーム
+                        <svg viewBox="0 0 1 1">
+                            <use href="#games-svg"/>
+                        </svg>
+                    </h2>
+                    <button class="exit-menu" onclick="toggleMenu(menu.GAME_SELECT)" aria-label="Close games">
+                        <svg viewBox="0 0 1 1">
+                            <use href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="game-grid" class="panel-content grid">
+                    <!-- Auto populated -->
+                </div>
+            </div>
+        </div>
+        <div id="costume-select" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>コスチューム
+                        <svg viewBox="0 0 1 1">
+                            <use href="#costumes-svg"/>
+                        </svg>
+                    </h2>
+                    <button class="exit-menu" onclick="toggleMenu(menu.COSTUME_SELECT)" aria-label="Close costumes">
+                        <svg viewBox="0 0 1 1">
+                            <use href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="costume-grid" class="panel-content grid">
+                    <!-- Auto populated -->
+                </div>
+            </div>
+        </div>
     </body>
 </html>
