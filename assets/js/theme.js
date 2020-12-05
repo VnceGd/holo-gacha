@@ -55,3 +55,14 @@ function populateThemeGrid() {
 
     isThemePopulated = true
 }
+
+// Retrieve and set theme from cache
+function loadThemePref() {
+    let cachedTheme = localStorage.getItem('theme')
+
+    if (cachedTheme != null) {
+        setTheme(cachedTheme)
+    }
+}
+
+loadThemePref()

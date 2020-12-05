@@ -259,3 +259,18 @@ function generateButtons(_list) {
 function clearMemberButtons() {
     document.getElementById('member-grid').innerHTML = ''
 }
+
+// Set member from cache or default to Polka
+function loadMemberPref() {
+    let cachedMember = localStorage.getItem('member')
+
+    if (cachedMember != null) {
+        let memberKey = Object.keys(member).find(key => member[key]['FILE'] === cachedMember)
+        setMember(member[memberKey])
+    }
+    else {
+        setMember(member.POLKA)
+    }
+}
+
+loadMemberPref()

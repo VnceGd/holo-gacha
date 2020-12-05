@@ -147,31 +147,6 @@ function clearData() {
     }
 }
 
-// Load settings from local storage
-function loadPrefs() {
-    let cachedTheme = localStorage.getItem('theme')
-    let cachedMember = localStorage.getItem('member')
-    let cachedVolume = localStorage.getItem('volume')
-
-    if (cachedTheme != null) {
-        setTheme(cachedTheme)
-    }
-
-    if (cachedMember != null) {
-        let memberKey = Object.keys(member).find(key => member[key]['FILE'] === cachedMember)
-        setMember(member[memberKey])
-    }
-    else {
-        setMember(member.POLKA)
-    }
-
-    if (cachedVolume != null) {
-        setVolume(cachedVolume)
-        document.getElementById('audio').value = cachedVolume
-        document.getElementById('audio-value').value = cachedVolume
-    }
-}
-
 // --------
 // DATABASE
 // --------
@@ -245,8 +220,6 @@ document.body.onload = _ => {
     currentLang = document.documentElement.lang
     nameKey = `NAME_${currentLang.toUpperCase()}`
     document.getElementById('lang-select').value = currentLang
-    loadPrefs()
     loadData()
-    loadAudio()
     updateCoins()
 }

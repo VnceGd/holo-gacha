@@ -71,6 +71,17 @@ function stopAudio() {
     if (!currentAudio.paused) currentAudio.pause()
 }
 
+// Load volume value from cache
+function loadVolumeSettings() {
+    let cachedVolume = localStorage.getItem('volume')
+
+    if (cachedVolume != null) {
+        setVolume(cachedVolume)
+        document.getElementById('audio').value = cachedVolume
+        document.getElementById('audio-value').value = cachedVolume
+    }
+}
+
 // Add event listeners to buttons for playing SFX
 function loadAudio() {
     let AudioContext = window.AudioContext || window.webkitAudioContext
@@ -83,4 +94,8 @@ function loadAudio() {
             playSoundEffect('btn-click')
         })
     }
+    
+    loadVolumeSettings()
 }
+
+loadAudio()
