@@ -7,21 +7,25 @@ const costume_type = {
     DEFAULT: {
         FILE: 'full',
         NAME_EN: 'Default',
+        NAME_JP: 'デフォルト',
         STATE: costume_state.LOCKED
     },
     NEW_YEAR: {
         FILE: 'new_year',
         NAME_EN: 'New Year',
+        NAME_JP: '新年',
         STATE: costume_state.LOCKED
     },
     NONSTOP_STORY: {
         FILE: 'nonstop_story',
         NAME_EN: 'Nonstop Story',
+        NAME_JP: 'ノンストップストーリー',
         STATE: costume_state.LOCKED
     },
     ORIGINAL: {
         FILE: 'original',
         NAME_EN: 'Original',
+        NAME_JP: 'オリジナル',
         STATE: costume_state.LOCKED
     }
 }
