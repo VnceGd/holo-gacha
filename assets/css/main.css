@@ -185,6 +185,7 @@ button:hover .tooltip {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    overflow: hidden;
 }
 #full-illust {
     height: 100%;
