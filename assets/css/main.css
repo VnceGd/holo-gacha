@@ -194,6 +194,7 @@ button:hover .tooltip {
 .tap-chest {
     position: absolute;
     cursor: pointer;
+    max-width: 100vw;
 }
 .tap-head {
     top: 5vh;
