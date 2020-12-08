@@ -267,6 +267,18 @@ https://hololive.wiki/wiki/File:Shirakami_Fubuki_-_Full_Illustration_01.png
 
 ### Audio:
 
+[`audio/fubuki/greeting.mp3`](audio/fubuki/greeting.mp3)
+
+https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-013.mp3
+
+[`audio/fubuki/good-night-friends.mp3`](audio/fubuki/good-night-friends.mp3)
+
+https://www.youtube.com/watch?v=TGJQpmz7F60
+
+[`audio/fubuki/bye-bye-friends.mp3`](audio/fubuki/bye-bye-friends.mp3), [`audio/fubuki/konketsuno-ippai-arigatou.mp3`](audio/fubuki/konketsuno-ippai-arigatou.mp3), [`audio/fubuki/aishiteru-yo.mp3`](audio/fubuki/aishiteru-yo.mp3) (*Edited in Audacity*)
+
+https://www.youtube.com/watch?v=9V33tPCrDH0
+
 [`audio/fubuki/gacha.mp3`](audio/fubuki/gacha.mp3)
 
 https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-040.mp3

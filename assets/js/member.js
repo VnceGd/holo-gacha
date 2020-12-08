@@ -148,7 +148,7 @@ function setMember(_member) {
     localStorage.setItem('member', memberFile)
 }
 
-// Add buttons for each member to the member grid unless already populated
+// Add buttons for each member to member grid
 function populateMemberGrid() {
     if (isMemberPopulated) clearMemberButtons()
 
@@ -222,7 +222,7 @@ function reverseSortOrder() {
     }
 }
 
-// Generate buttons for each element in the list
+// Generate buttons in member grid for each element in the list
 function generateButtons(_list) {
     _list.forEach(m => {
         let templateButton = document.createElement('button')
@@ -255,7 +255,7 @@ function generateButtons(_list) {
     })
 }
 
-// Clear button elements from grid
+// Clear buttons from member grid
 function clearMemberButtons() {
     document.getElementById('member-grid').innerHTML = ''
 }

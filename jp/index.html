@@ -23,6 +23,7 @@
         <script src="assets/js/audio.js" defer></script>
         <script src="assets/js/member.js" defer></script>
         <script src="assets/js/costume.js" defer></script>
+        <script src="assets/js/voicelines.js" defer></script>
         <script src="assets/js/game.js" defer></script>
         <script src="assets/js/gacha.js" defer></script>
         <script src="assets/js/index.js" defer></script>
@@ -67,6 +68,16 @@
                             <path id="costumes-svg" stroke="var(--fg-color)" stroke-width=".1" fill-opacity="0" d="M.35 .3 .5 .15 .65 .3 .5 .5 .2 .6 .1 .8 .9 .8 .8 .6 .6 .5"/>
                         </svg>
                         <p class="tooltip left">コスチューム</p>
+                    </button>
+                    <button  onclick="toggleMenu(menu.VOICELINES)" aria-label="Open voice lines">
+                        <svg viewBox="0 0 1 1">
+                            <g id="voicelines-svg" fill="var(--fg-color)">
+                                <path d="M0 .3 .2 .3 .5 .1 .5 .9 .2 .7 0 .7"/>
+                                <path d="M.65 .3 .75 .3 .75 .7 .65 .7"/>
+                                <path d="M.9 .2 1 .2 1 .8 .9 .8"/>
+                            </g>
+                        </svg>
+                        <p class="tooltip left">Voice Lines</p>
                     </button>
                 </div>
                 <div class="button-group right">
@@ -246,6 +257,25 @@
                     </button>
                 </div>
                 <div id="costume-grid" class="panel-content grid">
+                    <!-- Auto populated -->
+                </div>
+            </div>
+        </div>
+        <div id="voicelines" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>Voice Lines
+                        <svg viewBox="0 0 1 1">
+                            <use href="#voicelines-svg"/>
+                        </svg>
+                    </h2>
+                    <button class="exit-menu" onclick="toggleMenu(menu.VOICELINES)" aria-label="Close voicelines">
+                        <svg viewBox="0 0 1 1">
+                            <use href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="voiceline-list" class="panel-content">
                     <!-- Auto populated -->
                 </div>
             </div>

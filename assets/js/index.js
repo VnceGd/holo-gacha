@@ -7,7 +7,8 @@ const menu = {
     GAME_SELECT: 'game-select',
     MEMBER_SELECT: 'member-select',
     SETTINGS: 'settings',
-    THEME_SELECT: 'theme-select'
+    THEME_SELECT: 'theme-select',
+    VOICELINES: 'voicelines'
 }
 
 let currentLang = lang.EN
@@ -93,6 +94,9 @@ async function toggleMenu(_menu) {
             break
         case menu.THEME_SELECT:
             populateThemeGrid()
+            break
+        case menu.VOICELINES:
+            populateVoicelines()
             break
     }
 }

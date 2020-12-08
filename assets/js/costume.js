@@ -120,7 +120,7 @@ function setCostume(_costume) {
     document.getElementById('full-illust').src = `assets/img/${currentMember['FILE']}/${_costume}.png`
 }
 
-// Add buttons for each member to the member grid unless already populated
+// Add buttons for current member costumes to costume grid
 function populateCostumeGrid() {
     let memberFile = currentMember['FILE']
     let costumeKey = Object.keys(costume).find(key => costume[key]['FILE'] === memberFile)
@@ -150,7 +150,7 @@ function populateCostumeGrid() {
     }
 }
 
-// Clear button elements from grid
+// Clear buttons from costume grid
 function clearCostumeButtons() {
     document.getElementById('costume-grid').innerHTML = ''
 }
