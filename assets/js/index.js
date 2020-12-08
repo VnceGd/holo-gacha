@@ -139,6 +139,34 @@ function toggleInterface() {
     }
 }
 
+// Directly modify holocoin balance
+function addCoinsDirect() {
+    let coinInput = prompt('Enter an amount of coins to add:', '100')
+    let additionAmount = Number(coinInput)
+
+    if (isNaN(additionAmount)) {
+        alert('Invalid input.')
+        return
+    }
+    if ((additionAmount - Math.floor(additionAmount)) !== 0) {
+        alert('Invalid input.')
+        return
+    }
+
+    currentCoins = Number(currentCoins) + additionAmount
+    localStorage.setItem('holoCoins', currentCoins)
+    updateCoins()
+}
+
+// Unlock all characters
+function unlockAll() {
+    if (confirm('All characters will be unlocked. Continue?')) {
+        Object.keys(member).forEach(value => {
+            addData(member[value])
+        })
+    }
+}
+
 // Remove all data from local storage
 function clearData() {
     if (confirm('This will remove ALL saved data! Continue?')) {

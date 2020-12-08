@@ -232,7 +232,7 @@ function playGachaAnimation(_character) {
 
 // Remove coins from local storage and update text
 function removeCoins(_amount) {
-    localStorage.setItem('holoCoins', currentCoins -= 100)
+    localStorage.setItem('holoCoins', currentCoins -= _amount)
     updateCoins()
 }
 
