@@ -81,16 +81,16 @@
     position: fixed;
     display: flex;
     top: 0;
+    bottom: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    right: 0;
     background-color: var(--bg-color);
     justify-content: center;
     overflow: hidden;
 }
 #gacha-animation img {
     position: absolute;
-    height: 100vh;
+    height: 100%;
 }
 #gacha-animation p {
     position: absolute;
