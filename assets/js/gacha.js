@@ -24,9 +24,12 @@ const banner = {
 
 let currentCoins = 0
 let bannerCost = 100
+let isBannerMenuOpen = false
 
 // Create a fullscreen window with a banner image and roll gacha button
 function openBannerMenu() {
+    if (isBannerMenuOpen) return
+
     let bannerDiv = document.createElement('div')
     let bannerListing = document.createElement('div')
     let bannerContent = document.createElement('div')
@@ -54,6 +57,7 @@ function openBannerMenu() {
             bannerDiv.remove()
         }, 250)
         document.removeEventListener('keydown', handleKeyDown)
+        isBannerMenuOpen = false
     }
 
     let selectBanner = _banner => {
@@ -121,6 +125,8 @@ function openBannerMenu() {
     })
 
     document.addEventListener('keydown', handleKeyDown)
+
+    isBannerMenuOpen = true
 }
 
 // Obtain a random character on the specified banner if funds are sufficient
