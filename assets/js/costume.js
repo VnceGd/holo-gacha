@@ -126,7 +126,7 @@ function populateCostumeGrid() {
     let costumeKey = Object.keys(costume).find(key => costume[key]['FILE'] === memberFile)
     let memberCostumes = costume[costumeKey]
 
-    clearCostumeButtons()
+    clearPanelContent('costume-grid')
 
     for (let i = 1; i < Object.keys(memberCostumes).length; i++) {
         let templateButton = document.createElement('button')
@@ -148,9 +148,4 @@ function populateCostumeGrid() {
         <p class="tooltip bottom">${memberCostumeName}</p>`
         document.getElementById('costume-grid').appendChild(templateButton)
     }
-}
-
-// Clear buttons from costume grid
-function clearCostumeButtons() {
-    document.getElementById('costume-grid').innerHTML = ''
 }

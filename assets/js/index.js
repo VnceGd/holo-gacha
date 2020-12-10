@@ -101,6 +101,10 @@ async function toggleMenu(_menu) {
     }
 }
 
+function clearPanelContent(_panel) {
+    document.getElementById(_panel).innerHTML = ''
+}
+
 // Add keydown listeners for menu control
 document.addEventListener("keydown", e => {
     switch(e.key) {

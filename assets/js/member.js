@@ -257,7 +257,7 @@ function generateButtons(_list) {
 
 // Clear buttons from member grid
 function clearMemberButtons() {
-    document.getElementById('member-grid').innerHTML = ''
+    clearPanelContent('member-grid')
 }
 
 // Set member from cache or default to Polka

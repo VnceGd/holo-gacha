@@ -10,7 +10,7 @@ function populateVoicelines() {
         if (request.status >= 200 && request.status < 400) {
             let data = JSON.parse(request.responseText)
 
-            clearVoicelineButtons()
+            clearPanelContent('voiceline-list')
 
             Object.entries(data).forEach(([key, value]) => {
                 let templateButton = document.createElement('button')
@@ -31,11 +31,6 @@ function populateVoicelines() {
     }
 
     request.send()
-}
-
-// Clear button elements from grid
-function clearVoicelineButtons() {
-    document.getElementById('voiceline-list').innerHTML = ''
 }
 
 // Display error message
