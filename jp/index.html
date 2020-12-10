@@ -24,6 +24,7 @@
         <script src="assets/js/member.js" defer></script>
         <script src="assets/js/costume.js" defer></script>
         <script src="assets/js/voicelines.js" defer></script>
+        <script src="assets/js/profile.js" defer></script>
         <script src="assets/js/game.js" defer></script>
         <script src="assets/js/gacha.js" defer></script>
         <script src="assets/js/index.js" defer></script>
@@ -77,7 +78,18 @@
                                 <path d="M.9 .2 1 .2 1 .8 .9 .8"/>
                             </g>
                         </svg>
-                        <p class="tooltip left">Voice Lines</p>
+                        <p class="tooltip left">ボイスライン</p>
+                    </button>
+                    <button onclick="toggleMenu(menu.PROFILE)" aria-label="Open profile">
+                        <svg viewBox="0 0 1 1">
+                            <g id="profile-svg" fill="transparent" stroke="var(--fg-color)" stroke-width="0.1">
+                                <path d="M.2 .1 .1 .1 .1 .9 .9 .9 .9 .1 .8 .1"/>
+                                <path d="M.4 .1 .6 .1"/>
+                                <path d="M.3 .35 .7 .35"/>
+                                <path d="M.3 .6 .7 .6"/>
+                            </g>
+                        </svg>
+                        <p class="tooltip left">プロフィール</p>
                     </button>
                 </div>
                 <div class="button-group right">
@@ -266,7 +278,7 @@
         <div id="voicelines" class="menu">
             <div class="panel">
                 <div class="panel-header">
-                    <h2>Voice Lines
+                    <h2>ボイスライン
                         <svg viewBox="0 0 1 1">
                             <use href="#voicelines-svg"/>
                         </svg>
@@ -278,6 +290,25 @@
                     </button>
                 </div>
                 <div id="voiceline-list" class="panel-content">
+                    <!-- Auto populated -->
+                </div>
+            </div>
+        </div>
+        <div id="profile" class="menu">
+            <div class="panel">
+                <div class="panel-header">
+                    <h2>プロフィール
+                        <svg viewBox="0 0 1 1">
+                            <use href="#profile-svg"/>
+                        </svg>
+                    </h2>
+                    <button class="exit-menu" onclick="toggleMenu(menu.PROFILE)" aria-label="Close profile">
+                        <svg viewBox="0 0 1 1">
+                            <use href="#exit-svg"/>
+                        </svg>
+                    </button>
+                </div>
+                <div id="profile-list" class="panel-content">
                     <!-- Auto populated -->
                 </div>
             </div>

@@ -6,6 +6,7 @@ const menu = {
     COSTUME_SELECT: 'costume-select',
     GAME_SELECT: 'game-select',
     MEMBER_SELECT: 'member-select',
+    PROFILE: 'profile',
     SETTINGS: 'settings',
     THEME_SELECT: 'theme-select',
     VOICELINES: 'voicelines'
@@ -98,6 +99,9 @@ async function toggleMenu(_menu) {
         case menu.VOICELINES:
             populateVoicelines()
             break
+        case menu.PROFILE:
+            populateProfileList()
+            break
     }
 }
 
@@ -112,6 +116,7 @@ document.addEventListener("keydown", e => {
             toggleMenu(menu.MEMBER_SELECT)
             break
         case 'Escape':
+            if (isBannerMenuOpen) return
             if (currentMenu == null) toggleMenu(menu.SETTINGS)
             else toggleMenu(currentMenu)
             break
