@@ -101,10 +101,17 @@ async function toggleMenu(_menu) {
     }
 }
 
-// Exit menus when 'Escape' is pressed
+// Add keydown listeners for menu control
 document.addEventListener("keydown", e => {
-    if (currentMenu == null) return
-    if (e.key == 'Escape') toggleMenu(currentMenu)
+    switch(e.key) {
+        case 'c':
+            toggleMenu(menu.MEMBER_SELECT)
+            break
+        case 'Escape':
+            if (currentMenu == null) toggleMenu(menu.SETTINGS)
+            else toggleMenu(currentMenu)
+            break
+    }
 })
 
 // --------
