@@ -380,11 +380,9 @@ https://www.hololive.tv/
 
 ### Icons
 
-[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg) (From Raj Dev @ freeicons.io)
+[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg) (*Converted using [vectorizer.io](https://vectorizer.io), Edited in VSCode*)
 
-Licensed under [Creative Commons(Attribution 3.0 unported)](https://creativecommons.org/licenses/by/3.0/)
-
-https://www.freeicons.io/free-food-icons/carrot-icon-11614
+https://hololive.wiki/wiki/File:Logo_-_Usada_Pekora_Pekora_Ch._01.png
 
 ### Sound Effects
 

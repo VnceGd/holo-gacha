@@ -35,5 +35,5 @@ function populateVoicelines() {
 
 // Display error message
 function voicelinesError() {
-    document.getElementById('voiceline-list').innerHTML = 'No voicelines found.'
+    document.getElementById('voiceline-list').innerHTML = 'No voice lines found.'
 }
