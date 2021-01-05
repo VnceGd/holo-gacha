@@ -1,36 +1,25 @@
 // Add buttons for character voicelines from json object
 function populateVoicelines() {
     let memberFile = currentMember['FILE']
-    let voicelineObj = `assets/audio/${memberFile}/voicelines.json`
-    let request = new XMLHttpRequest()
 
-    request.open('GET', voicelineObj, true)
+    fetch(`assets/audio/${memberFile}/voicelines.json`)
+    .then(readObject)
+    .then(parseVoicelines)
+    .catch(voicelinesError)
+}
 
-    request.onload = _ => {
-        if (request.status >= 200 && request.status < 400) {
-            let data = JSON.parse(request.responseText)
+// Generate voiceline buttons
+function parseVoicelines(data) {
+    clearPanelContent('voiceline-list')
 
-            clearPanelContent('voiceline-list')
+    Object.entries(data).forEach(([key, value]) => {
+        let templateButton = document.createElement('button')
 
-            Object.entries(data).forEach(([key, value]) => {
-                let templateButton = document.createElement('button')
-        
-                templateButton.onclick = _ => { playAudioClip(currentMember, key) }
-        
-                templateButton.innerHTML = `${value}`
-                document.getElementById('voiceline-list').appendChild(templateButton)
-            })
-        }
-        else {
-            voicelinesError()
-        }
-    }
+        templateButton.onclick = _ => { playAudioClip(currentMember, key) }
 
-    request.onerror = _ => {
-        voicelinesError()
-    }
-
-    request.send()
+        templateButton.innerHTML = `${value}`
+        document.getElementById('voiceline-list').appendChild(templateButton)
+    })
 }
 
 // Display error message

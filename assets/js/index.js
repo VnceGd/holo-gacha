@@ -74,6 +74,7 @@ async function toggleMenu(_menu) {
         currentMenu = null
         await animatePanel(_menu, 'reverse')
         document.getElementById(_menu).classList.remove('active')
+        return
     }
     else {
         if (currentMenu != null) document.getElementById(currentMenu).classList.remove('active')
@@ -261,6 +262,10 @@ function clearDatabase() {
     let objectStore = db.transaction('members_os', 'readwrite').objectStore('members_os')
 
     objectStore.clear()
+}
+
+function readObject(object) {
+    return object.json()
 }
 
 // Load preferences and data after document is loaded
