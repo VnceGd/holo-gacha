@@ -43,7 +43,7 @@ function openBannerMenu() {
     if (e.key == 'Escape') closePanel()
   }
 
-  let closePanel = _ => {
+  let closePanel = () => {
     bannerDiv.animate(
       [
         // keyframes
@@ -56,7 +56,7 @@ function openBannerMenu() {
         easing: 'ease-out',
       }
     )
-    setTimeout(_ => {
+    setTimeout(() => {
       bannerDiv.remove()
     }, 250)
     document.removeEventListener('keydown', handleKeyDown)
@@ -64,7 +64,7 @@ function openBannerMenu() {
   }
 
   let selectBanner = _banner => {
-    rollButton.onclick = _ => {
+    rollButton.onclick = () => {
       rollGacha(_banner)
     }
     bannerImg.src = `assets/img/banner/${_banner['IMG']}`
@@ -75,7 +75,7 @@ function openBannerMenu() {
 
     bannerBtn.className = 'banner-btn'
     bannerBtn.style.backgroundImage = `url('assets/img/banner/${banner[key]['IMG']}')`
-    bannerBtn.onclick = _ => {
+    bannerBtn.onclick = () => {
       selectBanner(banner[key])
     }
 
@@ -91,23 +91,25 @@ function openBannerMenu() {
 
   rollButton.id = 'gacha-roll-btn'
   rollButton.innerHTML = `Roll x1<br>
-        <span><svg viewBox="0 0 1 1">
-            <use href="#holocoin-svg"/>
-        </svg> x 100</span>`
-  rollButton.onclick = _ => {
+    <span><svg viewBox="0 0 1 1">
+      <use href="#holocoin-svg"/>
+    </svg> x 100</span>`
+  rollButton.onclick = () => {
     rollGacha()
   }
 
-  holoCoinDisplay.innerHTML = `<span name='holocoin-amount'>${currentCoins}
-        </span> <span><svg viewBox="0 0 1 1">
-            <use href="#holocoin-svg"/>
-        </svg></span>`
+  holoCoinDisplay.innerHTML = `<span name='holocoin-amount'>${
+    currentCoins ? currentCoins : 0
+  }
+    </span> <span><svg viewBox="0 0 1 1">
+        <use href="#holocoin-svg"/>
+    </svg></span>`
 
   closeButton.id = 'gacha-close-btn'
   closeButton.innerHTML = `<svg viewBox="0 0 1 1">
-        <use href="#exit-svg"/>
-        </svg>`
-  closeButton.onclick = _ => {
+    <use href="#exit-svg"/>
+    </svg>`
+  closeButton.onclick = () => {
     closePanel()
     playSoundEffect('btn-click')
   }
@@ -168,7 +170,7 @@ function playGachaAnimation(_character) {
   let characterImg = document.createElement('img')
   let continueBtn = document.createElement('button')
 
-  let closePanel = _ => {
+  let closePanel = () => {
     stopAudio()
     animationDiv.animate(
       [
@@ -182,12 +184,12 @@ function playGachaAnimation(_character) {
         easing: 'ease-out',
       }
     )
-    setTimeout(_ => {
+    setTimeout(() => {
       animationDiv.remove()
     }, 250)
   }
 
-  let skipAnimation = _ => {
+  let skipAnimation = () => {
     if (isAnimationFinished) return
 
     let characterName = document.createElement('p')
@@ -199,14 +201,14 @@ function playGachaAnimation(_character) {
     animationDiv.appendChild(characterName)
 
     continueBtn.innerHTML = 'Continue'
-    continueBtn.onclick = _ => {
+    continueBtn.onclick = () => {
       closePanel()
       playSoundEffect('btn-click')
     }
 
     animation.finish()
 
-    setTimeout(_ => {
+    setTimeout(() => {
       playAudioClip(member[memberKey], 'gacha')
     }, 100)
 
@@ -215,12 +217,12 @@ function playGachaAnimation(_character) {
 
   animationDiv.id = 'gacha-animation'
   characterImg.src = `assets/img/${_character}/full.webp`
-  characterImg.onerror = _ => {
+  characterImg.onerror = () => {
     characterImg.src = `assets/img/${_character}/full.png`
   }
 
   continueBtn.innerHTML = 'Skip'
-  continueBtn.onclick = _ => {
+  continueBtn.onclick = () => {
     skipAnimation()
     playSoundEffect('btn-click')
   }
@@ -270,7 +272,7 @@ function updateCoins() {
   let coinAmountText = document.getElementsByName('holocoin-amount')
   currentCoins = localStorage.getItem('holoCoins')
 
-  if (!currentCoins)
+  if (currentCoins == null)
     coinAmountText.forEach(txtElement => {
       txtElement.innerHTML = 0
     })

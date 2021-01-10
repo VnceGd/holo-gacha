@@ -143,7 +143,7 @@ function setMember(_member) {
 
   currentMember = _member
   fullIllust.src = `assets/img/${memberFile}/full.webp`
-  fullIllust.onerror = _ => {
+  fullIllust.onerror = () => {
     fullIllust.src = `assets/img/${memberFile}/full.png`
   }
   localStorage.setItem('member', memberFile)
@@ -230,13 +230,13 @@ function generateButtons(_list) {
     let memberOwned = member[memberKey]['OWNED']
 
     if (memberOwned) {
-      templateButton.onclick = _ => {
+      templateButton.onclick = () => {
         setMember(member[memberKey])
         playSoundEffect('btn-click')
       }
     } else {
       templateButton.className = 'locked'
-      templateButton.onclick = _ => {
+      templateButton.onclick = () => {
         playSoundEffect('btn-disabled')
       }
     }

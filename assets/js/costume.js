@@ -138,18 +138,18 @@ function populateCostumeGrid() {
     let memberCostume = memberCostumes[memberCostumeKey]['FILE']
     let memberCostumeName = memberCostumes[memberCostumeKey][nameKey]
 
-    templateButton.onclick = _ => {
+    templateButton.onclick = () => {
       setCostume(memberCostume)
       playSoundEffect('btn-click')
     }
 
     templateButton.innerHTML = `<div class="background"></div>
-        <picture>
-            <source type="image/webp" srcset="assets/img/${memberFile}/${memberCostume}.webp">
-            <source type="image/png" srcset="assets/img/${memberFile}/${memberCostume}.png">
-            <img src="assets/img/${memberFile}/${memberCostume}.png" alt="${memberCostume}">
-        </picture>
-        <p class="tooltip bottom">${memberCostumeName}</p>`
+      <picture>
+        <source type="image/webp" srcset="assets/img/${memberFile}/${memberCostume}.webp">
+        <source type="image/png" srcset="assets/img/${memberFile}/${memberCostume}.png">
+        <img src="assets/img/${memberFile}/${memberCostume}.png" alt="${memberCostume}">
+      </picture>
+      <p class="tooltip bottom">${memberCostumeName}</p>`
     document.getElementById('costume-grid').appendChild(templateButton)
   }
 }

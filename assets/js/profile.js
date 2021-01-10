@@ -41,7 +41,7 @@ function parseProfile(data) {
           let templateMediaButton = document.createElement('button')
 
           templateMediaButton.innerHTML = key
-          templateMediaButton.onclick = _ => {
+          templateMediaButton.onclick = () => {
             window.open(value)
           }
           profileList.appendChild(templateMediaButton)

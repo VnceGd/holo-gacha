@@ -65,7 +65,7 @@ function animatePanel(_menu, _reverse) {
             direction: _reverse,
           }
         )
-        setTimeout(_ => {
+        setTimeout(() => {
           resolve('panel animated')
         }, animDuration - 20)
         break
@@ -166,11 +166,10 @@ function addCoinsDirect() {
   let coinInput = prompt('Enter an amount of coins to add:', '100')
   let additionAmount = Number(coinInput)
 
-  if (isNaN(additionAmount)) {
-    alert('Invalid input.')
-    return
-  }
-  if (additionAmount - Math.floor(additionAmount) !== 0) {
+  if (
+    isNaN(additionAmount) ||
+    additionAmount - Math.floor(additionAmount) !== 0
+  ) {
     alert('Invalid input.')
     return
   }
@@ -210,11 +209,11 @@ function clearData() {
 function loadData() {
   let request = window.indexedDB.open('members_db', 1)
 
-  request.onerror = _ => {
+  request.onerror = () => {
     console.log('Database failed to open')
   }
 
-  request.onsuccess = _ => {
+  request.onsuccess = () => {
     db = request.result
 
     updateData()
@@ -234,11 +233,11 @@ function addData(_data) {
 
   objectStore.put(newItem)
 
-  transaction.oncomplete = _ => {
+  transaction.oncomplete = () => {
     updateData()
   }
 
-  transaction.onerror = _ => {
+  transaction.onerror = () => {
     console.log('Transaction not opened due to error')
   }
 }
@@ -277,8 +276,8 @@ function readObject(object) {
   return object.json()
 }
 
-// Load preferences and data after document is loaded
-document.body.onload = _ => {
+// Load data after document is loaded
+document.body.onload = () => {
   currentLang = document.documentElement.lang
   nameKey = `NAME_${currentLang.toUpperCase()}`
   document.getElementById('lang-select').value = currentLang
