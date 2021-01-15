@@ -1,0 +1,17 @@
+/* Light (Default) */
+:root {
+  --bg-color: #fff;
+  --fg-color: #000;
+  --menu-color: #fefefe;
+  --btn-color: #8df;
+  --btn-hov-color: #baf8ff;
+}
+
+/* Dark */
+:root[theme='dark'] {
+  --bg-color: #333;
+  --fg-color: #fff;
+  --menu-color: #555;
+  --btn-color: #000;
+  --btn-hov-color: #222;
+}

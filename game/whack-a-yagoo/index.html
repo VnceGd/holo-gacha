@@ -1,62 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Whack-a-YAGOO">
-        <meta name="theme-color" content="#8df"/>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Whack-a-YAGOO" />
+    <meta name="theme-color" content="#8df" />
 
-        <title>Whack-a-YAGOO</title>
-        <link rel="icon" href="assets/img/yagoo.png">
+    <title>Whack-a-YAGOO</title>
+    <link rel="icon" href="assets/img/yagoo.png" />
 
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/theme.css" />
 
-        <script src="assets/js/index.js" defer></script>
-        <script src="assets/js/settings.js" defer></script>
-    </head>
-    <body>
-        <main>
-            <button class="exit-menu" aria-label="Exit game" onclick="endGame()">
-                <svg viewBox="0 0 1 1">
-                    <g id="exit-svg" fill="var(--fg-color)">
-                        <path d="M.1 .1 .1 .9 .4 .9 .4 .1"/>
-                        <path d="M.9 .1 .9 .9 .6 .9 .6 .1"/>
-                    </g>
-                </svg>
-            </button>
-            <p id="timer-text">00:00</p>
-            <div id="game">
-                <!-- Auto generated -->
-            </div>
-            <div class="modal" id="pregame-panel">
-                <div class="modal-content">
-                    <h1>WHACK-A-YAGOO</h1>
-                    <button onclick="startGame()">Play</button>
-                    <!-- <button onclick="togglePanel(panel.SETTINGS)">Settings</button> -->
-                    <button onclick="window.location.href='../..'">Exit</button>
-                </div>
-            </div>
-            <div class="modal" id="settings-panel">
-                <div class="modal-content">
-                    <h1>SETTINGS</h1>
-                    <p>Rows: <input id="max-rows" type="number" value="3" min="1" max="10"></p>
-                    <p>Columns: <input id="max-cols" type="number" value="3" min="1" max="10"></p>
-                    <p>Time: <input id="max-time" type="number" value="15" min="0" max="60"> sec</p>
-                    <p>Spawn Interval: <input id="spawn-interval" type="number" step=".1" value="1" min="0" max="10"> sec</p>
-                    <p>Stay Duration: <input id="stay-duration" type="number" step=".1" value="3" min="0" max="10"> sec</p>
-                    <button onclick="togglePanel(panel.SETTINGS)">Close</button>
-                </div>
-            </div>
-            <div class="modal" id="postgame-panel">
-                <div class="modal-content">
-                    <h1 id="postgame-header">GAME END</h1>
-                    <p># YAGOO hit: <span id="hit-count">0</span></p>
-                    <p id="coin-count">HoloCoins earned: 0</p>
-                    <button id="resume-btn" onclick="resumeGame()">Return to Game</button>
-                    <button onclick="restartGame()">Back to Main Menu</button>
-                </div>
-            </div>
-        </main>
-    </body>
+    <script src="assets/js/index.js" defer></script>
+    <script src="assets/js/settings.js" defer></script>
+    <script src="assets/js/theme.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <button class="exit-menu" aria-label="Exit game" onclick="endGame()">
+        <svg viewBox="0 0 1 1">
+          <g id="exit-svg" fill="var(--fg-color)">
+            <path d="M.1 .1 .1 .9 .4 .9 .4 .1" />
+            <path d="M.9 .1 .9 .9 .6 .9 .6 .1" />
+          </g>
+        </svg>
+      </button>
+      <p id="timer-text">00:00</p>
+      <div id="game">
+        <!-- Auto generated -->
+      </div>
+      <div class="modal" id="pregame-panel">
+        <div class="modal-content">
+          <h1>WHACK-A-YAGOO</h1>
+          <button onclick="startGame()">Play</button>
+          <button onclick="togglePanel(panel.SETTINGS)">Settings</button>
+          <button onclick="window.location.href='../..'">Exit</button>
+        </div>
+      </div>
+      <div class="modal" id="settings-panel">
+        <div class="modal-content">
+          <h1>SETTINGS</h1>
+          <table>
+            <tr>
+              <th>Grid size:</th>
+              <td>
+                <input id="grid-size" type="number" value="3" min="3" max="10" />
+              </td>
+            </tr>
+            <tr>
+              <th>Time:</th>
+              <td>
+                <input id="max-time" type="number" value="30" min="10" max="180" />
+              </td>
+              <td>sec.</td>
+            </tr>
+            <tr>
+              <th>Spawn Rate:</th>
+              <td>
+                <input id="spawn-rate" type="number" step=".1" value="1.5" min="0" max="10" />
+              </td>
+              <td>sec.</td>
+            </tr>
+            <tr>
+              <th>Theme:</th>
+              <td>
+                <input id="light" name="theme" type="radio" value="light" checked />
+                <label for="light" onclick="setTheme(theme.LIGHT)">Light</label>
+                <input id="dark" name="theme" type="radio" value="dark" />
+                <label for="dark" onclick="setTheme(theme.DARK)">Dark</label>
+              </td>
+            </tr>
+          </table>
+          <!-- <p>
+            Stay Duration:
+            <input id="stay-duration" type="number" step=".1" value="3" min="0" max="10" />
+            sec
+          </p> -->
+          <button onclick="togglePanel(panel.SETTINGS)">Close</button>
+        </div>
+      </div>
+      <div class="modal" id="postgame-panel">
+        <div class="modal-content">
+          <h1 id="postgame-header">GAME END</h1>
+          <p># YAGOO hit: <span id="hit-count">0</span></p>
+          <p id="coin-count">HoloCoins earned: 0</p>
+          <button id="resume-btn" onclick="resumeGame()">Return to Game</button>
+          <button onclick="restartGame()">Back to Main Menu</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
