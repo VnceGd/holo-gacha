@@ -1,6 +1,6 @@
 # Assets
 
-All assets listed are sourced from third-parties and are subject to their respective terms and conditions. Note that any assets which have been edited are indicated along with the software used to edit them. 
+All assets listed are sourced from third-parties and are subject to their respective terms and conditions. Note that any assets which have been edited are indicated along with the software used to edit them.
 
 WebP images are not included in the list as they are converted from their PNG source material using [ezgif.com](https://ezgif.com/png-to-webp).
 
@@ -30,6 +30,8 @@ Other specific licenses may be noted under assets as necessary.
 
 [☄️ Hoshimachi Suisei](#hoshimachi-suisei)
 
+[🥐 Inugami Korone](#inugami-korone)
+
 [⚓ Minato Aqua](#minato-aqua)
 
 [🌙 Murasaki Shion](#murasaki-shion)
@@ -37,6 +39,8 @@ Other specific licenses may be noted under assets as necessary.
 [😈 Nakiri Ayame](#nakiri-ayame)
 
 [🏮 Natsuiro Matsuri](#natsuiro-matsuri)
+
+[🍙 Nekomata Okayu](#nekomata-okayu)
 
 [🎪 Omaru Polka](#omaru-polka)
 
@@ -65,6 +69,7 @@ Other specific licenses may be noted under assets as necessary.
 ---
 
 ❣️
+
 ## Akai Haato
 
 ### Illustration:
@@ -74,6 +79,7 @@ Other specific licenses may be noted under assets as necessary.
 https://en.hololive.tv/portfolio/items/433551
 
 🍎
+
 ## Aki Rosenthal
 
 ### Illustration:
@@ -93,30 +99,43 @@ https://www.myinstants.com/instant/akirose-bad-boy-47624/
 https://www.myinstants.com/instant/akirose-ara-ara-55111/
 
 🔱
+
 ## Gawr Gura
 
 ### Illustration:
 
-[`img/gura/full.png`](img/gura/full.png) (*Edited in GIMP-2.10*)
+[`img/gura/full.png`](img/gura/full.png) (_Edited in GIMP-2.10_)
 
 https://hololive.wiki/wiki/File:Gawr_Gura_-_Full_Illustration_01.jpg
 
 ### Audio:
 
-[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3), [`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3) (*Edited in Audacity*)
+[`audio/gura/tap-chest.mp3`](audio/gura/tap-chest.mp3), [`audio/gura/tap-head.mp3`](audio/gura/tap-head.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=dBK0gKW61NU
 
 ☄️
+
 ## Hoshimachi Suisei
 
 ### Illustration:
 
-[`img/suisei/full.png`](img/suisei/full.png) (*Edited in GIMP-2.10*)
+[`img/suisei/full.png`](img/suisei/full.png) (_Edited in GIMP-2.10_)
 
 https://en.hololive.tv/portfolio/items/433550
 
+🥐
+
+## Inugami Korone
+
+### Illustration:
+
+[`img/korone/full.png`](img/korone/full.png)
+
+https://hololive.wiki/wiki/File:Inugami_Korone_-_Full_Illustration_01.png
+
 ⚓
+
 ## Minato Aqua
 
 ### Illustration:
@@ -140,51 +159,66 @@ https://www.myinstants.com/instant/mo-baka-1514/
 https://www.myinstants.com/instant/neeeeeeeee-37805/
 
 🌙
+
 ## Murasaki Shion
 
 ### Illustration:
 
-[`img/shion/full.png`](img/shion/full.png) (*Edited in GIMP-2.10*)
+[`img/shion/full.png`](img/shion/full.png) (_Edited in GIMP-2.10_)
 
 https://en.hololive.tv/portfolio/items/433577
 
 😈
+
 ## Nakiri Ayame
 
 ### Illustration:
 
-[`img/ayame/full.png`](img/ayame/full.png) (*Edited in GIMP-2.10*)
+[`img/ayame/full.png`](img/ayame/full.png) (_Edited in GIMP-2.10_)
 
 https://en.hololive.tv/portfolio/items/433583
 
 🏮
+
 ## Natsuiro Matsuri
 
 ### Illustration:
 
-[`img/matsuri/full.png`](img/matsuri/full.png) (*Edited in Photopea*)
+[`img/matsuri/full.png`](img/matsuri/full.png) (_Edited in Photopea_)
 
 https://en.hololive.tv/portfolio/items/433575
 
+🍙
+
+## Nekomata Okayu
+
+### Illustration:
+
+[`img/okayu/full.png`](img/okayu/full.png)
+
+https://hololive.wiki/wiki/File:Nekomata_Okayu_-_Full_Illustration_01.png
+
 🎪
+
 ## Omaru Polka
 
 ### Illustration:
 
 [`img/icons-192.png`](img/icons-192.png),
-[`img/icons-512.png`](img/icons-512.png) (*Edited in GIMP-2.10*)
+[`img/icons-512.png`](img/icons-512.png) (_Edited in GIMP-2.10_)
 
 [`img/polka/full.png`](img/polka/full.png)
 
 https://hololive.wiki/wiki/File:Omaru_Polka_-_Full_Illustration_01.png
 
-### Audio: 
+### Audio:
 
-[`audio/polka/tap-chest.mp3`](audio/polka/tap-chest.mp3), [`audio/polka/tap-head.mp3`](audio/polka/tap-head.mp3) (*Edited in Audacity*)
+[`audio/polka/tap-chest.mp3`](audio/polka/tap-chest.mp3), [`audio/polka/tap-head.mp3`](audio/polka/tap-head.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=01HNMoigEuY
 
 🌲
+
 ## Ookami Mio
 
 ### Illustration:
@@ -194,6 +228,7 @@ https://www.youtube.com/watch?v=01HNMoigEuY
 https://en.hololive.tv/portfolio/items/433580
 
 🚑
+
 ## Oozora Subaru
 
 ### Illustration:
@@ -209,6 +244,7 @@ https://en.hololive.tv/portfolio/items/433593
 https://www.myinstants.com/instant/subasubasubasubasubasuba-29512/
 
 🤖
+
 ## Roboco
 
 ### Illustration:
@@ -217,38 +253,39 @@ https://www.myinstants.com/instant/subasubasubasubasubasuba-29512/
 
 https://en.hololive.tv/portfolio/items/433579
 
-[`img/roboco/new_year.png`](img/roboco/new_year.png) (*Edited in Photopea*)
+[`img/roboco/new_year.png`](img/roboco/new_year.png) (_Edited in Photopea_)
 
 https://twitter.com/GeekJack_Store/status/1241603059303604224/photo/3
 
-[`img/roboco/nonstop_story.png`](img/roboco/nonstop_story.png) (*Edited in Photopea*)
+[`img/roboco/nonstop_story.png`](img/roboco/nonstop_story.png) (_Edited in Photopea_)
 
 https://hololive.wiki/wiki/File:Roboco_-_Nonstop_Story_Full_Illustration.png
 
 ### Audio:
 
-[`audio/roboco/gacha.mp3`](audio/roboco/gacha.mp3) (*Edited in Audacity*)
+[`audio/roboco/gacha.mp3`](audio/roboco/gacha.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=G-vff8SLVCY
 
-[`audio/roboco/tap-chest.mp3`](audio/roboco/tap-chest.mp3) (*Edited in Audacity*)
+[`audio/roboco/tap-chest.mp3`](audio/roboco/tap-chest.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=rnl9csoCx3g
 
-[`audio/roboco/tap-head.mp3`](audio/roboco/tap-head.mp3) (*Edited in Audacity*)
+[`audio/roboco/tap-head.mp3`](audio/roboco/tap-head.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=ddgipyIVra4
 
 🌸
+
 ## Sakura Miko
 
 ### Illustration:
 
-[`img/miko/full.png`](img/miko/full.png) (*Edited in Photopea*)
+[`img/miko/full.png`](img/miko/full.png) (_Edited in Photopea_)
 
 https://twitter.com/GeekJack_Store/status/1240094304313282560/photo/1
 
-[`img/miko/nonstop_story.png`](img/miko/nonstop_story.png) (*Edited in Photopea*)
+[`img/miko/nonstop_story.png`](img/miko/nonstop_story.png) (_Edited in Photopea_)
 
 https://hololive.wiki/wiki/File:Sakura_Miko_-_Nonstop_Story_Full_Illustration.png
 
@@ -257,6 +294,7 @@ https://hololive.wiki/wiki/File:Sakura_Miko_-_Nonstop_Story_Full_Illustration.pn
 https://en.hololive.tv/portfolio/items/433578
 
 🌽
+
 ## Shirakami Fubuki
 
 ### Illustration:
@@ -275,7 +313,7 @@ https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-013.mp3
 
 https://www.youtube.com/watch?v=TGJQpmz7F60
 
-[`audio/fubuki/bye-bye-friends.mp3`](audio/fubuki/bye-bye-friends.mp3), [`audio/fubuki/konketsuno-ippai-arigatou.mp3`](audio/fubuki/konketsuno-ippai-arigatou.mp3), [`audio/fubuki/aishiteru-yo.mp3`](audio/fubuki/aishiteru-yo.mp3) (*Edited in Audacity*)
+[`audio/fubuki/bye-bye-friends.mp3`](audio/fubuki/bye-bye-friends.mp3), [`audio/fubuki/konketsuno-ippai-arigatou.mp3`](audio/fubuki/konketsuno-ippai-arigatou.mp3), [`audio/fubuki/aishiteru-yo.mp3`](audio/fubuki/aishiteru-yo.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=9V33tPCrDH0
 
@@ -292,6 +330,7 @@ https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-001.mp3
 https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-018.mp3
 
 🐻
+
 ## Tokino Sora
 
 ### Illustration:
@@ -300,11 +339,12 @@ https://github.com/NafeeJ/fubuki-button/blob/master/static/voices/f-018.mp3
 
 https://en.hololive.tv/portfolio/items/433553
 
-[`img/sora/nonstop_story.png`](img/sora/nonstop_story.png) (*Edited in Photopea*)
+[`img/sora/nonstop_story.png`](img/sora/nonstop_story.png) (_Edited in Photopea_)
 
 https://hololive.wiki/wiki/File:Tokino_Sora_-_Nonstop_Story_Full_Illustration.png
 
 🐏
+
 ## Tsunomaki Watame
 
 ### Illustration:
@@ -324,6 +364,7 @@ https://www.myinstants.com/instant/watame-wa-warukunai-yo-nee-84500/
 https://www.myinstants.com/instant/watame-factory-74311/
 
 👯
+
 ## Usada Pekora
 
 ### Illustration:
@@ -343,6 +384,7 @@ https://www.myinstants.com/instant/pekoonetoucchi-7300/
 https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/
 
 🌟
+
 ## Yozora Mel
 
 ### Illustrations:
@@ -351,15 +393,16 @@ https://www.myinstants.com/instant/pe-ko-pe-ko-pe-ko-pe-ko-47771/
 
 https://hololive.wiki/wiki/File:Yozora_Mel_-_Full_Illustration_01.png
 
-[`img/mel/new_year.png`](img/mel/new_year.png) (*Edited in Photopea*)
+[`img/mel/new_year.png`](img/mel/new_year.png) (_Edited in Photopea_)
 
 https://twitter.com/GeekJack_Store/status/1239715435253137408/photo/4
 
-[`img/mel/nonstop_story.png`](img/mel/nonstop_story.png) (*Edited in Photopea*)
+[`img/mel/nonstop_story.png`](img/mel/nonstop_story.png) (_Edited in Photopea_)
 
 https://hololive.wiki/wiki/File:Yozora_Mel_-_Nonstop_Story_Full_Illustration.png
 
 💋
+
 ## Yuzuki Choco
 
 ### Illustrations:
@@ -378,15 +421,19 @@ https://en.hololive.tv/portfolio/items/433552
 
 https://www.hololive.tv/
 
+[`img/banner/default_plus.png`](img/banner/default_plus.png)
+
+https://cover-corp.com/
+
 ### Icons
 
-[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg) (*Converted using [vectorizer.io](https://vectorizer.io), Edited in VSCode*)
+[`img/pekora/ninjin.svg`](img/pekora/ninjin.svg) (_Converted using [vectorizer.io](https://vectorizer.io), Edited in VSCode_)
 
 https://hololive.wiki/wiki/File:Logo_-_Usada_Pekora_Pekora_Ch._01.png
 
 ### Sound Effects
 
-[`audio/sfx/btn-click.mp3`](audio/sfx/btn-click.mp3) (*Edited in Audacity*)
+[`audio/sfx/btn-click.mp3`](audio/sfx/btn-click.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=aCAMZvLX1Gs
 
@@ -394,6 +441,6 @@ https://www.youtube.com/watch?v=aCAMZvLX1Gs
 
 https://www.myinstants.com/instant/polka-hnn-01-82596/
 
-[`audio/sfx/gacha.mp3`](audio/sfx/gacha.mp3) (*Edited in Audacity*)
+[`audio/sfx/gacha.mp3`](audio/sfx/gacha.mp3) (_Edited in Audacity_)
 
 https://www.youtube.com/watch?v=9kQ2GtvDV3s

@@ -14,7 +14,9 @@ const banner = {
     CHOCO: member.CHOCO,
     SUBARU: member.SUBARU,
     MIO: member.MIO,
-    IMG: 'default.png',
+    OKAYU: member.OKAYU,
+    KORONE: member.KORONE,
+    IMG: 'default_plus.png',
   },
   // SHINY_SMILY_STORY: {
   //   SUISEI: member.SUISEI,
@@ -82,7 +84,7 @@ function openBannerMenu() {
     bannerListing.appendChild(bannerBtn)
   }
 
-  bannerImg.src = `assets/img/banner/default.png`
+  bannerImg.src = `assets/img/banner/default_plus.png`
   bannerContent.appendChild(bannerImg)
 
   bannerDiv.id = 'gacha-banner'
@@ -98,9 +100,7 @@ function openBannerMenu() {
     rollGacha()
   }
 
-  holoCoinDisplay.innerHTML = `<span name='holocoin-amount'>${
-    currentCoins ? currentCoins : 0
-  }
+  holoCoinDisplay.innerHTML = `<span name='holocoin-amount'>${currentCoins ? currentCoins : 0}
     </span> <span><svg viewBox="0 0 1 1">
         <use href="#holocoin-svg"/>
     </svg></span>`
@@ -193,9 +193,7 @@ function playGachaAnimation(_character) {
     if (isAnimationFinished) return
 
     let characterName = document.createElement('p')
-    let memberKey = Object.keys(member).find(
-      key => member[key]['FILE'] === _character
-    )
+    let memberKey = Object.keys(member).find(key => member[key]['FILE'] === _character)
 
     characterName.innerHTML = member[memberKey][nameKey]
     animationDiv.appendChild(characterName)

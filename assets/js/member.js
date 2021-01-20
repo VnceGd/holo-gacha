@@ -90,6 +90,18 @@ const member = {
     NAME_JP: '大神 ミオ',
     OWNED: false,
   },
+  OKAYU: {
+    FILE: 'okayu',
+    NAME_EN: 'Nekomata Okayu',
+    NAME_JP: '猫又おかゆ',
+    OWNED: false,
+  },
+  KORONE: {
+    FILE: 'korone',
+    NAME_EN: 'Inugami Korone',
+    NAME_JP: '戌神ころね',
+    OWNED: false,
+  },
   PEKORA: {
     FILE: 'pekora',
     NAME_EN: 'Usada Pekora',
@@ -262,9 +274,7 @@ function loadMemberPref() {
   let cachedMember = localStorage.getItem('member')
 
   if (cachedMember != null) {
-    let memberKey = Object.keys(member).find(
-      key => member[key]['FILE'] === cachedMember
-    )
+    let memberKey = Object.keys(member).find(key => member[key]['FILE'] === cachedMember)
     setMember(member[memberKey])
   } else {
     setMember(member.POLKA)

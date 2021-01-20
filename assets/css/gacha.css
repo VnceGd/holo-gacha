@@ -1,133 +1,134 @@
 /* Banner */
 
 #gacha-banner {
-    position: fixed;
-    display: flex;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--menu-color);
-    justify-content: center;
-    flex-direction: column-reverse;
-    overflow: hidden;
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--menu-color);
+  justify-content: center;
+  flex-direction: column-reverse;
+  overflow: hidden;
 }
 #gacha-banner .listing {
-    display: flex;
-    padding: 1.5rem 1rem;
-    border-top: 1px solid var(--bg-color);
-    flex-direction: row;
-    align-items: flex-start;
-    overflow: auto;
+  display: flex;
+  padding: 1.5rem 1rem;
+  border-top: 1px solid var(--bg-color);
+  flex-direction: row;
+  align-items: flex-start;
+  overflow: auto;
 }
 #gacha-banner .content {
-    display: flex;
-    height: calc(100vh - 16rem);
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  height: calc(100vh - 16rem);
+  justify-content: center;
+  align-items: center;
 }
 #gacha-banner img {
-    margin: .5rem auto;
-    max-width: 90%;
-    max-height: 60%;
-    object-fit: contain;
+  margin: 0.5rem auto;
+  max-width: 90%;
+  max-height: 60%;
+  border-radius: 0.25rem;
+  object-fit: contain;
 }
 #gacha-banner button {
-    margin: .5rem auto;
-    padding: 1rem 2rem;
-    background-color: var(--btn-color);
-    color: var(--fg-color);
-    border: none;
-    border-radius: 2rem;
-    transition: .2s;
+  margin: 0.5rem auto;
+  padding: 1rem 2rem;
+  background-color: var(--btn-color);
+  color: var(--fg-color);
+  border: none;
+  border-radius: 2rem;
+  transition: 0.2s;
 }
 #gacha-banner button:focus,
 #gacha-banner button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 #gacha-banner .top {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    display: flex;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
 }
 #gacha-banner .banner-btn {
-    flex: none;
-    margin: auto .5rem;
-    width: 8rem;
-    height: 4rem;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: .5rem;
+  flex: none;
+  margin: auto 0.5rem;
+  width: 8rem;
+  height: 4rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0.25rem;
 }
 #gacha-banner #gacha-roll-btn {
-    margin: 0;
-    padding: .5rem 1rem;
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    width: 10rem;
+  margin: 0;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 10rem;
 }
 #gacha-banner #gacha-close-btn {
-    margin-left: 1rem;
-    padding: 0 .625rem;
-    border-radius: 50%;
+  margin-left: 1rem;
+  padding: 0 0.625rem;
+  border-radius: 50%;
 }
 
 /* Animation */
 
 #gacha-animation {
-    position: fixed;
-    display: flex;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: var(--bg-color);
-    justify-content: center;
-    overflow: hidden;
+  position: fixed;
+  display: flex;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color);
+  justify-content: center;
+  overflow: hidden;
 }
 #gacha-animation img {
-    position: absolute;
-    height: 100%;
+  position: absolute;
+  height: 100%;
 }
 #gacha-animation p {
-    position: absolute;
-    bottom: 3rem;
-    right: 1rem;
-    padding: 1rem 2rem;
-    background: var(--menu-color);
-    border-radius: 2rem;
-    font-weight: 700;
-    font-size: 2rem;
+  position: absolute;
+  bottom: 3rem;
+  right: 1rem;
+  padding: 1rem 2rem;
+  background: var(--menu-color);
+  border-radius: 2rem;
+  font-weight: 700;
+  font-size: 2rem;
 }
 #gacha-animation button {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    padding: 1rem 2rem;
-    background-color: var(--btn-color);
-    color: var(--fg-color);
-    border: none;
-    border-radius: 2rem;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--btn-color);
+  color: var(--fg-color);
+  border: none;
+  border-radius: 2rem;
 }
 
 @media only screen and (min-width: 43em) {
-    #gacha-banner {
-        flex-direction: row;
-    }
-    #gacha-banner .listing {
-        padding: 1rem;
-        width: 8.5rem;
-        flex-direction: column;
-        border-right: 1px solid var(--bg-color);
-    }
-    #gacha-banner .content {
-        width: calc(100vw - 8rem);
-        height: auto;
-    }
-    #gacha-banner .banner-btn {
-        margin: .5rem auto;
-    }
+  #gacha-banner {
+    flex-direction: row;
+  }
+  #gacha-banner .listing {
+    padding: 1rem;
+    width: 8.5rem;
+    flex-direction: column;
+    border-right: 1px solid var(--bg-color);
+  }
+  #gacha-banner .content {
+    width: calc(100vw - 8rem);
+    height: auto;
+  }
+  #gacha-banner .banner-btn {
+    margin: 0.5rem auto;
+  }
 }
