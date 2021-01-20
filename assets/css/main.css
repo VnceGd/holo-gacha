@@ -378,9 +378,9 @@ input[type='number'] {
 }
 
 /* Audio Input */
-#audio {
+.audio-range {
   vertical-align: middle;
 }
-#audio-value {
+.audio-value {
   width: 2.5rem;
 }
