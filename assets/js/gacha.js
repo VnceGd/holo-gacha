@@ -100,10 +100,11 @@ function openBannerMenu() {
     rollGacha()
   }
 
-  holoCoinDisplay.innerHTML = `<span name='holocoin-amount'>${currentCoins ? currentCoins : 0}
-    </span> <span><svg viewBox="0 0 1 1">
+  holoCoinDisplay.className = 'currency'
+  holoCoinDisplay.innerHTML = `<svg viewBox="0 0 1 1">
         <use href="#holocoin-svg"/>
-    </svg></span>`
+    </svg>
+    <span name='holocoin-amount'>${currentCoins ? currentCoins : 0}</span>`
 
   closeButton.id = 'gacha-close-btn'
   closeButton.innerHTML = `<svg viewBox="0 0 1 1">

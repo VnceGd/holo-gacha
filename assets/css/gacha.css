@@ -34,8 +34,6 @@
   object-fit: contain;
 }
 #gacha-banner button {
-  margin: 0.5rem auto;
-  padding: 1rem 2rem;
   background-color: var(--btn-color);
   color: var(--fg-color);
   border: none;
@@ -71,8 +69,9 @@
   width: 10rem;
 }
 #gacha-banner #gacha-close-btn {
+  width: 2rem;
+  height: 2rem;
   margin-left: 1rem;
-  padding: 0 0.625rem;
   border-radius: 50%;
 }
 

@@ -2,374 +2,385 @@
 html,
 body,
 main {
-    height: 100%;
-    box-sizing: border-box;
+  height: 100%;
+  box-sizing: border-box;
 }
 html {
-    width: 100%;
+  width: 100%;
 }
 body {
-    margin: 0;
-    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
-    background: var(--bg-color);
-    color: var(--fg-color);
+  margin: 0;
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  background: var(--bg-color);
+  color: var(--fg-color);
 }
-p, span, input, button {
-    font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+p,
+span,
+input,
+button {
+  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
 }
 a,
 a:visited {
-    color: var(--link-color);
+  color: var(--link-color);
 }
 svg {
-    height: 1rem;
-    vertical-align: middle;
+  height: 1rem;
+  vertical-align: middle;
 }
 .background {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: var(--bg-icon) repeat center/25%;
-    opacity: .3;
-    z-index: -1;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--bg-icon) repeat center/25%;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 /* INTERFACE */
-#holocoin-text {
-    position: fixed;
-    margin: 0;
-    top: 1rem;
-    right: 1rem;
+.currency {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.currency :first-child {
+  margin-right: 0.5rem;
 }
 .hidden {
-    opacity: 0;
-    transition: .2s;
+  opacity: 0;
+  transition: 0.2s;
 }
 .hidden:hover {
-    opacity: 1;
+  opacity: 1;
+}
+#holocoin-text {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
 }
 
 /* CHARACTER */
 .member-card {
-    margin: auto;
-    padding: 5%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
-    overflow: hidden;
+  margin: auto;
+  padding: 5%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 #full-illust {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .tap-head,
 .tap-chest {
-    position: absolute;
-    cursor: pointer;
-    max-width: 100vw;
+  position: absolute;
+  cursor: pointer;
+  max-width: 100vw;
 }
 .tap-head {
-    top: 5vh;
-    width: 20vh;
-    height: 25vh;
+  top: 5vh;
+  width: 20vh;
+  height: 25vh;
 }
 .tap-chest {
-    top: 30vh;
-    width: 30vh;
-    height: 60vh;
+  top: 30vh;
+  width: 30vh;
+  height: 60vh;
 }
 
 /* MENU */
 .menu {
-    display: none;
+  display: none;
 }
 .menu button {
-    padding: .5rem;
-    border: none;
-    border-radius: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
 }
 .active {
-    display: block;
+  display: block;
 }
 .panel {
-    position: fixed;
-    padding: 2rem;
-    width: 100vw;
-    max-height: 100%;
-    max-height: -moz-fill-available;
-    max-height: -webkit-fill-available;
-    bottom: 0;
-    background: var(--menu-color);
-    box-sizing: border-box;
-    backdrop-filter: blur(.25rem);
-    -webkit-backdrop-filter: blur(.25rem);
+  position: fixed;
+  padding: 2rem;
+  width: 100vw;
+  max-height: 100%;
+  max-height: -moz-fill-available;
+  max-height: -webkit-fill-available;
+  bottom: 0;
+  background: var(--menu-color);
+  box-sizing: border-box;
+  backdrop-filter: blur(0.25rem);
+  -webkit-backdrop-filter: blur(0.25rem);
 }
 .panel h2:first-of-type {
-    margin-top: 0;
+  margin-top: 0;
 }
 .panel-content button {
-    margin: .25rem .5rem .25rem 0;
-    background-color: var(--btn-color);
-    color: var(--fg-color);
+  margin: 0.25rem 0.5rem 0.25rem 0;
+  background-color: var(--btn-color);
+  color: var(--fg-color);
 }
 .panel-content button:focus,
 .panel-content button:hover {
-    background-color: var(--bg-color);
+  background-color: var(--bg-color);
 }
 .panel-content button:active {
-    transform: scale(.95);
+  transform: scale(0.95);
 }
 .panel-content {
-    max-height: calc(100vh - 6rem);
-    overflow: scroll;
+  max-height: calc(100vh - 6rem);
+  overflow: scroll;
 }
 #member-select .panel-content {
-    max-height: calc(100vh - 9rem);
+  max-height: calc(100vh - 9rem);
 }
 .panel-content .alert {
-    background-color: #f00;
-    color: #fff;
-    font-weight: 700;
+  background-color: #f00;
+  color: #fff;
+  font-weight: 700;
 }
 .panel-content .alert:focus,
 .panel-content .alert:hover {
-    background-color: #f33;
+  background-color: #f33;
 }
 
 /* Settings Menu */
 #source-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 #source-link:focus,
 #source-link:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Select Menu */
 .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  grid-gap: 1rem;
 }
 .grid button {
-    margin: initial;
-    max-height: 8rem;
-    overflow: hidden;
+  margin: initial;
+  max-height: 8rem;
+  overflow: hidden;
 }
 .grid img {
-    max-width: 100%;
-    max-height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 #member-grid img,
 #costume-grid img {
-    max-height: none;
+  max-height: none;
 }
 .locked img {
-    filter: grayscale(1) brightness(.5);
+  filter: grayscale(1) brightness(0.5);
 }
 
 /* Profile List */
 tr:nth-child(even) {
-    background: var(--menu-color);
+  background: var(--menu-color);
 }
 td {
-    padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
 }
 
 /* BUTTON */
 button {
-    cursor: pointer;
-    font-weight: 700;
+  cursor: pointer;
+  font-weight: 700;
 }
 button a {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .button-group {
-    display: flex;
-    flex-direction: column-reverse;
-    position: fixed;
-    bottom: 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  bottom: 1rem;
 }
 .button-group.right {
-    right: 1rem;
+  right: 1rem;
 }
 .button-group.left {
-    left: 1rem;
+  left: 1rem;
 }
 .button-group button {
-    width: 3rem;
-    height: 3rem;
-    margin-top: 1rem;
-    padding: .75rem;
-    border: none;
-    border-radius: 50%;
-    box-shadow: 0 .125rem .25rem 0 #0005;
-    background: var(--btn-color);
-    color: var(--fg-color);
-    transition: .2s;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0.125rem 0.25rem 0 #0005;
+  background: var(--btn-color);
+  color: var(--fg-color);
+  transition: 0.2s;
 }
 .button-group button:focus,
 .button-group button:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 .button-group button:active {
-    transform: scale(.98);
+  transform: scale(0.98);
 }
 .button-group svg {
-    height: 1.5rem;
+  height: 1.5rem;
 }
 .exit-menu {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 2rem;
-    height: 2rem;
-    background: none;
-    border: none;
-    transition: .2s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background: none;
+  border: none;
+  transition: 0.2s;
 }
 .exit-menu:focus,
 .exit-menu:hover {
-    background: #0002;
+  background: #0002;
 }
 .grid button {
-    position: relative;
-    min-height: 8rem;
-    border: 2px solid var(--menu-color);
-    transition: .2s;
+  position: relative;
+  min-height: 8rem;
+  border: 2px solid var(--menu-color);
+  transition: 0.2s;
 }
 .grid button:focus,
 .grid button:hover {
-    border: 2px solid var(--fg-color);
-    outline: none;
+  border: 2px solid var(--fg-color);
+  outline: none;
 }
 .grid button:active {
-    border: 2px solid var(--btn-color);
+  border: 2px solid var(--btn-color);
 }
 #member-grid button,
 #costume-grid button {
-    background: var(--bg-color);
+  background: var(--bg-color);
 }
 .grid button .background {
-    z-index: auto;
+  z-index: auto;
 }
 .grid button picture {
-    position: relative;
+  position: relative;
 }
 
 /* Tooltip */
 button .tooltip {
-    position: absolute;
-    padding: .5rem 1rem;
-    color: var(--fg-color);
-    background-color: var(--btn-color);
-    border-radius: .25rem;
-    opacity: 0;
-    font-weight: 400;
-    transform: scale(0);
-    box-shadow: 0 .125rem .25rem 0 #0005;
-    z-index: 1;
-    transition: .2s;
+  position: absolute;
+  padding: 0.5rem 1rem;
+  color: var(--fg-color);
+  background-color: var(--btn-color);
+  border-radius: 0.25rem;
+  opacity: 0;
+  font-weight: 400;
+  transform: scale(0);
+  box-shadow: 0 0.125rem 0.25rem 0 #0005;
+  z-index: 1;
+  transition: 0.2s;
 }
 button .tooltip.right,
 button .tooltip.left {
-    top: 0rem;
-    white-space: nowrap;
+  top: 0rem;
+  white-space: nowrap;
 }
 button .tooltip.right {
-    right: 3.5rem;
-    transform-origin: right;
+  right: 3.5rem;
+  transform-origin: right;
 }
 button .tooltip.left {
-    left: 3.5rem;
-    transform-origin: left;
+  left: 3.5rem;
+  transform-origin: left;
 }
 button .tooltip.bottom {
-    bottom: 0rem;
-    transform-origin: bottom;
-    pointer-events: none;
+  bottom: 0rem;
+  transform-origin: bottom;
+  pointer-events: none;
 }
 button:focus .tooltip,
 button:hover .tooltip {
-    opacity: 1;
-    transform: scale(1);
-    transition: .2s;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.2s;
 }
 .grid .tooltip {
-    max-width: 65%;
+  max-width: 65%;
 }
 
 /* INPUT */
-input, label {
-    cursor: pointer;
+input,
+label {
+  cursor: pointer;
 }
 select,
-input[type="number"] {
-    padding: .25rem .5rem;
-    background: var(--btn-color);
-    color: var(--fg-color);
-    border: none;
-    border-radius: .25rem;
-    cursor: pointer;
+input[type='number'] {
+  padding: 0.25rem 0.5rem;
+  background: var(--btn-color);
+  color: var(--fg-color);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 /* https://www.w3schools.com/howto/howto_css_custom_checkbox.asp */
 .custom-checkbox {
-    display: inline-block;
-    position: relative;
-    padding-left: 2rem;
+  display: inline-block;
+  position: relative;
+  padding-left: 2rem;
 }
 .custom-checkbox input {
-    position: absolute;
-    opacity: 0;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
 }
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color: var(--btn-color);
-    border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-color: var(--btn-color);
+  border-radius: 50%;
 }
 .custom-checkbox .checkmark:after {
-    content: "";
-    position: absolute;
-    left: .375rem;
-    top: .5rem;
-    width: .5rem;
-    height: .5rem;
-    border: solid var(--fg-color);
-    border-width: 0 .25rem .25rem 0;
-    -webkit-transform: rotate(225deg);
-    -ms-transform: rotate(225deg);
-    transform: rotate(225deg);
-    transition: transform .2s;
+  content: '';
+  position: absolute;
+  left: 0.375rem;
+  top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: solid var(--fg-color);
+  border-width: 0 0.25rem 0.25rem 0;
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+  transition: transform 0.2s;
 }
 .custom-checkbox input:checked ~ .checkmark:after {
-    top: .25rem;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    transition: transform .2s;
+  top: 0.25rem;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  transition: transform 0.2s;
 }
 
 /* Audio Input */
 #audio {
-    vertical-align: middle;
+  vertical-align: middle;
 }
 #audio-value {
-    width: 2.5rem;
+  width: 2.5rem;
 }
